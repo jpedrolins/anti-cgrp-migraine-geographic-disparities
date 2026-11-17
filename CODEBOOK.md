@@ -201,3 +201,139 @@ indicator definition. The subsequent 108-record models were then recalculated.
 Use the analysis directory in the new ZIP as the current computational release.
 The accompanying notebook runs these versioned scripts; historical notebooks,
 datasets and codebooks are retained for audit, not mixed into the current run.
+
+---
+
+# Part E. Figure 2 v2: refined geographic map and shared figure design system (17 November 2026)
+
+## Status and scope
+
+Presentation-only refinement of the manuscript's Figure 2 (two-panel world map).
+**No analytical modification was made; the underlying results were preserved.**
+No record, country–record pair, eligibility decision, country normalization,
+removed registry location, WHO Member State classification, YLD input, expected
+count or O/E ratio was changed or recalculated. Figure numbering follows the
+current manuscript (Figure 1 is the PRISMA flow diagram). The previous script,
+`figure2_vertical.R` (v1), is retained unchanged.
+
+## Files
+
+| Role | Path |
+|---|---|
+| Figure script | `figure2_global_distribution.R` |
+| Shared design system (sourced by the script) | `figure_theme.R` |
+| Vector PDF (fonts embedded) | `figures/figure2/Figure_2_global_distribution_v2.pdf` |
+| Editable SVG (text kept as text) | `figures/figure2/Figure_2_global_distribution_v2.svg` |
+| PNG, 600 dpi | `figures/figure2/Figure_2_global_distribution_v2.png` |
+| Plotted values and classes, 194 rows | `figures/figure2/Figure_2_global_distribution_v2_plot_data.csv` |
+| Validation record, input/output SHA-256 | `figures/figure2/Figure_2_global_distribution_v2_validation.json` |
+| Proposed caption | `figures/figure2/Figure_2_legend_proposed.md` |
+
+Inputs, all from `public_data_and_reference_results.zip`: `country_record_453.csv`
+(participations), `results/country_expected_oe_all_scenarios.csv` (scenario
+`Point`: observed, O/E), `source_data/who_regions.csv` (194-state universe) and
+`source/natural_earth/ne_50m_admin_0_countries.shp`.
+
+## Analytical population, unit and geography
+
+Unit: the country–trial participation, i.e. one unique `(study_id, country_iso3)`
+pair among WHO Member States; a trial contributes at most once per country,
+irrespective of site count. Not sites, not enrolled participants, not unique
+trials. Population: the adopted 108-record release (106 records with an eligible
+country). Geographic unit: the 194 WHO Member States (ISO3). Variables plotted:
+`participations` (count per Member State, including 0) and `oe` (observed ÷
+expected, expected proportional to the country's share of GBD 2023 all-age,
+both-sex migraine YLDs in 2023).
+
+## Visualization transformations
+
+- Natural Earth 1:50m Admin-0 polygons joined on ISO_A3 (ADM0_A3 where ISO_A3 is
+  `-99`, e.g. France, Norway); Antarctica omitted; Robinson projection
+  (ESRI:54030). All 194 Member States match exactly one polygon. French Guiana is
+  part of the France polygon in Natural Earth and is shaded as France (unchanged
+  from v1).
+- Panel a classes (unchanged from v1): 0; 1–2; 3–5; 6–14; 15–29; ≥30.
+- Panel b classes (**changed encoding**, see below): <0.1; 0.1–<0.2; 0.2–<0.5;
+  0.5–<1; 1–<2; 2–<5; 5–<10; ≥10, lower-inclusive, applied to unrounded O/E.
+  Member States with 0 participations (O/E = 0) form a separate category.
+
+## Colour scale and interpretation
+
+- Panel a: sequential navy ramp `#CFDCEC → #122C54`; darker = more participations.
+- Panel b: diverging scale mirrored in lightness around O/E = 1. Warm
+  (`#7E4325, #A8653F, #C99472, #E6CBB4`) = fewer participations than expected
+  from migraine burden; navy (`#CFDCEC, #94B0D3, #4F78AE, #14305A`) = more.
+  Classes are reciprocal-symmetric (0.5↔2, 0.2↔5, 0.1↔10), so equal colour
+  intensity means the same fold-deviation from proportionality in either direction.
+- Neutral grey `#DEDEDC`: WHO Member State with no participation (observed zero;
+  147 states). White with grey outline: area outside the analytical universe
+  (not a WHO Member State, e.g. Taiwan, Puerto Rico, Greenland, Western Sahara,
+  Somaliland and small territories); not analysed, and not the same as zero.
+
+## Validation checks (computed at run time; nothing hard-coded)
+
+The script stops unless: pairs are unique; every pair country is in the 194-state
+universe; per-country counts from the pair file equal `observed` in the O/E file
+for all 194 states; every Member State joins to one polygon; totals equal
+`CURRENT_RELEASE.json`. Result on 17 November 2026: 194 Member States; 453
+country–trial participations; 47 participating states; 147 without
+participation; 106 contributing records. Panel b class counts: <0.1, 2 (India,
+China); 0.1–<0.2, 1 (Iran); 0.2–<0.5, 3; 0.5–<1, 5; 1–<2, 2; 2–<5, 12; 5–<10, 9;
+≥10, 13.
+
+Discrepancy investigated: an external brief cited ~452 participations. 452 is
+the superseded 107-record version (`source/prior_country_record452.csv`); the
+only difference is the pair NCT04361721–ITA adopted on 16 November 2026. The
+manuscript already reports 453. No change was made.
+
+## Changes relative to v1 (`figure2_vertical.R`)
+
+Aesthetic: shared design system (`figure_theme.R`); Arial at final size
+(7–10 pt; Montserrat not installed, Arial is Springer Nature's recommended face);
+174 mm double-column width (164 mm high; 2 mm top and 1.5 mm side/bottom page margins) instead of 8 × 9.35 in; keys placed in
+open ocean instead of below each map, sized 7.5 pt (title) / 7 pt (labels), with 6 mm of extra open ocean added on the left of the map frame so the keys stay clear of land (geography unchanged); stepped keys; bold lowercase panel letters
+with short panel headings and no embedded figure title; restrained navy/warm
+palette replacing ColorBrewer blue/orange; 0.25 pt white borders; areas outside
+the universe drawn hollow so that they cannot be confused with zero; terminology
+"country–trial" (manuscript wording) instead of "country–record"; PDF and SVG
+exports added.
+
+Visual encoding (not analytical): panel b changed from 2 classes below 1 and 4
+above (<0.5, 0.5–<1 | 1–<2, 2–<5, 5–<10, ≥10) to 4 + 4 reciprocal-symmetric
+classes, at the investigator's request on 17 November 2026, because the former
+scale was asymmetric on a ratio scale. O/E values and the categories above 1 are
+unchanged.
+
+## Shared design system (`figure_theme.R`)
+
+Typography (`fig_font`, `fig_size`: tag 10, heading 8, title 7.5, text 7,
+in-panel keys 7.5/7, minimum 6.5 pt), colours (`fig_col`, `fig_navy`, `fig_diverging`, `fig_series`
+for up to four grouped series), line weights (`fig_lwd`), widths (`fig_width`:
+84 / 129 / 174 mm; maximum height 234 mm), panel headings (`fig_heading`),
+themes (`theme_fig` for charts, `theme_fig_map` for maps), stepped keys
+(`fig_binned_key`) and export (`fig_save`: SVG via svglite, PDF from that SVG via
+librsvg, PNG 600 dpi via ragg). Later figures should source this file rather than
+restate settings.
+
+PDF note: librsvg emits a small Type 3 font containing only the space glyph;
+all visible text is embedded Arial TrueType subsets.
+
+## Reproduction
+
+```sh
+python3 run_analysis.py --output ../registry_validation --validate-only
+Rscript figure2_global_distribution.R ../registry_validation figures/figure2
+```
+
+R packages: dplyr, readr, sf, ggplot2, patchwork, jsonlite, svglite, rsvg,
+ragg; system font Arial. Outputs are overwritten in the given directory; compare
+`output_sha256` in the validation JSON. The full launcher (`--figures`) also runs
+this script.
+
+## Recommended structural changes (not implemented)
+
+1. Europe inset in both panels: 29 of the 47 participating states are in the WHO European Region and
+   several are hard to read at 174 mm.
+2. Point markers for participating states too small to see (Singapore, 2
+   participations; Lebanon, 1).
+Either would add a visual element and needs investigator approval.

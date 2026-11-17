@@ -61,9 +61,24 @@ an input is missing or differs from the reviewed snapshot; it never imputes a
 missing source or substitutes newer data silently.
 
 R packages: MASS, sandwich, jsonlite, ggplot2, dplyr, tidyr, readr, sf, ggrepel,
-patchwork and geepack. Python packages for clustered tests: numpy and pandas.
+patchwork and geepack; the refined figures also use svglite, rsvg and ragg. Python packages for clustered tests: numpy and pandas.
 Environment details are retained in the archived `results/R_session_info.txt`.
 The subgroup tests use 99,999 resamples with a recorded fixed seed.
+
+## Figures
+
+`figure_theme.R` is the shared design system (typography, palette, line weights,
+export sizes) for the manuscript figures. The publication version of Figure 2
+(geographic distribution and O/E map) is produced by
+`figure2_global_distribution.R` and committed in `figures/figure2/` as PDF, SVG
+and 600-dpi PNG, with its plotted values and a validation record. Regenerate it
+after the registry validation step:
+
+```sh
+Rscript figure2_global_distribution.R ../registry_validation figures/figure2
+```
+
+See CODEBOOK.md, Part E. `figure2_vertical.R` is the previous version.
 
 ## Development and citation
 

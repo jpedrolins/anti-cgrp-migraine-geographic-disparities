@@ -1,0 +1,50 @@
+{
+  "figure": "Figure 2",
+  "version": "v2",
+  "generated": "2026-11-17T21:15:00-0300",
+  "scope": "Presentation-only refinement of figure2_vertical.R; data and O/E values unchanged; panel b uses reciprocal-symmetric O/E classes.",
+  "validation": {
+    "who_member_states": 194,
+    "country_trial_participations": 453,
+    "participating_member_states": 47,
+    "member_states_without_participation": 147,
+    "records_contributing": 106,
+    "release_metadata_agreement": "CURRENT_RELEASE.json"
+  },
+  "class_counts_panel_a": {
+    "≥30": 2,
+    "1–2": 14,
+    "15–29": 9,
+    "3–5": 7,
+    "6–14": 15,
+    "No participation (0)": 147
+  },
+  "class_counts_panel_b": {
+    "<0.1": 2,
+    "≥10": 13,
+    "0.1–<0.2": 1,
+    "0.2–<0.5": 3,
+    "0.5–<1": 5,
+    "1–<2": 2,
+    "2–<5": 12,
+    "5–<10": 9,
+    "No participation (0)": 147
+  },
+  "export": {
+    "width_mm": 174,
+    "height_mm": 164,
+    "png_dpi": 600,
+    "font": "Arial"
+  },
+  "input_sha256": {
+    "country_record": "b4e4b0ffc9d2170a9f7574c8576351f3f70fed51ebab0bed1e8543cf2b032f07",
+    "oe_results": "e42ab71f7cc522f833bb24125056b9dbfef370d0b5a5bde40d13d15c118be418",
+    "who_universe": "5397e2b05a04aa560e03187f94f0713ab0172118ebdf0de26f494c0071ebc356",
+    "natural_earth_shp": "94799b91827fb9f32c0c517d60281572abcf5e4647d19b7f52217071cc4fd30d"
+  },
+  "output_sha256": {
+    "Figure_2_global_distribution_v2.pdf": "80d3f01323ca1b6719c464a978ea517c0bfbd98874080d71aee07ee60e0ad664",
+    "Figure_2_global_distribution_v2.svg": "b31afb880c0780122030e5e75dd9b7025a37cc03868376d52c4426b640bb3311",
+    "Figure_2_global_distribution_v2.png": "df0694b2ac2025def9efef3d295418850f8fabfe06d7760e1558403cb43803cb"
+  }
+}

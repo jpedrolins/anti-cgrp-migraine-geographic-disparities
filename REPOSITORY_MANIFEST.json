@@ -15,8 +15,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 20426,
-      "sha256": "2975e50272084bce7cccef14e953162722090816ba05fcc6f125697f937b5060"
+      "bytes": 27927,
+      "sha256": "688ed94bd338f1e7f54a78bc336e627a4fcae5585043944b8be5b24573ca9e23"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -40,8 +40,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 3956,
-      "sha256": "0ddf444edf364635ecb446d7c71412b11e51f67e64eb67bee7dbc2718f033636"
+      "bytes": 4590,
+      "sha256": "97f36d048af32dc16e71d087d1e0c04a9963d3976f2dc587b713131d81a9de59"
     },
     {
       "file": "VALIDATION.md",
@@ -110,8 +110,8 @@
     },
     {
       "file": "run_analysis.py",
-      "bytes": 4437,
-      "sha256": "8a36954693f001a1f936068f34ef3298f7109c6361eb411ff584dff4714193ad"
+      "bytes": 4470,
+      "sha256": "c86dc5255b692348f1b34e10692ffeb7f9e88818bf577ef88c8dc5828110b8b8"
     },
     {
       "file": "summarize_current.py",
@@ -127,6 +127,46 @@
       "file": "temporal_income.R",
       "bytes": 5622,
       "sha256": "b9fcb9b2b9c086d2ac161778ee8379c154799a1d31c4fa7d72166a62aa0b58de"
+    },
+    {
+      "file": "figure_theme.R",
+      "bytes": 11086,
+      "sha256": "9be07bf386ff7fbfb3671dd2e77ac8a32bf75f657b60d9902a721cf63e049101"
+    },
+    {
+      "file": "figure2_global_distribution.R",
+      "bytes": 10352,
+      "sha256": "3374de8068312144c60dc5a56121ccb01ef93c2945450b701569398a447fc725"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v2.pdf",
+      "bytes": 1099003,
+      "sha256": "80d3f01323ca1b6719c464a978ea517c0bfbd98874080d71aee07ee60e0ad664"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v2.png",
+      "bytes": 1201057,
+      "sha256": "df0694b2ac2025def9efef3d295418850f8fabfe06d7760e1558403cb43803cb"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v2.svg",
+      "bytes": 3332005,
+      "sha256": "b31afb880c0780122030e5e75dd9b7025a37cc03868376d52c4426b640bb3311"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v2_plot_data.csv",
+      "bytes": 9164,
+      "sha256": "19c30b0ff9d06e2081f2e2e09959e4484a46af0203e9ffcba73c21493764610a"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v2_validation.json",
+      "bytes": 1706,
+      "sha256": "d3af935cdbbb8f1dafc247dbe5232cfb34dc8d1387f7eb00e4bf3267071f14bb"
+    },
+    {
+      "file": "figures/figure2/Figure_2_legend_proposed.md",
+      "bytes": 1873,
+      "sha256": "95d79df507b5a1c17d81de4d69d9eb6b62d397d14670266edfa62d9a2aa873df"
     }
   ],
   "excluded_inputs": [
@@ -138,5 +178,7 @@
     "source_data/processed_indicators.csv"
   ],
   "originals_modified": false,
-  "scientific_results_recalculated_for_packaging": false
+  "scientific_results_recalculated_for_packaging": false,
+  "updated": "2026-11-17",
+  "update_note": "Figure 2 v2 presentation refinement and shared figure theme; no analytical change. See CODEBOOK.md Part E."
 }
