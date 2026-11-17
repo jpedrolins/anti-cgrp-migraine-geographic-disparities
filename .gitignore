@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.Rhistory
+.RData
+.env
+external_inputs/
+reproduction*/
+analysis_inputs_and_reference_outputs.zip
+IHME*.csv
+IHME*.CSV

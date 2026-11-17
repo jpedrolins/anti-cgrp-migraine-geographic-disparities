@@ -1,0 +1,59 @@
+[
+  {
+    "path": "covariates_haq_rd.csv",
+    "bytes": 5107,
+    "sha256": "a1a8158f2f3b5b110ef44da363b2d9d2be2e01eadc14010cb213080cf4774d60",
+    "columns": [
+      "country_iso3",
+      "haq_2019",
+      "rd_value",
+      "rd_year"
+    ],
+    "data_rows": 194,
+    "description": "Country-level HAQ 2019 and reviewed R&D covariates, as defined in CODEBOOK.md."
+  },
+  {
+    "path": "source_data/country_dataset.csv",
+    "bytes": 17155,
+    "sha256": "5ed16950c64128767dde782357ff2fce6975d926ca9ac38aaef8de35a63eb0fc",
+    "columns": [
+      "ISO3",
+      "Country",
+      "Income group (FY2019)",
+      "Country-record participations, n",
+      "Any trial record",
+      "Migraine YLD number, 2019",
+      "GDP per capita, PPP-adjusted, period mean",
+      "HDI, period mean"
+    ],
+    "data_rows": 194,
+    "description": "Exact reviewed country-level GDP/HDI input snapshot, including a retained historical YLD audit column."
+  },
+  {
+    "path": "source/IHME-GBD_2023_DATA-96e7c249-1.csv",
+    "bytes": 38055,
+    "sha256": "bfd0c7dd18f9bf60e01a90a55381249d793b6ea72cc3b5a1d7392b3311ee8a67",
+    "columns": [
+      "population_group_id",
+      "population_group_name",
+      "measure_id",
+      "measure_name",
+      "location_id",
+      "location_name",
+      "sex_id",
+      "sex_name",
+      "age_id",
+      "age_name",
+      "cause_id",
+      "cause_name",
+      "metric_id",
+      "metric_name",
+      "year",
+      "val",
+      "upper",
+      "lower"
+    ],
+    "data_rows": 204,
+    "description": "IHME GBD 2023; migraine YLD numbers, year 2023, both sexes, all ages; val/lower/upper."
+  }
+]

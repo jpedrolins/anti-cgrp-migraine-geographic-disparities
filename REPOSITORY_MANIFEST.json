@@ -1,0 +1,142 @@
+{
+  "prepared": "2026-11-17",
+  "status": "Public working research repository; Zenodo unpublished",
+  "source_analysis": "20261116_adopted_108_country_record",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 145,
+      "sha256": "13a290d495733eda339e96ed007514cd953f8bfadc17fcf20be0d2f452877a75"
+    },
+    {
+      "file": "CITATION.cff",
+      "bytes": 1164,
+      "sha256": "43020cccd5fc7a5a2c3d4c18e397d621a95195c5badca08f84603f7918bce9ed"
+    },
+    {
+      "file": "CODEBOOK.md",
+      "bytes": 20426,
+      "sha256": "2975e50272084bce7cccef14e953162722090816ba05fcc6f125697f937b5060"
+    },
+    {
+      "file": "CURRENT_RELEASE.json",
+      "bytes": 775,
+      "sha256": "ea98f5f0eff36e28d0da288797aa5443ede5300d95d74a19ce88060e7d70247d"
+    },
+    {
+      "file": "DATA_ACCESS.md",
+      "bytes": 2501,
+      "sha256": "0a9e5f3d5ef2c46867d10904e05f8f808e3fdbf7fede7a90d3c4a8c020730cf3"
+    },
+    {
+      "file": "EXTERNAL_INPUTS.json",
+      "bytes": 1608,
+      "sha256": "f88be0d33c0bc4777e1bd42920f920cbe129e5c0b03ceb1ae233313be97fd74a"
+    },
+    {
+      "file": "LICENSES.md",
+      "bytes": 1672,
+      "sha256": "215493667f3e78c13d011c2dba17c7f1becefa847a80eb648e03880119ef9215"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3956,
+      "sha256": "0ddf444edf364635ecb446d7c71412b11e51f67e64eb67bee7dbc2718f033636"
+    },
+    {
+      "file": "VALIDATION.md",
+      "bytes": 1270,
+      "sha256": "b2483d27b98a2acf6897f8b153cc7176c58d9550611975827059ded907f33b4a"
+    },
+    {
+      "file": "analysis.R",
+      "bytes": 8897,
+      "sha256": "65ea8364a8782aa905a3ae6745d2339b93165262148ec192c8b2e72231b35dd1"
+    },
+    {
+      "file": "bounding_haq_rd.R",
+      "bytes": 1132,
+      "sha256": "c262c0f8b1ade9f7b206dcdcfe14af18532f686ec1af743937da8a9260f18805"
+    },
+    {
+      "file": "build_figure3.R",
+      "bytes": 1588,
+      "sha256": "8c4455557964fb9968cd9dddfed088e702c70f2ba2247207e3d8e1c5e52595bb"
+    },
+    {
+      "file": "build_figure_4panel.R",
+      "bytes": 10489,
+      "sha256": "f9b462f9d732e048c7cd585115db84bbdaf7365e7c44ac7113a1a818c3ddbb55"
+    },
+    {
+      "file": "build_maps.R",
+      "bytes": 3000,
+      "sha256": "813f135ade34aca9b1ae4180ddfdbc3a59a0f887412f9f1e616e279fd0ce2d14"
+    },
+    {
+      "file": "build_supplementary_drug_figure.R",
+      "bytes": 2218,
+      "sha256": "901478580b5e1b73f6aaae1af1e413a4864622fa3fd54d0a1fa1ee0177babb36"
+    },
+    {
+      "file": "build_supplementary_income_forest.R",
+      "bytes": 2385,
+      "sha256": "42e4e514cf7ee64f8a77a9db2c4e276e2c9bfe9db0b6fd9f12c0953d2f8e7b5c"
+    },
+    {
+      "file": "clustered_analysis.py",
+      "bytes": 4333,
+      "sha256": "f0674bc95832ad765b91525bccdfbb0c5177b9cdd5ed24a1a751b3304b09e027"
+    },
+    {
+      "file": "figure2_vertical.R",
+      "bytes": 3331,
+      "sha256": "23b5c34c70803faa7d165eae642135ca25ea13a007b48d856a54b847253b87ff"
+    },
+    {
+      "file": "pre_post_income_test.R",
+      "bytes": 3017,
+      "sha256": "6a1fe39f1b0ecb13c39d46020bdb2b375b6f7f97a9d8069b580dffae4c4e8ad4"
+    },
+    {
+      "file": "public_data_and_reference_results.zip",
+      "bytes": 1703512,
+      "sha256": "433c7b54b4950d0397f8c5eb24f1f6646ec3598fedae3a5c2a683cfc2dd3d922"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 13,
+      "sha256": "7c3194b101c68d4c524948fd09ec3dff5e7ecf54f11e8ccc23440ff932a604e7"
+    },
+    {
+      "file": "run_analysis.py",
+      "bytes": 4437,
+      "sha256": "8a36954693f001a1f936068f34ef3298f7109c6361eb411ff584dff4714193ad"
+    },
+    {
+      "file": "summarize_current.py",
+      "bytes": 5459,
+      "sha256": "f8b357f29466ee5b30633c4d096eef8e26cf02b4edc87d06519df62739b59e6e"
+    },
+    {
+      "file": "table3_covariates.R",
+      "bytes": 6155,
+      "sha256": "4bc9fd6c70ff9b89add32b742664e69e5024121700f9cf7e94e29d4afff111b5"
+    },
+    {
+      "file": "temporal_income.R",
+      "bytes": 5622,
+      "sha256": "b9fcb9b2b9c086d2ac161778ee8379c154799a1d31c4fa7d72166a62aa0b58de"
+    }
+  ],
+  "excluded_inputs": [
+    "covariates_haq_rd.csv",
+    "results/country_analytic_with_yld_bounds_v1.csv",
+    "source/IHME-GBD_2023_DATA-96e7c249-1.csv",
+    "source_data/country_dataset.csv",
+    "source_data/gbd_export.csv",
+    "source_data/processed_indicators.csv"
+  ],
+  "originals_modified": false,
+  "scientific_results_recalculated_for_packaging": false
+}

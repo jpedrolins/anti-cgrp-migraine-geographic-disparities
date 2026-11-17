@@ -1,0 +1,19 @@
+{
+  "version": "20261116_adopted_108_country_record",
+  "records": 108,
+  "WHO_country_record_pairs": 453,
+  "with_geography": 106,
+  "participating_countries": 47,
+  "WHO_members": 194,
+  "excluded_records": 24,
+  "duplicates_removed": 35,
+  "only_added_pair": [
+    "NCT04361721",
+    "ITA"
+  ],
+  "burden": "GBD 2023 release, year 2023",
+  "analytical_unit": "unique country-record pair; no city/site analysis",
+  "manual_adjudication_conflict": "Raw registry type OBSERVATIONAL retained; inclusion explicitly directed by the author.",
+  "source_checksums_unchanged": true,
+  "scripts": "Run in the analysis directory. Requires R packages MASS, sandwich, jsonlite, ggplot2, dplyr, tidyr, readr, sf, ggrepel, patchwork, geepack; Python numpy/pandas for clustered tests."
+}
