@@ -15,8 +15,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 43445,
-      "sha256": "e560fb86c8f86b234e340c68139f2a0389c5318ccb6dc48cf575b3f05e9c4203"
+      "bytes": 46023,
+      "sha256": "7e98dc1617c05de63a6204e9680199200bef58c190091ebe9dd350755a00f5c0"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -40,8 +40,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 5485,
-      "sha256": "e9fd157f8557e0c99442fde2bed16bd5193c9c4e5737caef5c598bdc7c53953a"
+      "bytes": 5440,
+      "sha256": "ff336473f1323c9b592654ce9c3d1093aa376b133debefb86b13d274c9c49625"
     },
     {
       "file": "VALIDATION.md",
@@ -205,63 +205,38 @@
     },
     {
       "file": "figure4_socioeconomic.R",
-      "bytes": 19978,
-      "sha256": "763edac994f908cfa5e9f8396d13753e601df429a50186d77a1a3f9b818de3f5"
+      "bytes": 21237,
+      "sha256": "bfed28fd8d7f801368449900fbac4628e68a79b00c0ae45c7a9678ce3cc0ae33"
     },
     {
-      "file": "figures/figure4/Figure_4_and_S3_legends_proposed.md",
-      "bytes": 3127,
-      "sha256": "780fabf516074fe9e764786789a16e699aeeba4306c0d59a1cc998388b9d4e7d"
+      "file": "figures/figure4/Figure_4_legend_proposed.md",
+      "bytes": 2452,
+      "sha256": "04c7b1634f3cc7b635d762c6484de08ba488e666c4b033eb1bbe31cff79dd51a"
     },
     {
-      "file": "figures/figure4/Figure_4_socioeconomic_v2.pdf",
-      "bytes": 134564,
-      "sha256": "37327bd48fc1d4229c35360d397199743b5e7be48c1a216285c8a35d1c0478b0"
+      "file": "figures/figure4/Figure_4_socioeconomic_v3.pdf",
+      "bytes": 183084,
+      "sha256": "57d3c9b7ccd8d11c1acc0024e27e8a638769f39a534bbc67cadb3a5e1f3d1145"
     },
     {
-      "file": "figures/figure4/Figure_4_socioeconomic_v2.png",
-      "bytes": 739774,
-      "sha256": "476927a52d16aeb93eaf4daea72135dc0f81dbdd6f6d636e3f5bce5814415989"
+      "file": "figures/figure4/Figure_4_socioeconomic_v3.png",
+      "bytes": 1359674,
+      "sha256": "1aaebbcc9cd878336215d0af25dfb77031e0e3ac75f003ea508fd9c31aff3bf6"
     },
     {
-      "file": "figures/figure4/Figure_4_socioeconomic_v2.svg",
-      "bytes": 139456,
-      "sha256": "d59e3d372027e7eb74230fcc07588926c1532a75142e6c09a21e3fa078ea6466"
+      "file": "figures/figure4/Figure_4_socioeconomic_v3.svg",
+      "bytes": 280706,
+      "sha256": "1b26850745ad4741dbaea85b6974bbbd55540519329e61d7e00d6aa686c306b7"
     },
     {
-      "file": "figures/figure4/Figure_4_socioeconomic_v2_plot_data.csv",
-      "bytes": 31657,
-      "sha256": "1c87b6c4f7b20426b6093eb899c50a4d5531195642f24d70087042b4ce010169"
+      "file": "figures/figure4/Figure_4_socioeconomic_v3_plot_data.csv",
+      "bytes": 59529,
+      "sha256": "98416e178b8ee74c68eadcabe1c0c5db0139685d1d0815a3c5ab8774125edf0e"
     },
     {
-      "file": "figures/figure4/Figure_4_socioeconomic_v2_validation.json",
-      "bytes": 2330,
-      "sha256": "9993f2079ebbfc924d27d160321ea30bc7c0e4240384219a478a7e293cbfa2df"
-    },
-    {
-      "file": "figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1.pdf",
-      "bytes": 135888,
-      "sha256": "815d7c9073f81a51d5ca2f904db23ed058a4688f953e82cbc3f35388c6e5a727"
-    },
-    {
-      "file": "figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1.png",
-      "bytes": 720709,
-      "sha256": "288bb3fdf18511c6381e76aea9db63bed8e8ac05d73f7676d17b0535625baec4"
-    },
-    {
-      "file": "figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1.svg",
-      "bytes": 141419,
-      "sha256": "34eeb24424765bc45cf76126805ed06de4213ab4c61bff881dca7b397430a1db"
-    },
-    {
-      "file": "figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1_plot_data.csv",
-      "bytes": 27964,
-      "sha256": "a9f7876d1d6b7c077d30b374176c634b2092553372dcc5a5291dcb89b5f52c05"
-    },
-    {
-      "file": "figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1_validation.json",
-      "bytes": 2375,
-      "sha256": "5d367b1d3820ba86fa67790e7a741770b808d5eb743d17ede04c4446e2a49747"
+      "file": "figures/figure4/Figure_4_socioeconomic_v3_validation.json",
+      "bytes": 3159,
+      "sha256": "01f8880a9dd3b92fe5fd2d0dbed88bccfc3acf802539778c3cbcd46183bd738c"
     }
   ],
   "excluded_inputs": [
@@ -275,5 +250,5 @@
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
   "updated": "2026-11-17",
-  "update_note": "Figures 2-4 and Supplementary Figure S3 publication versions with shared figure theme; no analytical change. See CODEBOOK.md Parts E-G."
+  "update_note": "Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H."
 }

@@ -491,6 +491,11 @@ byte-identical, so it is unchanged.
 
 # Part G. Figure 4 v2 (HDI, GDP) and Supplementary Figure S3 v1 (HAQ, R&D) (17 November 2026)
 
+> **Superseded layout.** On 17 November 2026 the investigator chose a single four-panel
+> figure; see Part H. The model, axis, zero-strip, colour, size and label-rule
+> specifications below still apply. Supplementary Figure S3 was never adopted: its files
+> were removed and S1–S2 remain the only supplementary figures.
+
 ## Status and scope
 
 The four-panel socioeconomic figure (`build_figure_4panel.R`, retained unchanged)
@@ -649,3 +654,53 @@ Size: 174 × 112 mm; Arial 6.5–10 pt.
 
 `figure_theme.R` gained `fig_world_region`. The SVG and PNG of Figures 2 and 3
 regenerate byte-identically.
+
+---
+
+# Part H. Figure 4 v3: single four-panel socioeconomic figure (17 November 2026)
+
+## Change
+
+At the investigator's request, HDI (a), GDP per capita (b), HAQ Index (c) and R&D
+expenditure (d) are combined again in one 2 × 2 Figure 4. All four panels are
+styled identically, with no graphical distinction between primary and exploratory
+analyses. The analytical roles are stated in the caption:
+
+- HDI and GDP per capita: primary predictors.
+- HAQ Index: protocol-listed, evaluated in an additional analysis.
+- R&D expenditure: added post hoc as an exploratory predictor.
+
+The v2 two-panel Figure 4 and the Supplementary Figure S3 files were removed from
+the working tree (they remain in Git history).
+
+**No analytical modification.** The models, IRRs, CIs, n, offsets and O/E values
+are unchanged. The script still refits the models and stops unless they reproduce
+the reference outputs and manuscript Table 3.
+
+## Graphical changes relative to v2 (Part G)
+
+- **Layout:** 2 × 2; 174 × 190 mm; one shared legend; y-axis title on the left column only.
+- **Panel headings:** the "(exploratory)" tags were removed.
+- **Positive axis:** the top of the positive O/E axis was raised from 75 to 100 so that
+  labels above the highest points (O/E ≈ 49) are not cramped. Display only;
+  identical in all panels; ticks unchanged.
+- **Label readability (label selection rule unchanged):**
+  - Every plotted positive point takes part in label repulsion; unlabelled points
+    get an empty label.
+  - Invisible repulsion points cover the model annotation block and sample the
+    fitted curve, so labels avoid that text and the line.
+  - Each point's repulsion radius equals its plotted bubble size (`point.size`
+    mapped through the same square-root scale and 0.9–3.8 mm range).
+  - All labels get thin leader lines and a white halo; seed 20261117.
+- **Exports:** PDF (vector, embedded Arial), SVG and 600-dpi PNG in `figures/figure4/`
+  as `Figure_4_socioeconomic_v3.*`, plus plot data (no covariate values) and the
+  validation record.
+
+## Reproduction
+
+```sh
+Rscript figure4_socioeconomic.R ../full_reproduction figures
+```
+
+This requires the reviewed external inputs (DATA_ACCESS.md). The caption is in
+`figures/figure4/Figure_4_legend_proposed.md`.

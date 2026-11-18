@@ -1,8 +1,9 @@
 #!/usr/bin/env Rscript
-# Figure 4 (v2): socioeconomic gradients in burden-adjusted participation
-#   panel a, Human Development Index; panel b, GDP per capita (PPP)
-# Supplementary Figure S3 (v1): exploratory health-system and research indicators
-#   panel a, HAQ Index; panel b, R&D expenditure
+# Figure 4 (v3): socioeconomic gradients in burden-adjusted participation,
+# one 2 x 2 figure with identical panel styling:
+#   a, Human Development Index; b, GDP per capita (PPP); c, HAQ Index;
+#   d, R&D expenditure. (v2 had split c-d into a supplementary figure; the
+#   investigator reverted to a single four-panel figure on 17 November 2026.)
 #
 # Graphical refinement of the four-panel build_figure_4panel.R (kept unchanged).
 # The negative binomial models are refitted with the identical specification
@@ -97,13 +98,13 @@ specs <- list(
              labels = c("$1k", "$2k", "$5k", "$10k", "$20k", "$50k", "$100k")),
   HAQ = list(col = "haq", logx = FALSE, center = 80, step = 10,
              ref = "HAQ per 10 points", ref_file = "haq_rd", t3 = "HAQ Index",
-             heading = "Healthcare Access and Quality Index (exploratory)",
+             heading = "Healthcare Access and Quality Index",
              xlab = "HAQ Index, 2019 (age-standardized)",
              irr_text = "IRR per 10-point increase", breaks = seq(20, 100, 10),
              labels = waiver()),
   RD = list(col = "rd", logx = TRUE, center = 1,
             ref = "R&D per doubling", ref_file = "haq_rd", t3 = "R&D expenditure",
-            heading = "Research and development expenditure (exploratory)",
+            heading = "Research and development expenditure",
             xlab = "R&D expenditure, % of GDP (year closest to 2019)",
             irr_text = "IRR per doubling",
             breaks = c(0.01, 0.03, 0.1, 0.3, 1, 3),
@@ -181,7 +182,7 @@ checks$table3_reconciled <- TRUE
 # display offset only (it reduces overplotting and has no value); the data and
 # models use the exact zeros.
 pos_all <- unlist(lapply(M, function(x) x$data$oe_point[x$data$oe_point > 0]))
-y_lo <- log10(0.035); y_hi <- log10(75)
+y_lo <- log10(0.035); y_hi <- log10(100)
 if (min(pos_all) < 10^y_lo || max(pos_all) > 10^y_hi) fail("positive O/E outside axis range")
 gap <- 0.19; half <- 0.17
 y_zero <- y_lo - gap - half
@@ -192,6 +193,7 @@ set.seed(20261117)
 zero_offset <- setNames(runif(nrow(d), -0.75 * half, 0.75 * half), sort(d$ISO3))
 
 size_limits <- range(d$expected_point)
+size_range <- c(0.9, 3.8)   # mm, sqrt scale; shared by points and label repulsion
 label_rule <- function(p) {
   bind_rows(
     p |> filter(oe_point > 0) |> arrange(desc(oe_point), ISO3) |> slice_head(n = 3) |>
@@ -213,7 +215,14 @@ draw <- function(mod, tag, show_y = TRUE) {
            world_region = factor(world_region, levels = names(fig_world_region)))
   labs_d <- label_rule(p)
   p$label_reason <- labs_d$label_reason[match(p$ISO3, labs_d$ISO3)]
-  lab_pos <- p |> filter(!is.na(label_reason), oe_point > 0)
+  # Positive-scale label layer: every positive point is included (unlabelled
+  # ones with an empty label) so labels are pushed off all points, plus an
+  # invisible grid over the model annotation so labels avoid that text.
+  # point.size mirrors the plotted bubble size (same sqrt scale and range) so
+  # labels clear the full outline of large points.
+  psize <- function(e) scales::rescale(sqrt(e), to = size_range, from = sqrt(size_limits))
+  lab_pos <- p |> filter(oe_point > 0) |>
+    mutate(lab = ifelse(is.na(label_reason), "", ISO3), psize = psize(expected_point))
   lab_zero <- p |> filter(!is.na(label_reason), oe_point == 0)
 
   # Curve and band, restricted to the positive part of the axis so they never
@@ -229,8 +238,17 @@ draw <- function(mod, tag, show_y = TRUE) {
   ann_x <- if (s$logx) xlim[1] * 1.12 else xlim[1] + 0.02 * diff(xlim)
   xscale <- if (s$logx) scale_x_log10(breaks = s$breaks, labels = s$labels) else
     scale_x_continuous(breaks = s$breaks, labels = s$labels)
+  ann_frac <- 0.46                        # annotation block: share of panel width
+  ann_xs <- if (s$logx) exp(seq(log(xlim[1]), log(xlim[1]) + ann_frac * diff(log(xlim)),
+                                length.out = 7)) else
+    seq(xlim[1], xlim[1] + ann_frac * diff(xlim), length.out = 7)
+  ann_block <- expand.grid(xvar = ann_xs, y = seq(y_hi - 0.62, y_hi - 0.02, length.out = 5)) |>
+    mutate(lab = "", psize = 0.4)
+  curve_pts <- line[seq(1, nrow(line), by = 8), ] |> transmute(xvar, y = f, lab = "", psize = 0.4)
+  lab_pos <- bind_rows(lab_pos |> select(xvar, y, lab, psize), ann_block, curve_pts)
+  lab_zero <- lab_zero |> mutate(psize = psize(expected_point))
   repel <- list(family = fig_font, size = fig_size$note / .pt, colour = fig_col$ink,
-                seed = 20261117, min.segment.length = 0.1, segment.size = 0.2,
+                seed = 20261117, min.segment.length = 0, segment.size = 0.2,
                 segment.colour = fig_col$muted, max.overlaps = Inf,
                 bg.color = "white", bg.r = 0.12)
 
@@ -251,10 +269,11 @@ draw <- function(mod, tag, show_y = TRUE) {
                shape = 21, fill = NA, colour = fig_col$ink, stroke = 0.35) +
     geom_line(data = line, aes(x = xvar, y = f), inherit.aes = FALSE,
               colour = fig_pair[["observed"]], linewidth = 0.55) +
-    do.call(geom_text_repel, c(list(data = lab_pos, mapping = aes(label = ISO3),
-                                    ylim = c(y_lo + 0.05, y_hi - 0.02), box.padding = 0.35,
-                                    point.padding = 0.35), repel)) +
-    do.call(geom_text_repel, c(list(data = lab_zero, mapping = aes(label = ISO3),
+    do.call(geom_text_repel, c(list(data = lab_pos, mapping = aes(label = lab, point.size = psize),
+                                    ylim = c(y_lo + 0.05, y_hi - 0.02), box.padding = 0.4,
+                                    point.padding = 0.25, force = 3, force_pull = 0.5,
+                                    max.time = 3, max.iter = 50000), repel)) +
+    do.call(geom_text_repel, c(list(data = lab_zero, mapping = aes(label = ISO3, point.size = psize),
                                     # labels sit in the gap above the zero strip
                                     ylim = c(y_zero + half + 0.02, y_lo - 0.02), direction = "x",
                                     box.padding = 0.15, point.padding = 0.05), repel)) +
@@ -268,7 +287,7 @@ draw <- function(mod, tag, show_y = TRUE) {
              family = fig_font, size = fig_size$text / .pt, colour = fig_col$ink,
              label = sprintf("%s\n%s\nn = %d countries", s$irr_text, fmt_ci(mod$est), mod$n)) +
     scale_fill_manual(values = fig_world_region, name = "World region", drop = FALSE) +
-    scale_size_continuous(trans = "sqrt", range = c(0.9, 3.8), limits = size_limits,
+    scale_size_continuous(trans = "sqrt", range = size_range, limits = size_limits,
                           breaks = c(1, 10, 50), name = "Expected participations") +
     scale_y_continuous(breaks = y_breaks, labels = y_labels, expand = c(0, 0)) +
     xscale +
@@ -293,9 +312,9 @@ draw <- function(mod, tag, show_y = TRUE) {
                                override.aes = list(fill = "#9AA3AE", colour = "white", alpha = 1)))
 }
 
-# Shared legend below both panels (two rows: region colours, point size).
-compose <- function(a, b) {
-  (a | b) + plot_layout(guides = "collect") +
+# Shared legend below all panels (two rows: region colours, point size).
+compose <- function(a, b, c, d) {
+  ((a | b) / (c | d)) + plot_layout(guides = "collect") +
     plot_annotation(theme = theme(plot.margin = margin(2, 1.5, 1.5, 1.5, "mm"))) &
     theme(legend.position = "bottom", legend.justification = "left",
           legend.box = "vertical", legend.box.just = "left",
@@ -304,19 +323,17 @@ compose <- function(a, b) {
 }
 
 width_mm <- fig_width[["double"]]
-height_mm <- 112
-fig4 <- compose(draw(M$HDI, "a"), draw(M$GDP, "b", show_y = FALSE))
-figS3 <- compose(draw(M$HAQ, "a"), draw(M$RD, "b", show_y = FALSE))
+height_mm <- 190
+fig4 <- compose(draw(M$HDI, "a"), draw(M$GDP, "b", show_y = FALSE),
+                draw(M$HAQ, "c"), draw(M$RD, "d", show_y = FALSE))
 
 # (9)(10) conventions identical across panels and figures: same y transform,
 # limits, breaks, zero strip, size limits and colour map (single draw()).
 checks$shared_display <- list(y_positive_range = 10^c(y_lo, y_hi), zero_strip_centre = y_zero,
                               y_breaks = y_labels, size_limits = size_limits)
 
-stem4 <- file.path(out, "figure4", "Figure_4_socioeconomic_v2")
-stemS3 <- file.path(out, "figureS3", "Supplementary_Figure_S3_HAQ_RD_v1")
+stem4 <- file.path(out, "figure4", "Figure_4_socioeconomic_v3")
 files4 <- fig_save(fig4, stem4, width_mm, height_mm)
-filesS3 <- fig_save(figS3, stemS3, width_mm, height_mm)
 
 # ---------------------------------------------------------------------------
 # 4. Plot data and validation (no third-party covariate values are written;
@@ -356,8 +373,7 @@ write_out <- function(stem, keys, files, figure) {
     output_sha256 = as.list(setNames(vapply(files, sha256, ""), basename(files)))
   ), paste0(stem, "_validation.json"), auto_unbox = TRUE, pretty = TRUE, digits = NA)
 }
-write_out(stem4, c("HDI", "GDP"), files4, "Figure 4 v2")
-write_out(stemS3, c("HAQ", "RD"), filesS3, "Supplementary Figure S3 v1")
+write_out(stem4, c("HDI", "GDP", "HAQ", "RD"), files4, "Figure 4 v3")
 
 for (k in names(M)) cat(sprintf("%-3s IRR %s; n = %d\n", k, fmt_ci(M[[k]]$est), M[[k]]$n))
-cat("Wrote:", c(files4, filesS3), sep = "\n  ")
+cat("Wrote:", files4, sep = "\n  ")

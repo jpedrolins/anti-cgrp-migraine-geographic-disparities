@@ -1,6 +1,6 @@
 {
-  "figure": "Figure 4 v2",
-  "generated": "2026-11-17T21:58:24-0300",
+  "figure": "Figure 4 v3",
+  "generated": "2026-11-17T22:34:31-0300",
   "scope": "Graphical refinement; models refitted with the validated specification and checked against reference outputs.",
   "models": {
     "HDI": {
@@ -26,6 +26,30 @@
       "p": 4.92660513690367e-25,
       "theta": 0.490375859869201,
       "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    },
+    "HAQ": {
+      "model": "HAQ per 10 points",
+      "n_countries": 194,
+      "countries_with_participation": 47,
+      "participations": 453,
+      "IRR": 3.02916041085308,
+      "wald_lower_95": 2.45714596827743,
+      "wald_upper_95": 3.73433768817253,
+      "p": 3.08519578396584e-25,
+      "theta": 0.598663828091812,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    },
+    "RD": {
+      "model": "R&D per doubling",
+      "n_countries": 127,
+      "countries_with_participation": 46,
+      "participations": 452,
+      "IRR": 2.86974848979242,
+      "wald_lower_95": 1.89378265296433,
+      "wald_upper_95": 4.34868086988491,
+      "p": 6.65631302692282e-07,
+      "theta": 0.432507728841395,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
     }
   },
   "validation": {
@@ -33,7 +57,7 @@
     "exact_zero_countries": 147,
     "table3_reconciled": true,
     "shared_display": {
-      "y_positive_range": [0.035, 75],
+      "y_positive_range": [0.035, 100],
       "zero_strip_centre": -1.81593195564972,
       "y_breaks": ["0", "0.05", "0.1", "0.5", "1", "5", "10", "50"],
       "size_limits": [9.36666562138811e-05, 83.2951982544812]
@@ -41,7 +65,7 @@
   },
   "export": {
     "width_mm": 174,
-    "height_mm": 112,
+    "height_mm": 190,
     "png_dpi": 600,
     "font": "Arial"
   },
@@ -53,8 +77,8 @@
     "haq_rd_reference": "a068bc2619ea9c41e80188f92ae326a7b4d5faa7941af29c5be1ab66eab5e5d0"
   },
   "output_sha256": {
-    "Figure_4_socioeconomic_v2.pdf": "37327bd48fc1d4229c35360d397199743b5e7be48c1a216285c8a35d1c0478b0",
-    "Figure_4_socioeconomic_v2.svg": "d59e3d372027e7eb74230fcc07588926c1532a75142e6c09a21e3fa078ea6466",
-    "Figure_4_socioeconomic_v2.png": "476927a52d16aeb93eaf4daea72135dc0f81dbdd6f6d636e3f5bce5814415989"
+    "Figure_4_socioeconomic_v3.pdf": "57d3c9b7ccd8d11c1acc0024e27e8a638769f39a534bbc67cadb3a5e1f3d1145",
+    "Figure_4_socioeconomic_v3.svg": "1b26850745ad4741dbaea85b6974bbbd55540519329e61d7e00d6aa686c306b7",
+    "Figure_4_socioeconomic_v3.png": "1aaebbcc9cd878336215d0af25dfb77031e0e3ac75f003ea508fd9c31aff3bf6"
   }
 }
