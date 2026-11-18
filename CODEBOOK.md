@@ -486,3 +486,166 @@ PDF/SVG/PNG exports at 174 mm.
 `figure_theme.R` gained `fig_pair` and `fig_key_row` (a figure-level key
 sized in millimetres), and panel headings are now explicitly plain weight. The Figure 2 map was regenerated afterwards: its SVG and PNG are
 byte-identical, so it is unchanged.
+
+---
+
+# Part G. Figure 4 v2 (HDI, GDP) and Supplementary Figure S3 v1 (HAQ, R&D) (17 November 2026)
+
+## Status and scope
+
+The four-panel socioeconomic figure (`build_figure_4panel.R`, retained unchanged)
+is split as follows:
+
+- Figure 4 v2: HDI (a) and GDP per capita, PPP (b). These are the primary socioeconomic indicators.
+- Supplementary Figure S3 v1: HAQ Index (a) and R&D expenditure (b). These are the exploratory indicators. S3 is the next free number after Supplementary Figures S1–S2; no existing figure is renumbered.
+
+**No analytical modification was made.** The models are refitted with the
+validated specification only so that their curves can be drawn, and the script
+stops unless they reproduce the reference outputs. All changes are graphical,
+except for the y-axis treatment of zeros and the label rule described below.
+Both are presentation decisions.
+
+## Inputs (reviewed external snapshot; not redistributed)
+
+Run the script in a full-reproduction directory that holds the exact inputs
+listed in `EXTERNAL_INPUTS.json` (checked 17 November 2026 by SHA-256):
+
+- `results/country_analytic_with_yld_bounds_v1.csv`: 194 Member States, `observed`, `expected_point`, `oe_point`, HDI and GDP period means.
+- `covariates_haq_rd.csv`: `haq_2019`, `rd_value`.
+- `source/region_plot_mapping.csv`: world region.
+- `results/negative_binomial_models_all_scenarios.csv` (HDI/GDP) and `results/bounding_haq_rd.csv` (HAQ/R&D): reference estimates.
+- `results/country_expected_oe_all_scenarios.csv`: public O/E cross-check.
+- `results/native_document_tables/manuscript_table_06.csv`: manuscript Table 3.
+
+## Model specification (confirmed from `build_figure_4panel.R`, `analysis.R`, `bounding_haq_rd.R`)
+
+- Unit: WHO Member State.
+- Outcome: country–trial participations.
+- Model: `MASS::glm.nb(observed ~ predictor + offset(log(expected_point)))`, maxit 1000.
+  `expected_point` = 453 × country share of GBD 2023 migraine YLDs (all ages, both sexes, 2023).
+- Predictors (one model each; no mutual adjustment):
+
+| Predictor | Transformation | Effect expressed per |
+|---|---|---|
+| HDI | (HDI − 0.8) / 0.1 | 0.1 unit |
+| GDP | log2(GDP / 20 000) | doubling |
+| HAQ | (HAQ − 80) / 10 | 10 points |
+| R&D | log2(R&D % of GDP / 1) | doubling |
+
+  Centring changes only the intercept.
+- Inference: HC3 covariance (`sandwich::vcovHC`), two-sided Wald 95% CIs and P.
+- Missing data: complete cases per indicator; no imputation.
+
+| Model | n countries (with participation) | Participations | IRR (95% CI) | P |
+|---|---|---|---|---|
+| HDI per 0.1 | 190 (47) | 453 | 7.89 (5.92–10.52) | 3.3 × 10⁻⁴⁵ |
+| GDP per doubling | 185 (47) | 453 | 5.17 (3.78–7.05) | 4.9 × 10⁻²⁵ |
+| HAQ per 10 points (exploratory) | 194 (47) | 453 | 3.03 (2.46–3.73) | 3.1 × 10⁻²⁵ |
+| R&D per doubling (exploratory) | 127 (46) | 452 | 2.87 (1.89–4.35) | 6.7 × 10⁻⁷ |
+
+R&D is unavailable for Lebanon (1 participation), hence 452.
+
+## Curves and bands
+
+- The fitted mean on the O/E scale is E[count] / expected = exp(β₀ + β₁·predictor).
+  The script checks that this equals `fitted()/expected` for every country, to within 10⁻⁸.
+- Bands are 95% confidence intervals for the fitted mean, exp(η ± 1.96·SE(η)),
+  with SE(η) taken from the same HC3 matrix as the reported IRR CI. They are not
+  prediction intervals.
+- Curves and bands are not drawn below O/E = 0.035, the bottom of the positive
+  axis, so that they never enter the zero strip; above O/E = 75 they are clipped
+  by the panel.
+
+## Y axis and zero participation
+
+- Positive O/E values use a log10 axis from 0.035 to 75. Ticks: 0.05, 0.1, 0.5, 1, 5, 10, 50.
+- O/E = 0 (143, 138, 147 and 81 countries in the HDI, GDP, HAQ and R&D samples)
+  cannot be placed on a log axis. These countries are drawn in a shaded strip
+  below a visible gap, with the y axis broken between the two parts. Their
+  vertical position within the strip is a deterministic display offset
+  (`set.seed(20261117)`, uniform within ±75% of the strip half-height, stored as
+  `zero_strip_display_offset` in the plot data) and carries no value.
+- Model fitting uses the exact zeros. The script checks that observed = 0 exactly when O/E = 0.
+- The previous version plotted log10(1 + O/E), which placed zeros on the axis but
+  compressed every ratio below 1.
+- The same axis, strip, limits and size scale are used in all four panels.
+
+## Encodings
+
+- **Colour:** continental "world region" from `source/region_plot_mapping.csv`
+  (Africa, Asia, Europe, North America, Latin America and the Caribbean,
+  Oceania). These are not WHO regions. Cook Islands and Niue are assigned to
+  Oceania, Monaco to Europe and DPR Korea to Asia, as in the original script.
+  Palette: Paul Tol muted (`fig_world_region`).
+- **Point area:** expected participations, preserved from the original. Square-root
+  scale, 0.9–3.8 mm, with identical limits in both figures.
+
+## Country labels
+
+The rule is the original one, reduced from 5 to 3 countries per criterion, in
+each panel: the three highest O/E; the three lowest positive O/E; the three
+largest expected counts among countries with O/E = 0. Ties are broken by ISO3.
+
+- Labelled points get a thin dark ring.
+- Placement uses ggrepel with seed 20261117. Labels for zero-strip countries sit
+  in the gap above the strip.
+- Result in every panel: DNK, FIN, GEO; IND, CHN, IRN; IDN, BRA, NGA.
+
+## Model annotation
+
+Each panel shows the IRR descriptor, the IRR with its 95% CI, and n, in the
+panel's empty upper-left corner. P values (all < 0.001) are in the caption. No
+significance stars are used.
+
+## Validation (automated; the script stops on any failure)
+
+1. O/E equals the public results and observed/expected.
+2–4. IRR, CI and n reproduce the reference outputs (tolerance 10⁻⁶) and the
+rounded manuscript Table 3.
+5. All 194 identifiers are three-letter ISO3 codes.
+6. Exact zeros are preserved.
+7. Curves correspond to the models.
+8. Bands use the reported HC3 covariance.
+9–10. One drawing function provides a shared axis, strip, limits, colours and
+sizes for both figures.
+
+The point-YLD models are plotted. YLD-bound sensitivity fits exist for all four
+indicators (lower/upper rows in the two reference files; Supplementary Table S6)
+and are not mixed into the figures.
+
+## Reconciled discrepancy
+
+Earlier manuscript estimates (HDI 7.77; GDP 5.09) reproduce exactly from the
+superseded 107-record data with the legacy 2019 YLD offset. The current
+108-record, GBD 2023 models give 7.89 and 5.17, as reported in the current
+manuscript and Table 3. No result was changed.
+
+## Files and reproduction
+
+| Role | Path |
+|---|---|
+| Script (both figures) | `figure4_socioeconomic.R` (sources `figure_theme.R`) |
+| Figure 4 | `figures/figure4/Figure_4_socioeconomic_v2.{pdf,svg,png}` |
+| Supplementary Figure S3 | `figures/figureS3/Supplementary_Figure_S3_HAQ_RD_v1.{pdf,svg,png}` |
+| Plot data (no covariate values, per DATA_ACCESS.md) | `*_plot_data.csv` in each folder |
+| Validation records | `*_validation.json` in each folder |
+| Proposed captions | `figures/figure4/Figure_4_and_S3_legends_proposed.md` |
+
+```sh
+python3 run_analysis.py --output ../full_reproduction --external-inputs /path/to/external_inputs --figures
+# or, in an existing full-reproduction directory:
+Rscript figure4_socioeconomic.R ../full_reproduction figures
+```
+
+Size: 174 × 112 mm; Arial 6.5–10 pt.
+
+## Changes relative to the four-panel version
+
+- **Graphical:** two figures instead of one; true log y axis with a separate zero
+  strip; smaller labels selected by an objective rule; compact in-panel model
+  annotation; shared bottom legend; lowercase panel letters; shared design system;
+  PDF, SVG and 600-dpi PNG exports.
+- **Analytical:** none.
+
+`figure_theme.R` gained `fig_world_region`. The SVG and PNG of Figures 2 and 3
+regenerate byte-identically.

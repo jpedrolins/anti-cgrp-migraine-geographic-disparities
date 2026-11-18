@@ -90,6 +90,13 @@ Part F). `build_figure3.R` is the previous income-only version.
 Rscript figure3_burden_representation.R ../registry_validation figures/figure3
 ```
 
+Figure 4 (HDI and GDP per capita) and Supplementary Figure S3 (exploratory HAQ
+and R&D) are produced together by `figure4_socioeconomic.R` into
+`figures/figure4/` and `figures/figureS3/`. The script needs the reviewed
+external inputs (DATA_ACCESS.md), and it refits the validated negative binomial
+models and checks them against the reference outputs before drawing (CODEBOOK.md,
+Part G). `build_figure_4panel.R` is the previous four-panel version.
+
 ## Development and citation
 
 Updates are tracked through Git commits. This working repository is not a claim

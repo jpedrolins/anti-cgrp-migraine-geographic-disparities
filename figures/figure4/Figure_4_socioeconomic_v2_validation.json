@@ -1,0 +1,60 @@
+{
+  "figure": "Figure 4 v2",
+  "generated": "2026-11-17T21:58:24-0300",
+  "scope": "Graphical refinement; models refitted with the validated specification and checked against reference outputs.",
+  "models": {
+    "HDI": {
+      "model": "HDI per 0.1",
+      "n_countries": 190,
+      "countries_with_participation": 47,
+      "participations": 453,
+      "IRR": 7.89345912414731,
+      "wald_lower_95": 5.9241899094714,
+      "wald_upper_95": 10.5173361922396,
+      "p": 3.30930462494852e-45,
+      "theta": 0.809712169086119,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    },
+    "GDP": {
+      "model": "GDP per doubling",
+      "n_countries": 185,
+      "countries_with_participation": 47,
+      "participations": 453,
+      "IRR": 5.16533846674451,
+      "wald_lower_95": 3.78317163283907,
+      "wald_upper_95": 7.05247450166781,
+      "p": 4.92660513690367e-25,
+      "theta": 0.490375859869201,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    }
+  },
+  "validation": {
+    "oe_matches_public_results": true,
+    "exact_zero_countries": 147,
+    "table3_reconciled": true,
+    "shared_display": {
+      "y_positive_range": [0.035, 75],
+      "zero_strip_centre": -1.81593195564972,
+      "y_breaks": ["0", "0.05", "0.1", "0.5", "1", "5", "10", "50"],
+      "size_limits": [9.36666562138811e-05, 83.2951982544812]
+    }
+  },
+  "export": {
+    "width_mm": 174,
+    "height_mm": 112,
+    "png_dpi": 600,
+    "font": "Arial"
+  },
+  "input_sha256": {
+    "country_analytic": "81b9a5479fb34641088a06d9910d34fc9e8e7920fc6d12ebab4073db1a66acf1",
+    "covariates_haq_rd": "a1a8158f2f3b5b110ef44da363b2d9d2be2e01eadc14010cb213080cf4774d60",
+    "region_mapping": "bad96957d7ce03d278e965694410e42f946a6fe520de81fa74cb8d6b96ac58fc",
+    "nb_reference": "14d1e7b664db557d5fa8df030fb90467d15a96e7c8d0678cce54118dab18c67b",
+    "haq_rd_reference": "a068bc2619ea9c41e80188f92ae326a7b4d5faa7941af29c5be1ab66eab5e5d0"
+  },
+  "output_sha256": {
+    "Figure_4_socioeconomic_v2.pdf": "37327bd48fc1d4229c35360d397199743b5e7be48c1a216285c8a35d1c0478b0",
+    "Figure_4_socioeconomic_v2.svg": "d59e3d372027e7eb74230fcc07588926c1532a75142e6c09a21e3fa078ea6466",
+    "Figure_4_socioeconomic_v2.png": "476927a52d16aeb93eaf4daea72135dc0f81dbdd6f6d636e3f5bce5814415989"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "figure": "Supplementary Figure S3 v1",
+  "generated": "2026-11-17T21:58:25-0300",
+  "scope": "Graphical refinement; models refitted with the validated specification and checked against reference outputs.",
+  "models": {
+    "HAQ": {
+      "model": "HAQ per 10 points",
+      "n_countries": 194,
+      "countries_with_participation": 47,
+      "participations": 453,
+      "IRR": 3.02916041085308,
+      "wald_lower_95": 2.45714596827743,
+      "wald_upper_95": 3.73433768817253,
+      "p": 3.08519578396584e-25,
+      "theta": 0.598663828091812,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    },
+    "RD": {
+      "model": "R&D per doubling",
+      "n_countries": 127,
+      "countries_with_participation": 46,
+      "participations": 452,
+      "IRR": 2.86974848979242,
+      "wald_lower_95": 1.89378265296433,
+      "wald_upper_95": 4.34868086988491,
+      "p": 6.65631302692282e-07,
+      "theta": 0.432507728841395,
+      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+    }
+  },
+  "validation": {
+    "oe_matches_public_results": true,
+    "exact_zero_countries": 147,
+    "table3_reconciled": true,
+    "shared_display": {
+      "y_positive_range": [0.035, 75],
+      "zero_strip_centre": -1.81593195564972,
+      "y_breaks": ["0", "0.05", "0.1", "0.5", "1", "5", "10", "50"],
+      "size_limits": [9.36666562138811e-05, 83.2951982544812]
+    }
+  },
+  "export": {
+    "width_mm": 174,
+    "height_mm": 112,
+    "png_dpi": 600,
+    "font": "Arial"
+  },
+  "input_sha256": {
+    "country_analytic": "81b9a5479fb34641088a06d9910d34fc9e8e7920fc6d12ebab4073db1a66acf1",
+    "covariates_haq_rd": "a1a8158f2f3b5b110ef44da363b2d9d2be2e01eadc14010cb213080cf4774d60",
+    "region_mapping": "bad96957d7ce03d278e965694410e42f946a6fe520de81fa74cb8d6b96ac58fc",
+    "nb_reference": "14d1e7b664db557d5fa8df030fb90467d15a96e7c8d0678cce54118dab18c67b",
+    "haq_rd_reference": "a068bc2619ea9c41e80188f92ae326a7b4d5faa7941af29c5be1ab66eab5e5d0"
+  },
+  "output_sha256": {
+    "Supplementary_Figure_S3_HAQ_RD_v1.pdf": "815d7c9073f81a51d5ca2f904db23ed058a4688f953e82cbc3f35388c6e5a727",
+    "Supplementary_Figure_S3_HAQ_RD_v1.svg": "34eeb24424765bc45cf76126805ed06de4213ab4c61bff881dca7b397430a1db",
+    "Supplementary_Figure_S3_HAQ_RD_v1.png": "288bb3fdf18511c6381e76aea9db63bed8e8ac05d73f7676d17b0535625baec4"
+  }
+}

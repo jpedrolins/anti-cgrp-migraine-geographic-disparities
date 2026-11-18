@@ -64,6 +64,13 @@ fig_diverging <- c("#7E4325", "#A8653F", "#C99472", "#E6CBB4",
 # also separates in greyscale and for colour-vision deficiency.
 fig_pair <- c(observed = "#14305A", reference = "#AEB7C2")
 
+# Continental "world region" colours for country scatterplots (the project's
+# region_plot_mapping.csv grouping; not WHO regions). Paul Tol's muted
+# colour-blind-safe scheme, as in the original socioeconomic figure.
+fig_world_region <- c("Africa" = "#332288", "Asia" = "#DDCC77", "Europe" = "#117733",
+                      "North America" = "#88CCEE",
+                      "Latin America and the Caribbean" = "#CC6677", "Oceania" = "#AA4499")
+
 # Qualitative series for grouped bars / multi-series plots:
 # navy, mid-blue, slate, warm accent. Use in this order; max 4 series.
 fig_series <- c("#14305A", "#6489BA", "#8A939E", "#A8653F")
