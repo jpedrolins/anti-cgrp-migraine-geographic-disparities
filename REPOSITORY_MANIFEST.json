@@ -15,8 +15,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 27927,
-      "sha256": "688ed94bd338f1e7f54a78bc336e627a4fcae5585043944b8be5b24573ca9e23"
+      "bytes": 35610,
+      "sha256": "d0a4afc72a912e138e438497f8c2fd7a19146b1bf7a9ec6f0a9b67f3e0f60fce"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -40,8 +40,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 4590,
-      "sha256": "97f36d048af32dc16e71d087d1e0c04a9963d3976f2dc587b713131d81a9de59"
+      "bytes": 5035,
+      "sha256": "4b81d2da5391c12905038a8438d1265d916ba8113c439160c26e5d4de6c522a0"
     },
     {
       "file": "VALIDATION.md",
@@ -110,8 +110,8 @@
     },
     {
       "file": "run_analysis.py",
-      "bytes": 4470,
-      "sha256": "c86dc5255b692348f1b34e10692ffeb7f9e88818bf577ef88c8dc5828110b8b8"
+      "bytes": 4517,
+      "sha256": "ca714ac8ce7fbc2d64d2696390b1c4fa4e73cc7fa3e37cbe7b3460898799fa99"
     },
     {
       "file": "summarize_current.py",
@@ -130,8 +130,8 @@
     },
     {
       "file": "figure_theme.R",
-      "bytes": 11086,
-      "sha256": "9be07bf386ff7fbfb3671dd2e77ac8a32bf75f657b60d9902a721cf63e049101"
+      "bytes": 12589,
+      "sha256": "dd3cbdd27f1bb1a0d85badfa3d8524ba8aa4300fb310d9a346327f0fa8d84d34"
     },
     {
       "file": "figure2_global_distribution.R",
@@ -167,6 +167,41 @@
       "file": "figures/figure2/Figure_2_legend_proposed.md",
       "bytes": 1873,
       "sha256": "95d79df507b5a1c17d81de4d69d9eb6b62d397d14670266edfa62d9a2aa873df"
+    },
+    {
+      "file": "figure3_burden_representation.R",
+      "bytes": 15956,
+      "sha256": "d936e46d6047b26abb17629efc4b0ca011a5092a804876471a952f3505ca79fe"
+    },
+    {
+      "file": "figures/figure3/Figure_3_burden_representation_v2.pdf",
+      "bytes": 77454,
+      "sha256": "f2f0e5a187570356131108f02678f3a8282577ee21014d65ebcf7af97b787b1e"
+    },
+    {
+      "file": "figures/figure3/Figure_3_burden_representation_v2.png",
+      "bytes": 314104,
+      "sha256": "397e18f589cf900714de8748731e2d577a7c05e967f7c5077c38dfc4441cf50a"
+    },
+    {
+      "file": "figures/figure3/Figure_3_burden_representation_v2.svg",
+      "bytes": 17381,
+      "sha256": "60f3467127347c4c5b49cef7b3c81e5a2756b0ba4392abf97bb1fd1c15cdc07f"
+    },
+    {
+      "file": "figures/figure3/Figure_3_burden_representation_v2_plot_data.csv",
+      "bytes": 1383,
+      "sha256": "663037986e9eb4f97ab01f55c6994820fc72a103890c26404be18f9b9782b179"
+    },
+    {
+      "file": "figures/figure3/Figure_3_burden_representation_v2_validation.json",
+      "bytes": 3259,
+      "sha256": "87da0f7fce8840533cc11c536dde89af25fcd17b2de1dbdaf0bdfb4555730704"
+    },
+    {
+      "file": "figures/figure3/Figure_3_legend_proposed.md",
+      "bytes": 2498,
+      "sha256": "1b49dfc8b2ac1d68a5dc52cfd44c867b57e1bf770fe7501bbbd3ba1403c83b80"
     }
   ],
   "excluded_inputs": [
@@ -180,5 +215,5 @@
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
   "updated": "2026-11-17",
-  "update_note": "Figure 2 v2 presentation refinement and shared figure theme; no analytical change. See CODEBOOK.md Part E."
+  "update_note": "Figure 2 v2 (map) and Figure 3 v2 (burden-relative representation) with shared figure theme; no analytical change. See CODEBOOK.md Parts E and F."
 }

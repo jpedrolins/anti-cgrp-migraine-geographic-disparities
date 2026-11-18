@@ -58,6 +58,12 @@ fig_navy <- c("#CFDCEC", "#9CB6D6", "#6489BA", "#335A91", "#122C54")
 fig_diverging <- c("#7E4325", "#A8653F", "#C99472", "#E6CBB4",
                    "#CFDCEC", "#94B0D3", "#4F78AE", "#14305A")
 
+# Observed-versus-reference pair (e.g. observed participation share vs the
+# burden-proportional reference share): dark navy for what was observed, a
+# light cool slate for the reference. Strong luminance contrast, so the pair
+# also separates in greyscale and for colour-vision deficiency.
+fig_pair <- c(observed = "#14305A", reference = "#AEB7C2")
+
 # Qualitative series for grouped bars / multi-series plots:
 # navy, mid-blue, slate, warm accent. Use in this order; max 4 series.
 fig_series <- c("#14305A", "#6489BA", "#8A939E", "#A8653F")
@@ -128,7 +134,7 @@ fig_heading_theme <- function(indent_mm = 4.2) {
                             colour = fig_col$ink, hjust = 0, vjust = 1),
     plot.tag.location = "plot",
     plot.tag.position = c(0, 1),
-    plot.title = element_text(family = fig_font, size = fig_size$heading,
+    plot.title = element_text(family = fig_font, size = fig_size$heading, face = "plain",
                               colour = fig_col$ink, hjust = 0, vjust = 1,
                               margin = margin(t = 0.45, b = 1.8, l = indent_mm, unit = "mm")),
     plot.title.position = "plot"
@@ -198,6 +204,28 @@ fig_binned_key <- function(x0, y_top, mm, labels, colours, title, specials = NUL
     }
   }
   layers
+}
+
+# ---------------------------------------------------------------------------
+# Figure-level key
+# ---------------------------------------------------------------------------
+# One row of swatch + label pairs, sized in absolute millimetres and placed
+# above all panels (e.g. with patchwork::wrap_elements(full = ...)), for keys
+# that apply to every panel of a figure. Left-aligned with the panel letters.
+fig_key_row <- function(labels, fills, swatch_w = 4, swatch_h = 2.4, gap_mm = 7,
+                        pad_mm = 1.5, x0_mm = 0) {
+  kids <- list()
+  x <- unit(x0_mm, "mm")
+  for (i in seq_along(labels)) {
+    txt <- textGrob(labels[i], x = x + unit(swatch_w + pad_mm, "mm"), y = 0.5, just = "left",
+                    gp = gpar(fontfamily = fig_font, fontsize = fig_size$text, col = fig_col$ink))
+    kids <- c(kids, list(
+      rectGrob(x = x, y = 0.5, width = unit(swatch_w, "mm"), height = unit(swatch_h, "mm"),
+               just = c("left", "centre"), gp = gpar(fill = fills[i], col = NA)),
+      txt))
+    x <- x + unit(swatch_w + pad_mm + gap_mm, "mm") + grobWidth(txt)
+  }
+  gTree(children = do.call(gList, kids))
 }
 
 # ---------------------------------------------------------------------------

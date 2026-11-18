@@ -1,0 +1,122 @@
+{
+  "figure": "Figure 3",
+  "version": "v2",
+  "generated": "2026-11-17T21:32:58-0300",
+  "scope": "Descriptive observed vs burden-proportional shares; values reused from the adopted release.",
+  "validation": {
+    "release_metadata_agreement": "CURRENT_RELEASE.json",
+    "primary_total": 453,
+    "not_exploratory_benchmark_dataset": true,
+    "income_exception": {
+      "group": "Income group unavailable",
+      "countries": "Cook Islands; Niue",
+      "observed": 0,
+      "yld_share": 1.99223969152982e-06
+    },
+    "observed_share_sum": [1, 1],
+    "yld_share_sum": [1, 1],
+    "max_abs_diff_vs_group_results": [3.41060513164848e-13, 3.97903932025656e-13],
+    "manuscript_table2_reconciled": true,
+    "income_v1_figure_data_reconciled": true
+  },
+  "displayed_values": [
+    {
+      "panel": "a",
+      "group": "Africa",
+      "observed": 0,
+      "observed_pct": 0,
+      "yld_pct": 12.1,
+      "oe": 0
+    },
+    {
+      "panel": "a",
+      "group": "Americas",
+      "observed": 101,
+      "observed_pct": 22.3,
+      "yld_pct": 14,
+      "oe": 1.59
+    },
+    {
+      "panel": "a",
+      "group": "Eastern Mediterranean",
+      "observed": 2,
+      "observed_pct": 0.4,
+      "yld_pct": 9.7,
+      "oe": 0.05
+    },
+    {
+      "panel": "a",
+      "group": "Europe",
+      "observed": 297,
+      "observed_pct": 65.6,
+      "yld_pct": 14,
+      "oe": 4.67
+    },
+    {
+      "panel": "a",
+      "group": "South-East Asia",
+      "observed": 7,
+      "observed_pct": 1.5,
+      "yld_pct": 27.8,
+      "oe": 0.06
+    },
+    {
+      "panel": "a",
+      "group": "Western Pacific",
+      "observed": 46,
+      "observed_pct": 10.2,
+      "yld_pct": 22.4,
+      "oe": 0.45
+    },
+    {
+      "panel": "b",
+      "group": "High income",
+      "observed": 392,
+      "observed_pct": 86.5,
+      "yld_pct": 17.4,
+      "oe": 4.97
+    },
+    {
+      "panel": "b",
+      "group": "Low income",
+      "observed": 0,
+      "observed_pct": 0,
+      "yld_pct": 7.7,
+      "oe": 0
+    },
+    {
+      "panel": "b",
+      "group": "Lower-middle income",
+      "observed": 19,
+      "observed_pct": 4.2,
+      "yld_pct": 41.5,
+      "oe": 0.1
+    },
+    {
+      "panel": "b",
+      "group": "Upper-middle income",
+      "observed": 42,
+      "observed_pct": 9.3,
+      "yld_pct": 33.4,
+      "oe": 0.28
+    }
+  ],
+  "export": {
+    "width_mm": 174,
+    "height_mm": 114,
+    "png_dpi": 600,
+    "font": "Arial"
+  },
+  "input_sha256": {
+    "country_results": "e42ab71f7cc522f833bb24125056b9dbfef370d0b5a5bde40d13d15c118be418",
+    "group_results": "edacb04cd15bbe4c482c48d756d2123fe65a4566e111ce7e5d1245a9bfb2f128",
+    "country_record": "b4e4b0ffc9d2170a9f7574c8576351f3f70fed51ebab0bed1e8543cf2b032f07",
+    "manuscript_table_04": "acf820f005de98eee206aab8998f83e79e3782bed1e72a2dd3e46eea8abf6973",
+    "income_v1_data": "879a0afe4ce11d2cd4944093039e74419e180f1d4eeee2d035f83ccbb14f54da"
+  },
+  "output_sha256": {
+    "Figure_3_burden_representation_v2.pdf": "f2f0e5a187570356131108f02678f3a8282577ee21014d65ebcf7af97b787b1e",
+    "Figure_3_burden_representation_v2.svg": "60f3467127347c4c5b49cef7b3c81e5a2756b0ba4392abf97bb1fd1c15cdc07f",
+    "Figure_3_burden_representation_v2.png": "397e18f589cf900714de8748731e2d577a7c05e967f7c5077c38dfc4441cf50a"
+  }
+}

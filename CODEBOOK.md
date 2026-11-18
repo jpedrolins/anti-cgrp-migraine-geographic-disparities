@@ -337,3 +337,152 @@ this script.
 2. Point markers for participating states too small to see (Singapore, 2
    participations; Lebanon, 1).
 Either would add a visual element and needs investigator approval.
+
+---
+
+# Part F. Figure 3 v2: representation relative to migraine burden by WHO region and income group (17 November 2026)
+
+## Status and scope
+
+New publication version of manuscript Figure 3. It replaces the income-only bar
+chart (`build_figure3.R`, v1, retained unchanged) and adds a WHO-region panel.
+Numbering follows the current manuscript (Figure 1 PRISMA; Figure 2 map).
+**No analytical modification was made; values are reused from the adopted
+release and only re-aggregated for checking.** The separate post hoc,
+design-relaxed comparison (467 participations, Supplementary Table S9) is not
+used.
+
+## Purpose and interpretation
+
+Descriptive comparison, for each group, of (i) its share of all country–trial
+participations and (ii) its share of global migraine YLDs, i.e. the share it
+would have if participation were proportional to migraine burden. The O/E ratio
+summarizes the comparison. It is not a statistical test, a causal
+counterfactual, or a measure of patient access or recruitment.
+
+## Inputs and provenance (all in `public_data_and_reference_results.zip`)
+
+| File | Use |
+|---|---|
+| `results/country_expected_oe_all_scenarios.csv` (scenario `Point`) | Country-level `observed`, `expected`, `who_region`, `income`; aggregated to groups |
+| `results/who_income_expected_oe_all_scenarios.csv` (scenario `Point`) | Validated group results; cross-check |
+| `country_record_453.csv` | Unique country–trial pairs; total and regional cross-check |
+| `results/native_document_tables/manuscript_table_04.csv` | Manuscript Table 2 (regions); reconciliation |
+| `results/figure3_income_data.csv` | v1 Figure 3 income shares; reconciliation |
+
+## Definitions
+
+- **Unit:** country–trial participation (Part A): one unique `(study_id,
+  country_iso3)` pair among WHO Member States, at most once per trial and
+  country, irrespective of site count.
+- **Denominator population:** the 194 WHO Member States (zero-participation
+  states included); 453 participations from the 108-record release.
+- **Burden:** GBD 2023 migraine YLDs, all ages, both sexes, number, year 2023
+  (Part B / `config.json`). Absolute YLDs are not redistributed publicly; a
+  group's YLD share is recovered exactly as Σ expectedᵢ / Σ expected, because the
+  release defines expectedᵢ = 453 × YLDᵢ / ΣYLD.
+- **WHO region:** six regions from `source_data/who_regions.csv`.
+- **Income group:** World Bank FY2019 classification, fixed (Part A). Cook
+  Islands and Niue (WHO Member States, Western Pacific) have no World Bank
+  classification ("Income group unavailable"): 0 participations, 0.0002% of
+  YLDs. They are kept in all totals and denominators but are not drawn as a
+  separate category in panel b; the caption states this.
+
+## Formulas (unrounded)
+
+- Observed share = observed_g / Σ observed
+- YLD share = YLD_g / Σ YLD
+- Expected_g = Σ observed × YLD share_g
+- O/E_g = observed_g / expected_g = observed share / YLD share
+- Zero participations give O/E = 0 (expected is always > 0 for the displayed groups).
+
+## Display transformations (presentation, not analysis)
+
+- Shares in % with one decimal; O/E with two decimals (as in Table 2). Exact
+  zeros are written "0 (none)" with a short baseline mark, so they cannot be
+  read as rounded small values (smallest nonzero: Eastern Mediterranean 0.4%).
+- Both panels share one linear 0–100% axis; no truncation, no log scale.
+- Groups ordered by O/E (regions) and income rank (income groups, which is
+  also descending O/E).
+- Grouped horizontal bars were chosen over a dumbbell plot: both quantities are
+  shares of a whole with a meaningful zero, and connecting segments in a
+  dumbbell tend to be read as change over time.
+- Style from `figure_theme.R`: dark navy (`fig_pair["observed"]`, #14305A) for
+  observed shares, light slate (`fig_pair["reference"]`, #AEB7C2) for YLD
+  shares, which also separate in greyscale; Arial 7–10 pt; 174 × 114 mm; one
+  shared key above both panels (it applies to a and b alike), aligned with the
+  panel letters; O/E column right-aligned.
+
+## Validation (automated in the script; it stops on any failure)
+
+1. Group observed counts sum to 453, which equals the unique pair file and
+   `CURRENT_RELEASE.json`; the total is not the 467 exploratory total.
+2. WHO regions partition the 194 Member States (6 groups, no missing values).
+3. Income groups partition the 194 states (4 groups plus the documented
+   exception, which has 0 participations).
+4. Group expected counts sum to 453 (YLD aggregation).
+5–6. Observed and YLD shares each sum to 1 before rounding.
+7. Observed, expected, O/E and YLD shares agree with the validated group
+   results (max absolute difference 4 × 10⁻¹³) and regional counts with the pair file.
+8. Rounded values equal manuscript Table 2 (regions: n, %, YLD %, expected, O/E)
+   and the v1 income-figure data exactly.
+
+Results:
+
+| Group | Observed n (%) | YLD % | O/E |
+|---|---|---|---|
+| Europe | 297 (65.6) | 14.0 | 4.67 |
+| Americas | 101 (22.3) | 14.0 | 1.59 |
+| Western Pacific | 46 (10.2) | 22.4 | 0.45 |
+| South-East Asia | 7 (1.5) | 27.8 | 0.06 |
+| Eastern Mediterranean | 2 (0.4) | 9.7 | 0.05 |
+| Africa | 0 (0.0) | 12.1 | 0.00 |
+| High income | 392 (86.5) | 17.4 | 4.97 |
+| Upper-middle income | 42 (9.3) | 33.4 | 0.28 |
+| Lower-middle income | 19 (4.2) | 41.5 | 0.10 |
+| Low income | 0 (0.0) | 7.7 | 0.00 |
+
+Earlier checkpoints (452 participations; Europe 65.5%, O/E 4.46; Americas O/E
+1.55; Western Pacific 0.44; high income 18.1% of YLDs, O/E 4.78) were traced on
+17 November 2026. They reproduce exactly from the superseded 107-record data
+(452 participations) combined with the legacy `Migraine YLD number, 2019` column of
+`results/country_analytic_with_yld_bounds_v1.csv`, a restricted file that is not
+distributed. Two changes since then explain every difference: the NCT04361721–ITA
+pair (Europe 296 → 297), and the switch to GBD 2023 YLDs for 2023 (for example,
+high-income YLD share 18.1% → 17.4%). The current release, manuscript Table 2 and
+Results text agree with the values above. Nothing was adjusted to match earlier
+versions.
+
+## Files and reproduction
+
+| Role | Path |
+|---|---|
+| Script | `figure3_burden_representation.R` (sources `figure_theme.R`) |
+| Vector PDF | `figures/figure3/Figure_3_burden_representation_v2.pdf` |
+| Editable SVG | `figures/figure3/Figure_3_burden_representation_v2.svg` |
+| PNG, 600 dpi | `figures/figure3/Figure_3_burden_representation_v2.png` |
+| Group values (unrounded; no absolute YLDs) | `figures/figure3/Figure_3_burden_representation_v2_plot_data.csv` |
+| Validation record | `figures/figure3/Figure_3_burden_representation_v2_validation.json` |
+| Proposed caption | `figures/figure3/Figure_3_legend_proposed.md` |
+
+```sh
+python3 run_analysis.py --output ../registry_validation --validate-only
+Rscript figure3_burden_representation.R ../registry_validation figures/figure3
+```
+
+Reruns reproduce the SVG and PNG byte for byte. The PDFs (Figures 2 and 3) embed
+a creation date and random font-subset tags, so their checksums change on every
+run without any visual change.
+
+## Changes relative to v1 (`build_figure3.R`)
+
+Analytical: none; identical income shares. Content: WHO-region panel added (the
+same values as manuscript Table 2) and O/E column added. Presentation: shared
+design system, horizontal grouped bars with direct labels, explicit zeros,
+PDF/SVG/PNG exports at 174 mm.
+
+## Shared-style adjustments made with this figure
+
+`figure_theme.R` gained `fig_pair` and `fig_key_row` (a figure-level key
+sized in millimetres), and panel headings are now explicitly plain weight. The Figure 2 map was regenerated afterwards: its SVG and PNG are
+byte-identical, so it is unchanged.

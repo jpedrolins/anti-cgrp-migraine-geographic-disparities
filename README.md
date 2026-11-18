@@ -80,6 +80,16 @@ Rscript figure2_global_distribution.R ../registry_validation figures/figure2
 
 See CODEBOOK.md, Part E. `figure2_vertical.R` is the previous version.
 
+Figure 3 (observed participation share vs share of migraine YLDs, with O/E, by
+WHO region and World Bank income group) is produced by
+`figure3_burden_representation.R` into `figures/figure3/`; it validates every
+value against the release and manuscript Table 2 before drawing (CODEBOOK.md,
+Part F). `build_figure3.R` is the previous income-only version.
+
+```sh
+Rscript figure3_burden_representation.R ../registry_validation figures/figure3
+```
+
 ## Development and citation
 
 Updates are tracked through Git commits. This working repository is not a claim

@@ -77,7 +77,8 @@ def main():
         tasks.append((sys.executable, 'clustered_analysis.py'))
     if args.figures:
         tasks.extend(('Rscript', name) for name in [
-            'figure2_vertical.R', 'figure2_global_distribution.R', 'build_figure3.R', 'build_figure_4panel.R',
+            'figure2_vertical.R', 'figure2_global_distribution.R', 'build_figure3.R',
+            'figure3_burden_representation.R', 'build_figure_4panel.R',
             'build_supplementary_drug_figure.R', 'build_supplementary_income_forest.R', 'temporal_income.R'])
     for task in tasks:
         print('Running:', ' '.join(task), flush=True)
