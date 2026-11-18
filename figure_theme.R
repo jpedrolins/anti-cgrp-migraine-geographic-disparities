@@ -71,6 +71,12 @@ fig_world_region <- c("Africa" = "#332288", "Asia" = "#DDCC77", "Europe" = "#117
                       "North America" = "#88CCEE",
                       "Latin America and the Caribbean" = "#CC6677", "Oceania" = "#AA4499")
 
+# WHO regions for country scatterplots (same six regions as Figure 3), Paul
+# Tol's muted colour-blind-safe scheme.
+fig_who_region <- c("Africa" = "#332288", "Americas" = "#CC6677",
+                    "Eastern Mediterranean" = "#DDCC77", "Europe" = "#117733",
+                    "South-East Asia" = "#88CCEE", "Western Pacific" = "#AA4499")
+
 # Qualitative series for grouped bars / multi-series plots:
 # navy, mid-blue, slate, warm accent. Use in this order; max 4 series.
 fig_series <- c("#14305A", "#6489BA", "#8A939E", "#A8653F")

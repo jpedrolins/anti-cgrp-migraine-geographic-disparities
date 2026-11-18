@@ -15,8 +15,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 46023,
-      "sha256": "7e98dc1617c05de63a6204e9680199200bef58c190091ebe9dd350755a00f5c0"
+      "bytes": 47926,
+      "sha256": "2968194af7e9911d95d299dc535990906dd763d9a286a8d21bd34c9624ea9f5e"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -130,8 +130,8 @@
     },
     {
       "file": "figure_theme.R",
-      "bytes": 13036,
-      "sha256": "c25c2c07f5d8a8bd3fec247dbff4f41c00ad3b14accd5bceb7442090c2e4eed6"
+      "bytes": 13380,
+      "sha256": "b5204c4819690bb747f2d86f102897983c2d12047d70d145769550b20b7f31c9"
     },
     {
       "file": "figure2_global_distribution.R",
@@ -205,38 +205,38 @@
     },
     {
       "file": "figure4_socioeconomic.R",
-      "bytes": 21237,
-      "sha256": "bfed28fd8d7f801368449900fbac4628e68a79b00c0ae45c7a9678ce3cc0ae33"
+      "bytes": 21461,
+      "sha256": "5bd09737cbc39e81fb652a7b4e759029d4df162fabf467e6dd490709fef3b6c1"
     },
     {
       "file": "figures/figure4/Figure_4_legend_proposed.md",
-      "bytes": 2452,
-      "sha256": "04c7b1634f3cc7b635d762c6484de08ba488e666c4b033eb1bbe31cff79dd51a"
+      "bytes": 2518,
+      "sha256": "ab0b0ba32d38741d6de9af41f412992da4af4a8586c0e78b2eca33b804325321"
     },
     {
       "file": "figures/figure4/Figure_4_socioeconomic_v3.pdf",
-      "bytes": 183084,
-      "sha256": "57d3c9b7ccd8d11c1acc0024e27e8a638769f39a534bbc67cadb3a5e1f3d1145"
+      "bytes": 193162,
+      "sha256": "dd87764e0961d2cc4bb48125ae674251b37111b44081f04c4cbfc15ad4bb7aaa"
     },
     {
       "file": "figures/figure4/Figure_4_socioeconomic_v3.png",
-      "bytes": 1359674,
-      "sha256": "1aaebbcc9cd878336215d0af25dfb77031e0e3ac75f003ea508fd9c31aff3bf6"
+      "bytes": 1433348,
+      "sha256": "7707d10bc2e0693559ef6f38211850998f9b45a031de5d2d340e95ecb3a05937"
     },
     {
       "file": "figures/figure4/Figure_4_socioeconomic_v3.svg",
-      "bytes": 280706,
-      "sha256": "1b26850745ad4741dbaea85b6974bbbd55540519329e61d7e00d6aa686c306b7"
+      "bytes": 355044,
+      "sha256": "563bef96abbad9c6686091a473b5463baa1a0d9b09d380f518b7c43a8fb4240f"
     },
     {
       "file": "figures/figure4/Figure_4_socioeconomic_v3_plot_data.csv",
-      "bytes": 59529,
-      "sha256": "98416e178b8ee74c68eadcabe1c0c5db0139685d1d0815a3c5ab8774125edf0e"
+      "bytes": 59853,
+      "sha256": "e6dc04c553ae608876bd5a585c32825084d3f441e0450a7e4d90909f56b617bb"
     },
     {
       "file": "figures/figure4/Figure_4_socioeconomic_v3_validation.json",
-      "bytes": 3159,
-      "sha256": "01f8880a9dd3b92fe5fd2d0dbed88bccfc3acf802539778c3cbcd46183bd738c"
+      "bytes": 3324,
+      "sha256": "f587efa82c5d5b22d6d815dc7c985f9f21e3e229501879097ad5ec450a51ae4a"
     }
   ],
   "excluded_inputs": [

@@ -1,4 +1,4 @@
-# Figure 4 — caption (v3, four panels)
+# Figure 4 — caption (v3, four panels; not yet applied: the manuscript still says "world region" and "three")
 
 **Figure 4. Socioeconomic gradients in migraine burden-adjusted anti-CGRP monoclonal
 antibody trial participation.** Each point is a WHO Member State with available indicator
@@ -15,14 +15,14 @@ number expected if participations were distributed in proportion to each country
 migraine years lived with disability (YLDs; GBD 2023, 2023); O/E = 1 (dashed line) indicates
 representation proportional to burden. Positive O/E values are plotted on a logarithmic
 scale; countries without participation (O/E = 0) are shown in the shaded strip below the axis
-break, where vertical position is arbitrary and only reduces overlap. Color indicates world
+break, where vertical position is arbitrary and only reduces overlap. Color indicates WHO
 region; point area is proportional to expected participations. Lines show the fitted means
 of separate negative binomial models of participations with log expected participations as
 an offset, and shaded bands show their 95% confidence intervals (HC3 robust standard errors,
 Wald); fitted values below 0.035 are not drawn. Incidence rate ratios (IRRs) are expressed per
 0.1-unit HDI increase, per doubling of GDP per capita, per 10-point HAQ increase and per
 doubling of R&D expenditure (all P < 0.001). In each panel the labeled countries (ISO3 codes)
-are the three highest O/E ratios, the three lowest positive O/E ratios and the three largest
+are the five highest O/E ratios, the five lowest positive O/E ratios and the five largest
 expected counts among countries without participation. Associations are country-level and
 do not establish causality.
 

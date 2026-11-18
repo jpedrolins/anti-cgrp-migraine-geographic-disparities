@@ -1,6 +1,6 @@
 {
   "figure": "Figure 4 v3",
-  "generated": "2026-11-17T22:34:31-0300",
+  "generated": "2026-11-17T23:06:16-0300",
   "scope": "Graphical refinement; models refitted with the validated specification and checked against reference outputs.",
   "models": {
     "HDI": {
@@ -13,7 +13,7 @@
       "wald_upper_95": 10.5173361922396,
       "p": 3.30930462494852e-45,
       "theta": 0.809712169086119,
-      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+      "labelled": ["DNK", "FIN", "GEO", "ISL", "CZE", "IND", "CHN", "IRN", "PHL", "VNM", "IDN", "BRA", "NGA", "PAK", "BGD"]
     },
     "GDP": {
       "model": "GDP per doubling",
@@ -25,7 +25,7 @@
       "wald_upper_95": 7.05247450166781,
       "p": 4.92660513690367e-25,
       "theta": 0.490375859869201,
-      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+      "labelled": ["DNK", "FIN", "GEO", "ISL", "CZE", "IND", "CHN", "IRN", "PHL", "VNM", "IDN", "BRA", "NGA", "PAK", "BGD"]
     },
     "HAQ": {
       "model": "HAQ per 10 points",
@@ -37,7 +37,7 @@
       "wald_upper_95": 3.73433768817253,
       "p": 3.08519578396584e-25,
       "theta": 0.598663828091812,
-      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+      "labelled": ["DNK", "FIN", "GEO", "ISL", "CZE", "IND", "CHN", "IRN", "PHL", "VNM", "IDN", "BRA", "NGA", "PAK", "BGD"]
     },
     "RD": {
       "model": "R&D per doubling",
@@ -49,7 +49,7 @@
       "wald_upper_95": 4.34868086988491,
       "p": 6.65631302692282e-07,
       "theta": 0.432507728841395,
-      "labelled": ["DNK", "FIN", "GEO", "IND", "CHN", "IRN", "IDN", "BRA", "NGA"]
+      "labelled": ["DNK", "FIN", "GEO", "ISL", "CZE", "IND", "CHN", "IRN", "PHL", "VNM", "IDN", "BRA", "NGA", "PAK", "EGY"]
     }
   },
   "validation": {
@@ -58,7 +58,7 @@
     "table3_reconciled": true,
     "shared_display": {
       "y_positive_range": [0.035, 100],
-      "zero_strip_centre": -1.81593195564972,
+      "zero_strip_centre": -1.86593195564972,
       "y_breaks": ["0", "0.05", "0.1", "0.5", "1", "5", "10", "50"],
       "size_limits": [9.36666562138811e-05, 83.2951982544812]
     }
@@ -72,13 +72,13 @@
   "input_sha256": {
     "country_analytic": "81b9a5479fb34641088a06d9910d34fc9e8e7920fc6d12ebab4073db1a66acf1",
     "covariates_haq_rd": "a1a8158f2f3b5b110ef44da363b2d9d2be2e01eadc14010cb213080cf4774d60",
-    "region_mapping": "bad96957d7ce03d278e965694410e42f946a6fe520de81fa74cb8d6b96ac58fc",
+    "who_regions": "5397e2b05a04aa560e03187f94f0713ab0172118ebdf0de26f494c0071ebc356",
     "nb_reference": "14d1e7b664db557d5fa8df030fb90467d15a96e7c8d0678cce54118dab18c67b",
     "haq_rd_reference": "a068bc2619ea9c41e80188f92ae326a7b4d5faa7941af29c5be1ab66eab5e5d0"
   },
   "output_sha256": {
-    "Figure_4_socioeconomic_v3.pdf": "57d3c9b7ccd8d11c1acc0024e27e8a638769f39a534bbc67cadb3a5e1f3d1145",
-    "Figure_4_socioeconomic_v3.svg": "1b26850745ad4741dbaea85b6974bbbd55540519329e61d7e00d6aa686c306b7",
-    "Figure_4_socioeconomic_v3.png": "1aaebbcc9cd878336215d0af25dfb77031e0e3ac75f003ea508fd9c31aff3bf6"
+    "Figure_4_socioeconomic_v3.pdf": "dd87764e0961d2cc4bb48125ae674251b37111b44081f04c4cbfc15ad4bb7aaa",
+    "Figure_4_socioeconomic_v3.svg": "563bef96abbad9c6686091a473b5463baa1a0d9b09d380f518b7c43a8fb4240f",
+    "Figure_4_socioeconomic_v3.png": "7707d10bc2e0693559ef6f38211850998f9b45a031de5d2d340e95ecb3a05937"
   }
 }

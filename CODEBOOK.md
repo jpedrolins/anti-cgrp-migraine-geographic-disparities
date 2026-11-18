@@ -704,3 +704,38 @@ Rscript figure4_socioeconomic.R ../full_reproduction figures
 
 This requires the reviewed external inputs (DATA_ACCESS.md). The caption is in
 `figures/figure4/Figure_4_legend_proposed.md`.
+
+## Part H update: WHO regions, size key and five labels per criterion (17 November 2026)
+
+Investigator requests, all graphical:
+
+- **Point colour = WHO region** (Africa, Americas, Eastern Mediterranean, Europe,
+  South-East Asia, Western Pacific).
+  - Source: the analysis file's `who_region`, which the script checks country by
+    country against `source_data/who_regions.csv`. These are the same six
+    regions as Figure 3.
+  - Palette: Paul Tol muted (`fig_who_region` in `figure_theme.R`).
+  - This replaces the continental "world region" grouping (`region_plot_mapping.csv`),
+    which is no longer read. Visible consequences: Georgia (WHO European Region)
+    is now coloured as Europe; India is South-East Asia; China is Western Pacific.
+  - The plot-data column is now `who_region`.
+- **Size key** steps: 1, 2, 5, 10, 20 and 50 expected participations. Same
+  square-root scale and limits as before.
+- **Labels per criterion: 5** (was 3). Same rule otherwise. Set by `n_lab`, default 5;
+  the environment variable `FIG4_LABELS_PER_GROUP` can override it. Labelled countries:
+
+  | Panels | Five highest O/E | Five lowest positive O/E | Five largest expected among O/E = 0 |
+  |---|---|---|---|
+  | a–c | DNK, FIN, GEO, ISL, CZE | IND, CHN, IRN, PHL, VNM | IDN, BRA, NGA, PAK, BGD |
+  | d | as a–c | as a–c | IDN, BRA, NGA, PAK, EGY (Bangladesh has no R&D value) |
+
+- **Label legibility:**
+  - Labels are bold, with a wider white halo (0.16) and darker, slightly heavier
+    leader lines (0.28).
+  - Labelled points get a heavier ring (0.4).
+  - The gap above the zero strip, where zero-participation labels sit, was
+    widened from 0.19 to 0.24 log10 units.
+
+Models, IRRs, CIs, n, axes and the zero strip are unchanged, and all validation
+checks still pass. The caption in `Figure_4_legend_proposed.md` now says "WHO
+region" and "five". The manuscript caption has not been updated yet.

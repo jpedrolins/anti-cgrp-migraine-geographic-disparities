@@ -42,7 +42,7 @@ fail <- function(msg) stop("Validation failed: ", msg, call. = FALSE)
 # ---------------------------------------------------------------------------
 d <- read.csv(file.path(src, "results/country_analytic_with_yld_bounds_v1.csv"), check.names = FALSE)
 cv <- read.csv(file.path(src, "covariates_haq_rd.csv"))
-mapping <- read.csv(file.path(src, "source/region_plot_mapping.csv"))
+who_regions <- read.csv(file.path(src, "source_data/who_regions.csv"))
 oe_public <- read_csv(file.path(src, "results/country_expected_oe_all_scenarios.csv"),
                       show_col_types = FALSE) |> filter(scenario == "Point")
 ref_nb <- read.csv(file.path(src, "results/negative_binomial_models_all_scenarios.csv"))
@@ -65,14 +65,12 @@ if (any((d$observed == 0) != (d$oe_point == 0))) fail("zero participations not e
 checks$oe_matches_public_results <- TRUE
 checks$exact_zero_countries <- sum(d$oe_point == 0)
 
-# World region (continental grouping from region_plot_mapping.csv; the four
-# Member States absent from that file are assigned exactly as in
-# build_figure_4panel.R).
-d$world_region <- mapping$world_region[match(d$ISO3, mapping$country_iso3)]
-extra <- c(COK = "Oceania", NIU = "Oceania", MCO = "Europe", PRK = "Asia")
-d$world_region[d$ISO3 %in% names(extra)] <- extra[d$ISO3[d$ISO3 %in% names(extra)]]
-if (anyNA(d$world_region) || !all(d$world_region %in% names(fig_world_region)))
-  fail("world region")
+# WHO region (the analysis file's who_region, cross-checked against the
+# official membership list in source_data/who_regions.csv).
+d$region <- d$who_region
+if (anyNA(d$region) || !all(d$region %in% names(fig_who_region)) ||
+    any(d$region != who_regions$who_region[match(d$ISO3, who_regions$country_iso3)]))
+  fail("WHO region")
 
 d$hdi <- d[["HDI, period mean"]]
 d$gdp <- d[["GDP per capita, PPP-adjusted, period mean"]]
@@ -184,7 +182,7 @@ checks$table3_reconciled <- TRUE
 pos_all <- unlist(lapply(M, function(x) x$data$oe_point[x$data$oe_point > 0]))
 y_lo <- log10(0.035); y_hi <- log10(100)
 if (min(pos_all) < 10^y_lo || max(pos_all) > 10^y_hi) fail("positive O/E outside axis range")
-gap <- 0.19; half <- 0.17
+gap <- 0.24; half <- 0.17
 y_zero <- y_lo - gap - half
 y_breaks <- c(y_zero, log10(c(0.05, 0.1, 0.5, 1, 5, 10, 50)))
 y_labels <- c("0", "0.05", "0.1", "0.5", "1", "5", "10", "50")
@@ -194,14 +192,17 @@ zero_offset <- setNames(runif(nrow(d), -0.75 * half, 0.75 * half), sort(d$ISO3))
 
 size_limits <- range(d$expected_point)
 size_range <- c(0.9, 3.8)   # mm, sqrt scale; shared by points and label repulsion
+# Countries labelled per criterion (default 5, chosen by the investigator on
+# 17 November 2026; FIG4_LABELS_PER_GROUP overrides).
+n_lab <- as.integer(Sys.getenv("FIG4_LABELS_PER_GROUP", "5"))
 label_rule <- function(p) {
   bind_rows(
-    p |> filter(oe_point > 0) |> arrange(desc(oe_point), ISO3) |> slice_head(n = 3) |>
-      mutate(label_reason = "Three highest O/E"),
-    p |> filter(oe_point > 0) |> arrange(oe_point, ISO3) |> slice_head(n = 3) |>
-      mutate(label_reason = "Three lowest positive O/E"),
-    p |> filter(oe_point == 0) |> arrange(desc(expected_point), ISO3) |> slice_head(n = 3) |>
-      mutate(label_reason = "Three highest expected counts with O/E = 0")
+    p |> filter(oe_point > 0) |> arrange(desc(oe_point), ISO3) |> slice_head(n = n_lab) |>
+      mutate(label_reason = sprintf("%d highest O/E", n_lab)),
+    p |> filter(oe_point > 0) |> arrange(oe_point, ISO3) |> slice_head(n = n_lab) |>
+      mutate(label_reason = sprintf("%d lowest positive O/E", n_lab)),
+    p |> filter(oe_point == 0) |> arrange(desc(expected_point), ISO3) |> slice_head(n = n_lab) |>
+      mutate(label_reason = sprintf("%d highest expected counts with O/E = 0", n_lab))
   ) |> distinct(ISO3, .keep_all = TRUE) |> select(ISO3, label_reason)
 }
 
@@ -212,7 +213,7 @@ draw <- function(mod, tag, show_y = TRUE) {
   s <- mod$spec
   p <- mod$data |>
     mutate(y = ifelse(oe_point > 0, log10(oe_point), y_zero + zero_offset[ISO3]),
-           world_region = factor(world_region, levels = names(fig_world_region)))
+           region = factor(region, levels = names(fig_who_region)))
   labs_d <- label_rule(p)
   p$label_reason <- labs_d$label_reason[match(p$ISO3, labs_d$ISO3)]
   # Positive-scale label layer: every positive point is included (unlabelled
@@ -247,10 +248,12 @@ draw <- function(mod, tag, show_y = TRUE) {
   curve_pts <- line[seq(1, nrow(line), by = 8), ] |> transmute(xvar, y = f, lab = "", psize = 0.4)
   lab_pos <- bind_rows(lab_pos |> select(xvar, y, lab, psize), ann_block, curve_pts)
   lab_zero <- lab_zero |> mutate(psize = psize(expected_point))
-  repel <- list(family = fig_font, size = fig_size$note / .pt, colour = fig_col$ink,
-                seed = 20261117, min.segment.length = 0, segment.size = 0.2,
-                segment.colour = fig_col$muted, max.overlaps = Inf,
-                bg.color = "white", bg.r = 0.12)
+  # Labels: bold ISO3 codes with a white halo and darker, slightly heavier
+  # leader lines, so they read clearly against points, band and gridlines.
+  repel <- list(family = fig_font, fontface = "bold", size = fig_size$note / .pt,
+                colour = fig_col$ink, seed = 20261117, min.segment.length = 0,
+                segment.size = 0.28, segment.colour = "#4A5462", max.overlaps = Inf,
+                bg.color = "white", bg.r = 0.16)
 
   ggplot(p, aes(xvar, y)) +
     # zero strip, gridlines on the positive scale only, O/E = 1 reference
@@ -262,11 +265,11 @@ draw <- function(mod, tag, show_y = TRUE) {
                linewidth = fig_lwd$ref) +
     geom_ribbon(data = band, aes(x = xvar, ymin = l, ymax = h), inherit.aes = FALSE,
                 fill = fig_navy[1], alpha = 0.75) +
-    geom_point(aes(fill = world_region, size = expected_point), shape = 21,
+    geom_point(aes(fill = region, size = expected_point), shape = 21,
                colour = "white", stroke = 0.2, alpha = 0.9) +
     # labelled countries get a thin dark ring so they can be found among others
     geom_point(data = p |> filter(!is.na(label_reason)), aes(size = expected_point),
-               shape = 21, fill = NA, colour = fig_col$ink, stroke = 0.35) +
+               shape = 21, fill = NA, colour = fig_col$ink, stroke = 0.4) +
     geom_line(data = line, aes(x = xvar, y = f), inherit.aes = FALSE,
               colour = fig_pair[["observed"]], linewidth = 0.55) +
     do.call(geom_text_repel, c(list(data = lab_pos, mapping = aes(label = lab, point.size = psize),
@@ -286,9 +289,9 @@ draw <- function(mod, tag, show_y = TRUE) {
     annotate("text", x = ann_x, y = y_hi - 0.05, hjust = 0, vjust = 1, lineheight = 1.1,
              family = fig_font, size = fig_size$text / .pt, colour = fig_col$ink,
              label = sprintf("%s\n%s\nn = %d countries", s$irr_text, fmt_ci(mod$est), mod$n)) +
-    scale_fill_manual(values = fig_world_region, name = "World region", drop = FALSE) +
+    scale_fill_manual(values = fig_who_region, name = "WHO region", drop = FALSE) +
     scale_size_continuous(trans = "sqrt", range = size_range, limits = size_limits,
-                          breaks = c(1, 10, 50), name = "Expected participations") +
+                          breaks = c(1, 2, 5, 10, 20, 50), name = "Expected participations") +
     scale_y_continuous(breaks = y_breaks, labels = y_labels, expand = c(0, 0)) +
     xscale +
     coord_cartesian(xlim = xlim, ylim = c(y_zero - half, y_hi), expand = FALSE, clip = "on") +
@@ -352,7 +355,7 @@ write_out <- function(stem, keys, files, figure) {
     x <- M[[k]]
     lr <- label_rule(x$data)
     x$data |>
-      transmute(model = x$spec$ref, ISO3, country = Country, world_region, observed,
+      transmute(model = x$spec$ref, ISO3, country = Country, who_region = region, observed,
                 expected = expected_point, oe = oe_point,
                 zero_strip_display_offset = ifelse(oe_point == 0, zero_offset[ISO3], NA),
                 label_reason = lr$label_reason[match(ISO3, lr$ISO3)])
@@ -367,7 +370,7 @@ write_out <- function(stem, keys, files, figure) {
     input_sha256 = list(
       country_analytic = sha256(file.path(src, "results/country_analytic_with_yld_bounds_v1.csv")),
       covariates_haq_rd = sha256(file.path(src, "covariates_haq_rd.csv")),
-      region_mapping = sha256(file.path(src, "source/region_plot_mapping.csv")),
+      who_regions = sha256(file.path(src, "source_data/who_regions.csv")),
       nb_reference = sha256(file.path(src, "results/negative_binomial_models_all_scenarios.csv")),
       haq_rd_reference = sha256(file.path(src, "results/bounding_haq_rd.csv"))),
     output_sha256 = as.list(setNames(vapply(files, sha256, ""), basename(files)))
