@@ -1,0 +1,115 @@
+{
+  "figure": "Supplementary Figure S3",
+  "generated": "2026-11-18T16:16:04-0300",
+  "status": "Anti-CGRP column: 132 deduplicated records (477); WHO columns rebuilt from the Global Observatory exports.",
+  "validation": {
+    "totals": {
+      "anti_cgrp": 477,
+      "anti_eligible": 453,
+      "anti_pre": 747,
+      "who_all_trials": 1464719,
+      "who_migraine": 4090,
+      "who_neuropsychiatric": 163031
+    },
+    "shares_sum_to_one": true,
+    "unclassified_retained": {
+      "anti_cgrp": 0,
+      "anti_eligible": 0,
+      "anti_pre": 0,
+      "who_all_trials": 45,
+      "who_migraine": 0,
+      "who_neuropsychiatric": 12
+    },
+    "non_member_areas_excluded": {
+      "who_migraine": 187,
+      "who_neuropsychiatric": 8671,
+      "who_all_trials": 79140
+    },
+    "anti_cgrp_source": "All 132 deduplicated records before eligibility assessment (5 Aug 2026 snapshot)",
+    "anti_cgrp_pairs": {
+      "exclude": 24,
+      "include": 453
+    },
+    "anti_cgrp_sets": {
+      "eligible_108": 453,
+      "post_dedup_132": 477,
+      "pre_dedup_167": 747
+    },
+    "primary_cohort_total": 453,
+    "difference_vs_S9": {
+      "anti_cgrp": {
+        "High income": 9,
+        "Upper-middle income": 1,
+        "Lower-middle income": 0,
+        "Low income": 0,
+        "Income group unavailable": 0
+      },
+      "anti_eligible": {
+        "High income": "NA",
+        "Upper-middle income": "NA",
+        "Lower-middle income": "NA",
+        "Low income": "NA",
+        "Income group unavailable": "NA"
+      },
+      "anti_pre": {
+        "High income": "NA",
+        "Upper-middle income": "NA",
+        "Lower-middle income": "NA",
+        "Low income": "NA",
+        "Income group unavailable": "NA"
+      },
+      "who_all_trials": {
+        "High income": -14873,
+        "Upper-middle income": -18522,
+        "Lower-middle income": -13685,
+        "Low income": -255,
+        "Income group unavailable": -2
+      },
+      "who_migraine": {
+        "High income": 0,
+        "Upper-middle income": 0,
+        "Lower-middle income": 0,
+        "Low income": 0,
+        "Income group unavailable": 0
+      },
+      "who_neuropsychiatric": {
+        "High income": 0,
+        "Upper-middle income": 6,
+        "Lower-middle income": 0,
+        "Low income": 0,
+        "Income group unavailable": 0
+      }
+    }
+  },
+  "variant": "record_sets",
+  "hic_difference_pp": {
+    "anti_pre minus who_migraine": 20.3,
+    "anti_cgrp minus who_migraine": 19.95,
+    "anti_eligible minus who_migraine": 19.69,
+    "anti_pre minus who_neuropsychiatric": 19.73,
+    "anti_cgrp minus who_neuropsychiatric": 19.37,
+    "anti_eligible minus who_neuropsychiatric": 19.11,
+    "anti_pre minus who_all_trials": 23.46,
+    "anti_cgrp minus who_all_trials": 23.1,
+    "anti_eligible minus who_all_trials": 22.84
+  },
+  "who_input_files": {
+    "who_migraine": {
+      "file": "Trials by country.csv",
+      "sha256": "7bb2907715c1b8484f53e47659ceb40cee2caea10fcf1f37830fdf4ec513e30c"
+    },
+    "who_neuropsychiatric": {
+      "file": "Neuropsy - Trials by country (1).csv",
+      "sha256": "141b69104055ac29aad60313d4bd8127889cfe6afc5239b70f535c5f97f22084"
+    },
+    "who_all_trials": {
+      "file": "Trials per country.csv",
+      "sha256": "3549b9cedf9196565b6cb0c8201dff93712ec28950abfbeaf8ea79c8b56d58e8"
+    }
+  },
+  "output_sha256": {
+    "Figure_S3_record_selection_stages.pdf": "9f853819d79b6c8c59751b793c2232fe177cfae1481801b28a6a26456d226c6f",
+    "Figure_S3_record_selection_stages.svg": "2e84fb9b67b450c91fc45513021e120f64a2069346af36a5c59a94e03a8b9a26",
+    "Figure_S3_record_selection_stages.png": "14e30e9620b61f5acc90ebe49c25ac6273ed56e2d323af58e2bd169e415e11ba"
+  }
+}

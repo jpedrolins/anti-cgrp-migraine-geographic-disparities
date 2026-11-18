@@ -1,0 +1,21 @@
+drug,income_group,n,share,trials,countries,n_participations,share_pct_2dp
+Erenumab,High income,153,0.8742857142857143,37,42,175,87.43
+Erenumab,Upper-middle income,16,0.09142857142857143,37,42,175,9.14
+Erenumab,Lower-middle income,6,0.03428571428571429,37,42,175,3.43
+Erenumab,Low income,0,0,37,42,175,0
+Eptinezumab,High income,81,0.7788461538461539,22,31,104,77.88
+Eptinezumab,Upper-middle income,14,0.1346153846153846,22,31,104,13.46
+Eptinezumab,Lower-middle income,9,0.08653846153846154,22,31,104,8.65
+Eptinezumab,Low income,0,0,22,31,104,0
+Fremanezumab,High income,89,0.9368421052631579,23,21,95,93.68
+Fremanezumab,Upper-middle income,5,0.05263157894736842,23,21,95,5.26
+Fremanezumab,Lower-middle income,1,0.010526315789473684,23,21,95,1.05
+Fremanezumab,Low income,0,0,23,21,95,0
+Galcanezumab,High income,63,0.863013698630137,19,21,73,86.3
+Galcanezumab,Upper-middle income,7,0.0958904109589041,19,21,73,9.59
+Galcanezumab,Lower-middle income,3,0.0410958904109589,19,21,73,4.11
+Galcanezumab,Low income,0,0,19,21,73,0
+Multiple anti-CGRP mAbs,High income,5,1,6,3,5,100
+Multiple anti-CGRP mAbs,Upper-middle income,0,0,6,3,5,0
+Multiple anti-CGRP mAbs,Lower-middle income,0,0,6,3,5,0
+Multiple anti-CGRP mAbs,Low income,0,0,6,3,5,0

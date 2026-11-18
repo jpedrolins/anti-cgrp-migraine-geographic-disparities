@@ -1,0 +1,27 @@
+group,subgroup,who_member_states,participations
+Study phase,1,5,15
+Study phase,2,14,38
+Study phase,2/3,1,2
+Study phase,3,43,301
+Study phase,4,30,89
+Study phase,Not applicable,5,7
+Study phase,Not reported,1,1
+Sponsor type,Industry,46,426
+Sponsor type,Non-industry,4,20
+Sponsor type,Unclear/not reported,7,7
+Recruitment status,Completed,45,361
+Recruitment status,Recruiting,17,41
+Recruitment status,"Active, not recruiting",20,37
+Recruitment status,Not yet recruiting,0,0
+Recruitment status,Terminated,1,4
+Recruitment status,Withdrawn,2,2
+Recruitment status,Suspended,0,0
+Recruitment status,Unknown/not reported,5,8
+FDA approval period,Before approval,39,193
+FDA approval period,On/after approval,45,260
+FDA approval period,Missing or insufficient precision,0,0
+Anti-CGRP antibody,erenumab,42,180
+Anti-CGRP antibody,fremanezumab,22,98
+Anti-CGRP antibody,galcanezumab,22,78
+Anti-CGRP antibody,eptinezumab,31,105
+Anti-CGRP antibody,Not specified,1,1

@@ -1,0 +1,21 @@
+dataset,income_group,n
+anti_cgrp_467,High income,405
+anti_cgrp_467,Upper-middle income,43
+anti_cgrp_467,Lower-middle income,19
+anti_cgrp_467,Low income,0
+anti_cgrp_467,Income group unavailable,0
+who_migraine,High income,2734
+who_migraine,Upper-middle income,845
+who_migraine,Lower-middle income,509
+who_migraine,Low income,2
+who_migraine,Income group unavailable,0
+who_neuropsychiatric,High income,109915
+who_neuropsychiatric,Upper-middle income,40108
+who_neuropsychiatric,Lower-middle income,12430
+who_neuropsychiatric,Low income,560
+who_neuropsychiatric,Income group unavailable,12
+who_all_trials,High income,947769
+who_all_trials,Upper-middle income,385112
+who_all_trials,Lower-middle income,169930
+who_all_trials,Low income,9198
+who_all_trials,Income group unavailable,47

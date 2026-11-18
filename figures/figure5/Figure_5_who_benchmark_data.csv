@@ -1,0 +1,21 @@
+dataset,income_group,n,total,share,share_pct_2dp
+anti_cgrp,High income,414,477,0.8679245283018868,86.79
+anti_cgrp,Upper-middle income,44,477,0.09224318658280922,9.22
+anti_cgrp,Lower-middle income,19,477,0.039832285115303984,3.98
+anti_cgrp,Low income,0,477,0,0
+anti_cgrp,Income group unavailable,0,477,0,0
+who_all_trials,High income,932896,1464719,0.6369112437266125,63.69
+who_all_trials,Upper-middle income,366590,1464719,0.25028008785302847,25.03
+who_all_trials,Lower-middle income,156245,1464719,0.10667233783408285,10.67
+who_all_trials,Low income,8943,1464719,0.006105607969856334,0.61
+who_all_trials,Income group unavailable,45,1464719,3.07226164199413e-5,0
+who_migraine,High income,2734,4090,0.6684596577017115,66.85
+who_migraine,Upper-middle income,845,4090,0.20660146699266504,20.66
+who_migraine,Lower-middle income,509,4090,0.12444987775061124,12.44
+who_migraine,Low income,2,4090,4.889975550122249e-4,0.05
+who_migraine,Income group unavailable,0,4090,0,0
+who_neuropsychiatric,High income,109915,163031,0.6741969318718526,67.42
+who_neuropsychiatric,Upper-middle income,40114,163031,0.24605136446442702,24.61
+who_neuropsychiatric,Lower-middle income,12430,163031,0.07624316847716078,7.62
+who_neuropsychiatric,Low income,560,163031,0.0034349295532751438,0.34
+who_neuropsychiatric,Income group unavailable,12,163031,7.360563328446737e-5,0.01

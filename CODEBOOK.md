@@ -494,7 +494,7 @@ byte-identical, so it is unchanged.
 > **Superseded layout.** On 17 November 2026 the investigator chose a single four-panel
 > figure; see Part H. The model, axis, zero-strip, colour, size and label-rule
 > specifications below still apply. Supplementary Figure S3 was never adopted: its files
-> were removed and S1–S2 remain the only supplementary figures.
+> were removed. (The number S3 was later reused for a different figure; see Part I.)
 
 ## Status and scope
 
@@ -739,3 +739,140 @@ Investigator requests, all graphical:
 Models, IRRs, CIs, n, axes and the zero strip are unchanged, and all validation
 checks still pass. The caption in `Figure_4_legend_proposed.md` now says "WHO
 region" and "five". The manuscript caption has not been updated yet.
+
+---
+
+# Part I. Figure 5, Supplementary Figures S1 and S3, and Table 1 Panel B Member States (18 November 2026)
+
+## Figure 5: WHO clinical trial benchmarks
+
+**Purpose.** Descriptive, unadjusted comparison of the income-group distribution of
+anti-CGRP country–trial participations with three WHO ICTRP benchmarks: migraine
+trials, neuropsychiatric trials and all clinical trials.
+
+**Anti-CGRP set (investigator decision, 18 November 2026).** All **132 registry
+records retained after deduplication, before full-record eligibility assessment**
+(108 eligible trials and 24 excluded records): **477** country–trial participations.
+
+| Income group | n (%) |
+|---|---|
+| High | 414 (86.79) |
+| Upper-middle | 44 (9.22) |
+| Lower-middle | 19 (3.98) |
+| Low | 0 |
+
+This replaces two earlier versions:
+- the 467 values transcribed from Supplementary Table S9;
+- a 468 "design-relaxed" set: the 108 eligible trials plus the 15 records excluded only for study design. It is kept only as an audit trail in `figures/figure5/registry_design_relaxed_20261118/`.
+
+**Building the country–trial pairs.** `figure5_build_anti_cgrp_set.py` writes
+`figures/figure5/anti_cgrp_record_sets_pairs.csv` from the 5 August 2026 search
+snapshot. It needs restricted inputs that are not in the public zip:
+- `harmonized_registry_records.json`;
+- `deduplicated_registry_records_complete.json`;
+- `final_screening_source_snapshot_20260829.csv`.
+
+The rules:
+- **Countries:** taken from ClinicalTrials.gov location countries, or from the ICTRP
+  "Countries" field.
+- **jRCT records:** a record with no listed country is Japan (the
+  convention of the primary dataset).
+- **Member States only:** only the 194 WHO Member States are kept. Taiwan, Puerto Rico and other non-members are dropped.
+- **Rayyan duplicates:** EUCTR2020-004509-30-ES and EUCTR2020-000661-16-DK, the two duplicates removed in Rayyan (PRISMA n = 2), are excluded from the 134 deduplicated records, which leaves 132.
+- **Checks:** the script stops unless the rule, applied to the 108 eligible trials, reproduces the 453 primary pairs exactly, and unless the record set equals the 132-record screening snapshot.
+
+The CSV holds three PRISMA stages, all with income from the World Bank FY2019 classification:
+
+| `set` | Records | Pairs | High income |
+|---|---|---|---|
+| `pre_dedup_167` | 167 identified (a trial registered twice counts twice) | 747 | 651 (87.15%) |
+| `post_dedup_132` | 132 deduplicated, before eligibility (Figure 5) | 477 | 414 (86.79%) |
+| `eligible_108` | 108 eligible trials | 453 | 392 (86.53%) |
+
+**WHO benchmarks.** These are rebuilt from the WHO Global Observatory exports (UTF-16,
+tab-separated, every row duplicated):
+
+| Benchmark | Source file | Accessed | Participations | High income |
+|---|---|---|---|---|
+| Migraine | `Trials by country.csv` | 16 Nov 2026* | 4,090 | 66.85% |
+| Neuropsychiatric | `Neuropsy - Trials by country (1).csv` | 16 Nov 2026* | 163,031 | 67.42% |
+| All clinical trials | `Trials per country.csv` | 18 Nov 2026 | 1,464,719 | 63.69% |
+
+\* Access date as cited in S9; the local file timestamps are 15 November 2026, late evening.
+
+Handling of the exports:
+- **Country matching:** names are matched to the 194 Member States with aliases. Nauru appears as "Naoero" in the reference; correcting this adds 6 neuropsychiatric participations, a fix the investigator approved.
+- **Non-member areas:** areas that are not Member States are excluded. The all-trials export lists every Member State, so it is used to check that every unmatched name is a non-member.
+- **Unclassified income:** participations without an FY2019 income group (12 neuropsychiatric, 45 all trials) stay in the denominators.
+- **S9 update:** Supplementary Table S9 previously reported 1,512,056 / 62.68% for all trials, and the source export for those values was not found. S9 now uses the traceable reconstruction (18 November 2026).
+
+**Differences in high-income share** (anti-CGRP minus benchmark, percentage points):
+
+| Benchmark | 167 records | 132 records (Figure 5) | 108 eligible |
+|---|---|---|---|
+| Migraine | +20.30 | +19.95 | +19.69 |
+| Neuropsychiatric | +19.73 | +19.37 | +19.11 |
+| All clinical trials | +23.46 | +23.10 | +22.84 |
+
+**Script and layout.** `Rscript figure5_who_benchmark.R <data_dir> <who_export_dir> [output_dir] [variant]`.
+
+The layout follows Figure 3's conventions:
+- 100% stacked bars with the `fig_income` navy ramp and a single key row;
+- right-hand columns "n" and "Difference, pp";
+- a rule separating the anti-CGRP bar from the benchmarks;
+- size 174 × 57 mm.
+
+The anti-CGRP bar is labelled "Anti-CGRP mAb records", because the set includes
+observational studies and registries. The "Draft" marker was removed on 18 November 2026.
+
+Outputs: `figures/figure5/Figure_5_who_benchmark.{pdf,svg,png,_data.csv,_validation.json}`.
+Status notes are in `figures/figure5/PROVISIONAL_STATUS.md`.
+
+## Supplementary Figure S3: three record-selection stages
+
+`figure5_who_benchmark.R` with variant `record_sets` draws three anti-CGRP bars
+next to the same three WHO benchmarks:
+- (a) 167 records before deduplication;
+- (b) 132 records after deduplication;
+- (c) 108 eligible trials.
+
+The difference columns ("vs a", "vs b", "vs c") give the difference in high-income share between each benchmark and each anti-CGRP set. Lower-middle-income segments of sets a–c (3.5%, 4.0% and 4.2%) are too narrow to label, so the caption reports them.
+
+Purpose: to show reviewers that comparing a processed cohort with the rawer ICTRP
+aggregates does not drive the result. Across the three anti-CGRP sets, the high-income share varies by 0.6 percentage points, and its difference from each benchmark by less than 1 point.
+
+Outputs: `figures/figure5/Figure_S3_record_selection_stages.*`. Both the figure and its caption are in the supplement.
+
+## Supplementary Figure S1: redesign (candidate; not yet in the supplement)
+
+`Rscript figureS1_mab_income.R <data_dir> [output_dir]` redraws S1 as one chart
+in the shared design system, in place of the two-panel layout of
+`build_supplementary_drug_figure.R` (which is unchanged).
+
+The layout:
+- 100% stacked bars by income group, one per mutually exclusive antibody category;
+- right-hand columns: Trials, Countries (WHO Member States reached) and Participations;
+- "Multiple anti-CGRP mAbs" separated by a rule.
+
+Data and classification are the same as before: `source/study_agent_records.json`,
+`source/country_record_pairs.csv` and the two reviewed agent corrections (NCT04659226 → erenumab, NCT07071506 → fremanezumab). The script stops unless it reproduces `results/figure_s1_mab_data.csv`.
+
+What the figure shows:
+- It displays 452 participations. The unspecified-mAb trial (1 participation) is not shown.
+- One fremanezumab trial and one multiple-mAb trial have no participating Member State.
+
+Outputs: `figures/figureS1/Figure_S1_mab_income.*`.
+
+## Table 1 Panel B: WHO Member States per subgroup
+
+A column "WHO Member States n" was added between "Trials n" and
+"Participations n" (manuscript, 18 November 2026).
+
+The column definition:
+- **Value:** the number of distinct WHO Member States with at least one country–trial participation in the subgroup.
+- **Not additive across rows:** a country is counted once in each subgroup in which it participates. Overall there are 47 Member States.
+- **Antibody rows overlap:** as in the rest of the table, a trial evaluating several antibodies counts in each antibody's row. Fremanezumab and galcanezumab therefore show 22 Member States here, against 21 in the mutually exclusive categories of Figure S1.
+
+`python3 -I table1_member_states.py <data_dir> tables/table1_panel_b_member_states.csv`
+computes the column from `country_record_453.csv`. It stops unless its participation and high-income counts equal the published Panel B values in every row. The table note was extended accordingly.
+

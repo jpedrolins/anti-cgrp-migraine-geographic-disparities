@@ -77,6 +77,13 @@ fig_who_region <- c("Africa" = "#332288", "Americas" = "#CC6677",
                     "Eastern Mediterranean" = "#DDCC77", "Europe" = "#117733",
                     "South-East Asia" = "#88CCEE", "Western Pacific" = "#AA4499")
 
+# World Bank income groups as an ordinal sequential scale on the navy ramp
+# (high income darkest), consistent with Figures 2-3; a neutral grey for
+# unclassified. Avoids warm hues that mean WHO regions in Figure 4.
+fig_income <- c("High income" = "#122C54", "Upper-middle income" = "#4F78AE",
+                "Lower-middle income" = "#9CB6D6", "Low income" = "#D6E1EE",
+                "Income group unavailable" = "#B9BFC7")
+
 # Qualitative series for grouped bars / multi-series plots:
 # navy, mid-blue, slate, warm accent. Use in this order; max 4 series.
 fig_series <- c("#14305A", "#6489BA", "#8A939E", "#A8653F")

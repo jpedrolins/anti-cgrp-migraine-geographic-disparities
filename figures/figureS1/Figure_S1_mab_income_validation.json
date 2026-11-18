@@ -1,0 +1,19 @@
+{
+  "figure": "Supplementary Figure S1",
+  "generated": "2026-11-18T19:50:57-0300",
+  "reproduces": "results/figure_s1_mab_data.csv",
+  "displayed_participations": 452,
+  "unspecified_not_displayed": {
+    "trials": 1,
+    "participations": 1
+  },
+  "trials_without_participation": {
+    "Fremanezumab": 1,
+    "Multiple anti-CGRP mAbs": 1
+  },
+  "output_sha256": {
+    "Figure_S1_mab_income.pdf": "405c64d742f6e1f5689fcbf3aa31b5f7e84346840833a8aa3fca70e72115265c",
+    "Figure_S1_mab_income.svg": "0db71e01e9b594bbf98b75c15da5c92cfda22e94df28f2afa65d0ff0ae03aef7",
+    "Figure_S1_mab_income.png": "0d7b68feac012c99f729fc724bc18d697e5d7867ea515e29b8069fb2198a7d24"
+  }
+}
