@@ -104,5 +104,6 @@ draft; its reserved DOI is not yet an active citation. The final manuscript will
 cite the specific archived code/data version that produced its reported results.
 
 For the current working code, see `CITATION.cff` and cite the relevant commit.
-No new software or documentation licence is granted by making the repository
-public; a reusable open licence remains to be approved by the investigators.
+Code is released under the MIT Licence (`LICENSE`); data, results, figures and
+documentation produced by the authors under CC BY 4.0. Third-party inputs keep
+their own terms; see `LICENSES.md`.

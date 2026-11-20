@@ -1,0 +1,46 @@
+{
+  "title": "Geographic disparities in registered clinical trials of anti-CGRP monoclonal antibodies for migraine: data and analysis code",
+  "upload_type": "software",
+  "description": "Registry-derived dataset (108 eligible trials; 453 country–trial participations across the 194 WHO Member States), analysis code, figures and supplementary tables for the systematic review of the geographic distribution of registered anti-CGRP monoclonal antibody trials for migraine relative to migraine burden. Code is released under the MIT Licence; data, results, figures and documentation produced by the authors under CC BY 4.0. Third-party inputs (IHME GBD, World Bank, UNDP, UNESCO) are not redistributed; see DATA_ACCESS.md and LICENSES.md.",
+  "creators": [
+    {
+      "name": "Lins, João Pedro Sá",
+      "orcid": "0000-0002-1126-0006"
+    },
+    {
+      "name": "Carpinelli, Lucca Passow",
+      "orcid": "0009-0009-1454-1450"
+    },
+    {
+      "name": "Makita, Luana Miyahira",
+      "orcid": "0009-0004-8728-1411"
+    },
+    {
+      "name": "Lira, Maria Clara Santana",
+      "orcid": "0009-0006-6713-8997"
+    },
+    {
+      "name": "Piovesan, Elcio Juliato",
+      "orcid": "0000-0002-0915-0430"
+    },
+    {
+      "name": "Riso, Ivy Liger",
+      "orcid": "0000-0003-4652-681X"
+    },
+    {
+      "name": "Peres, Mário Fernando Prieto",
+      "orcid": "0000-0002-0068-1905"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "migraine",
+    "calcitonin gene-related peptide",
+    "monoclonal antibodies",
+    "clinical trials",
+    "global health",
+    "health equity",
+    "trial registries"
+  ]
+}

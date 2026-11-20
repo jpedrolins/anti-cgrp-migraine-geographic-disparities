@@ -1,9 +1,17 @@
 # Rights and source attribution
 
-This is a public working research repository, not a finalized licensed release.
-Public visibility does not grant an MIT, CC BY or other open licence to project
-materials. The investigators have not yet selected such a licence. Existing
-third-party rights remain with their respective owners.
+Licences approved by the investigators on 19 November 2026:
+
+- **Code** (R and Python scripts, `figure_theme.R`): MIT Licence; see `LICENSE`.
+- **Data, results, figures and documentation produced by the authors**: Creative
+  Commons Attribution 4.0 International (CC BY 4.0),
+  https://creativecommons.org/licenses/by/4.0/. This covers the registry-derived
+  dataset (trials, country–trial pairs, classifications), the derived tables and
+  figures, the codebook and the other documentation.
+
+These licences cover only the authors' own material. Third-party inputs and
+rights remain with their owners, as set out below; values derived from IHME
+estimates keep the IHME attribution and terms.
 
 ## Third-party inputs
 
