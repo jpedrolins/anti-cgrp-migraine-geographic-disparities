@@ -876,3 +876,55 @@ The column definition:
 `python3 -I table1_member_states.py <data_dir> tables/table1_panel_b_member_states.csv`
 computes the column from `country_record_453.csv`. It stops unless its participation and high-income counts equal the published Panel B values in every row. The table note was extended accordingly.
 
+
+---
+
+# Part J. Figure 1: PRISMA 2020 flow diagram, publication version (20 November 2026)
+
+## Status and scope
+
+Presentation-only redraw of the manuscript's Figure 1. **No count, record or
+eligibility decision was changed.** The boxes, labels and counts are those of the
+adopted 108-record flow diagram (`Figure_1_PRISMA_108_editable.docx`, which is
+retained privately and not overwritten).
+
+## Files
+
+| Role | Path |
+|---|---|
+| Figure script | `figure1_prisma.py` |
+| Counts drawn (one row per number in the figure) | `figures/figure1/Figure_1_PRISMA_counts.csv` |
+| Vector PDF, SVG and 3600-px PNG | `figures/figure1/Figure_1_PRISMA_2020.*` |
+| Validation record (checks, input and output SHA-256) | `figures/figure1/Figure_1_PRISMA_2020_validation.json` |
+
+## Layout
+
+- PRISMA 2020 template colours: header #FFC000, phase labels #9CC2E5; Arial; thin black boxes.
+- Boxes in the same row share one height, and the text is centred vertically.
+- **Screening is one stage.** Every record was assessed on the complete registry entry, and the footnote says so. The template's "records screened" and "reports sought for retrieval" boxes are therefore replaced by a single "full registry records assessed for eligibility" box.
+- The figure title is not part of the image; it stays in the manuscript caption.
+
+## Checks (the script stops on any mismatch)
+
+Internal arithmetic:
+- 167 = 109 + 58;
+- 35 = 19 + 14 + 2;
+- 132 = 167 − 35;
+- 24 = sum of the seven reasons;
+- 108 = 132 − 24.
+
+Against the public package:
+- `CURRENT_RELEASE.json`: 35 duplicates, 24 exclusions, 108 records.
+- `trial_level_108.csv`: 108 unique records.
+- Supplementary Table S2: 24 rows, and the count of each reason (every S2 reason is mapped to one figure label).
+- Included and excluded identifiers do not overlap.
+
+With `--restricted <processed_dir>`, also against the restricted registry processing files:
+- `harmonized_registry_records.json`: 109 ClinicalTrials.gov and 58 ICTRP records.
+- `automatic_exact_nct_matches.csv`: 19 automated exact-NCT matches.
+- `manual_review_decisions_final.csv`: 14 pairs decided as duplicates.
+- `deduplicated_registry_records_complete.json`: 134 records = 167 − 19 − 14. The two Rayyan duplicates (Part I) then leave 132.
+
+```sh
+python3 -I figure1_prisma.py ../registry_validation figures/figure1 [--restricted <processed_dir>]
+```

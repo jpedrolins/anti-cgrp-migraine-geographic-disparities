@@ -67,6 +67,14 @@ The subgroup tests use 99,999 resamples with a recorded fixed seed.
 
 ## Figures
 
+Figure 1 (PRISMA 2020 flow diagram) is produced by `figure1_prisma.py` from
+`figures/figure1/Figure_1_PRISMA_counts.csv`. Before drawing, the script checks every
+count against the release files and Supplementary Table S2 (CODEBOOK.md, Part J):
+
+```sh
+python3 -I figure1_prisma.py ../registry_validation figures/figure1
+```
+
 `figure_theme.R` is the shared design system (typography, palette, line weights,
 export sizes) for the manuscript figures. The publication version of Figure 2
 (geographic distribution and O/E map) is produced by

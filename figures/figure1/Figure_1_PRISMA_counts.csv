@@ -1,0 +1,19 @@
+section,item,label,n,s2_reason
+identification,source,ClinicalTrials.gov,109,
+identification,source,WHO ICTRP,58,
+identification,total,Total records identified,167,
+identification,duplicates,Duplicate records removed,35,
+identification,duplicate_type,"Exact NCT matches, automated",19,
+identification,duplicate_type,"Cross-registry duplicates, manual",14,
+identification,duplicate_type,Additional duplicates identified in Rayyan,2,
+screening,assessed,Full registry records assessed for eligibility,132,
+screening,excluded,Full registry records excluded,24,
+screening,reason,Observational study,6,Wrong study design: Observational study
+screening,reason,Real-world evidence study,5,Wrong study design: Real-world evidence study
+screening,reason,Primary condition was not migraine,3,Wrong condition: Primary condition is not migraine
+screening,reason,mAb appeared only as an eligibility criterion,3,Wrong intervention role: mAb mentioned only as an eligibility criterion
+screening,reason,mAb appeared only in the background or rationale,3,Wrong intervention role: mAb mentioned only in the study background or rationale — not tested as a study arm
+screening,reason,Patient registry,3,Wrong study design: Patient registry
+screening,reason,Post-authorisation safety study,1,Wrong study design: Post-authorisation safety study (PASS)
+included,included,Studies included in review,108,
+included,reports,Registry records of included studies,108,

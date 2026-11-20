@@ -1,0 +1,36 @@
+{
+  "figure": "Figure 1",
+  "generated": "2026-11-20T01:02:35-0300",
+  "counts": "figures/figure1/Figure_1_PRISMA_counts.csv",
+  "restricted_registry_checks": true,
+  "checks": {
+    "total = ClinicalTrials.gov + WHO ICTRP": true,
+    "duplicates = sum of duplicate types": true,
+    "assessed = total - duplicates": true,
+    "excluded = sum of reasons": true,
+    "included = assessed - excluded": true,
+    "duplicates = CURRENT_RELEASE.json": true,
+    "excluded = CURRENT_RELEASE.json": true,
+    "included = CURRENT_RELEASE.json": true,
+    "included = trial_level_108.csv (unique)": true,
+    "excluded = Supplementary Table S2 rows": true,
+    "each reason = Supplementary Table S2 count": true,
+    "S2 reasons all mapped": true,
+    "included and excluded are disjoint": true,
+    "ClinicalTrials.gov = harmonized records": true,
+    "WHO ICTRP = harmonized records": true,
+    "automated exact NCT matches = automatic_exact_nct_matches.csv": true,
+    "manual duplicates = manual review decisions": true,
+    "deduplicated records = total - automated - manual": true
+  },
+  "input_sha256": {
+    "Figure_1_PRISMA_counts.csv": "9626fb4548b5460c9ca5f0a817f891b9a4a0c7184bbc332fb3e197ea086d346f",
+    "trial_level_108.csv": "c0346600f485cd5553f55e9dd764aa259b3bf63eed652cd5c9f5e92377d0b4e3",
+    "supplement_table_02.csv": "44626a01112d6503763d39972b541c3923fe41d3f81052bcb3e3b37178b48b14"
+  },
+  "output_sha256": {
+    "Figure_1_PRISMA_2020.svg": "94bfec81ea54f426971285ba95caaf22ab16a9e34e7653c67fa91510a9b7fe92",
+    "Figure_1_PRISMA_2020.png": "34ce163fb4e62d15d733a53ccaa15b68c54888085d670232b841d59b1a20ddd2",
+    "Figure_1_PRISMA_2020.pdf": "b62877520c363f1045a3728981509c1fbf76c9100928166d95f27ce1a61c62ee"
+  }
+}

@@ -10,13 +10,13 @@
     },
     {
       "file": "CITATION.cff",
-      "bytes": 1164,
-      "sha256": "43020cccd5fc7a5a2c3d4c18e397d621a95195c5badca08f84603f7918bce9ed"
+      "bytes": 1195,
+      "sha256": "611f923f7b3bbf832486fa2b62b306d350dd1748a39f020e677463542347f542"
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 47926,
-      "sha256": "2968194af7e9911d95d299dc535990906dd763d9a286a8d21bd34c9624ea9f5e"
+      "bytes": 58166,
+      "sha256": "a471c52fd3483901557ca19c1563d6751527ba7e22d49ab0444be83a0b72f814"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -35,13 +35,13 @@
     },
     {
       "file": "LICENSES.md",
-      "bytes": 1672,
-      "sha256": "215493667f3e78c13d011c2dba17c7f1becefa847a80eb648e03880119ef9215"
+      "bytes": 2073,
+      "sha256": "944a5d5579a65d03895f1b7a967c1bca1db22a57b35eeb44fb0e68f1edbd0923"
     },
     {
       "file": "README.md",
-      "bytes": 5440,
-      "sha256": "ff336473f1323c9b592654ce9c3d1093aa376b133debefb86b13d274c9c49625"
+      "bytes": 5804,
+      "sha256": "2c8400244fe07417e67e76916206eab9488dc24c85ae8d6d80090aa80937b288"
     },
     {
       "file": "VALIDATION.md",
@@ -130,8 +130,8 @@
     },
     {
       "file": "figure_theme.R",
-      "bytes": 13380,
-      "sha256": "b5204c4819690bb747f2d86f102897983c2d12047d70d145769550b20b7f31c9"
+      "bytes": 13808,
+      "sha256": "b120a2e7649550e7c2d29c251edd60779bfd99d71809b4c97d3a60ee115ade51"
     },
     {
       "file": "figure2_global_distribution.R",
@@ -237,6 +237,266 @@
       "file": "figures/figure4/Figure_4_socioeconomic_v3_validation.json",
       "bytes": 3324,
       "sha256": "f587efa82c5d5b22d6d815dc7c985f9f21e3e229501879097ad5ec450a51ae4a"
+    },
+    {
+      "file": "figure1_prisma.py",
+      "bytes": 9941,
+      "sha256": "d9d71c852720950d441c1676a8e08a6a3546c01a5b926f26ee1537b13d4c2f69"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020.pdf",
+      "bytes": 67263,
+      "sha256": "b62877520c363f1045a3728981509c1fbf76c9100928166d95f27ce1a61c62ee"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020.png",
+      "bytes": 519720,
+      "sha256": "34ce163fb4e62d15d733a53ccaa15b68c54888085d670232b841d59b1a20ddd2"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020.svg",
+      "bytes": 4295,
+      "sha256": "94bfec81ea54f426971285ba95caaf22ab16a9e34e7653c67fa91510a9b7fe92"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020_validation.json",
+      "bytes": 1728,
+      "sha256": "3ff26f2d41884d82ec655ee0762c2208ff9015872ba106eb30c18e2d98a0a73b"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_counts.csv",
+      "bytes": 1439,
+      "sha256": "9626fb4548b5460c9ca5f0a817f891b9a4a0c7184bbc332fb3e197ea086d346f"
+    },
+    {
+      "file": ".zenodo.json",
+      "bytes": 1636,
+      "sha256": "4851214a71f321b76b0a00c6eb9a2a3f9eb530e88b6c5a49058c3dd988742f81"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1224,
+      "sha256": "7ada470c44fd791f5cecb97bf04e3ac3fce9cc81a439b1c5bfc50c63ac278c02"
+    },
+    {
+      "file": "figure5_build_anti_cgrp_set.py",
+      "bytes": 4905,
+      "sha256": "dc40e45eb6147d9bd089f336c124051456a953c86f921fd16d828ac4c5b362cd"
+    },
+    {
+      "file": "figure5_who_benchmark.R",
+      "bytes": 19584,
+      "sha256": "ebdf641e78c72dd5cdb201ad49b24daa2a9f9bd88df0af2fb85839d6210102c3"
+    },
+    {
+      "file": "figureS1_mab_income.R",
+      "bytes": 9988,
+      "sha256": "213a3c505a5d82d5789f06460f98c1fae07473ad997773fb06487ceca64f5a44"
+    },
+    {
+      "file": "figures/figure5/Figure_5_who_benchmark.pdf",
+      "bytes": 44824,
+      "sha256": "6af3bf2777762b8ccfe7123071df68d0eda538f6cf16a05c82ac5669d9259d8c"
+    },
+    {
+      "file": "figures/figure5/Figure_5_who_benchmark.png",
+      "bytes": 152443,
+      "sha256": "caed89f2151ba33bbdcd9c75879090454b4101815f597f742d601d30c1479733"
+    },
+    {
+      "file": "figures/figure5/Figure_5_who_benchmark.svg",
+      "bytes": 13269,
+      "sha256": "d867986edaa05b260b11c33e4bb81477be1a7e8dc575a01b0e2d1dbcc60a59d4"
+    },
+    {
+      "file": "figures/figure5/Figure_5_who_benchmark_data.csv",
+      "bytes": 1347,
+      "sha256": "2b087eb00407d1df702563c129dc8790196e77e14a69bf8c16ad80408f8cae62"
+    },
+    {
+      "file": "figures/figure5/Figure_5_who_benchmark_validation.json",
+      "bytes": 2815,
+      "sha256": "8fc87466320d8ee739414f87a7ac49e9b06648714633a42352f1c38634931556"
+    },
+    {
+      "file": "figures/figure5/Figure_S3_record_selection_stages.pdf",
+      "bytes": 50947,
+      "sha256": "9f853819d79b6c8c59751b793c2232fe177cfae1481801b28a6a26456d226c6f"
+    },
+    {
+      "file": "figures/figure5/Figure_S3_record_selection_stages.png",
+      "bytes": 252340,
+      "sha256": "14e30e9620b61f5acc90ebe49c25ac6273ed56e2d323af58e2bd169e415e11ba"
+    },
+    {
+      "file": "figures/figure5/Figure_S3_record_selection_stages.svg",
+      "bytes": 17657,
+      "sha256": "2e84fb9b67b450c91fc45513021e120f64a2069346af36a5c59a94e03a8b9a26"
+    },
+    {
+      "file": "figures/figure5/Figure_S3_record_selection_stages_data.csv",
+      "bytes": 1872,
+      "sha256": "65e3b87cde81daf12a2502697a16b213868bdeef238b20b5d97188a40c1ae81b"
+    },
+    {
+      "file": "figures/figure5/Figure_S3_record_selection_stages_validation.json",
+      "bytes": 3689,
+      "sha256": "666a7596a2f9b4ec540efdb9fa0cbe1f76cfe3930cd9b79aa86b419e388d5e6b"
+    },
+    {
+      "file": "figures/figure5/PROVISIONAL_STATUS.md",
+      "bytes": 4242,
+      "sha256": "033dfbb251d48d45310d6af834fa34692d853c4c584bc4824a124e6b6a3f4441"
+    },
+    {
+      "file": "figures/figure5/S9_transcribed_20261117.csv",
+      "bytes": 776,
+      "sha256": "90d3153bc4f66942423562aaebd4288a768535c9e5217e8624e226c69b6b4ccb"
+    },
+    {
+      "file": "figures/figure5/anti_cgrp_record_sets_pairs.csv",
+      "bytes": 112100,
+      "sha256": "72a20e0e4af792a5130f34b4ad303c6078ea7abe915e3ecc012f602f237187ad"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/design_relaxed_15_countries.csv",
+      "bytes": 3613,
+      "sha256": "76cd215c147502ded3b2d3e48713dc5695bad1e5a03a7b9872c0dd60bb51ae2b"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT04628429.json",
+      "bytes": 34930,
+      "sha256": "18a5accedb614a472c0316dbff02c6b7dacd99dfb8bc12355ea7ca0a8df3a88b"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT04803513.json",
+      "bytes": 9904,
+      "sha256": "58fbbf2a7c46abba4a040bf3657968302d37fa372c59f134182ac49aba403dc3"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT05281770.json",
+      "bytes": 13481,
+      "sha256": "c4030b971b3fd1a21b68775e76fb647fff4d1d0bf89c1e651ab9e26b468012b2"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT05334927.json",
+      "bytes": 29679,
+      "sha256": "4d766839f7fee9d984ee7f98614d899e0ffb2fbafa5a0645f67a40c0f32145c3"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT05342493.json",
+      "bytes": 6621,
+      "sha256": "b34b27697a6618534cb5080818b9a3ca3ca2d9692b00a809d764432fa1afcc14"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT05570149.json",
+      "bytes": 13086,
+      "sha256": "fa00075ddcdc95c0ba2480f989864fff05560e0cf3cdcc60332dc4f55725af12"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06085144.json",
+      "bytes": 17948,
+      "sha256": "40ac8fe24d812eade602f0bb0258c5fd20594dcfc393a3dc83be88fc133d6638"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06150781.json",
+      "bytes": 8523,
+      "sha256": "2b8677e9cb14de151c03d757ddd6d48ff283e7615c6af548fbc3161a7d08ac19"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06212661.json",
+      "bytes": 12338,
+      "sha256": "9563b1bb16cc548bffddcbea96bb82bef8878a772c64f0b878ecd7f538991789"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06459648.json",
+      "bytes": 13211,
+      "sha256": "dbe65c54e6b00c3403505834e703929e474e74d7c1277f483c85b0cd230b1f6f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06628921.json",
+      "bytes": 7462,
+      "sha256": "2a0741e8f22b8ca686ed9ae8ce3f03d065c8f4ef84f6f74c43d6ca6f2c818f2e"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT06659120.json",
+      "bytes": 12219,
+      "sha256": "a1125266ff6dda059ce7c233b74b8546f02b6e552144703fd60020460ceca24f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT07029126.json",
+      "bytes": 11077,
+      "sha256": "bfcabeaf88dd4c974288e29b74558f71a5c70c74c891a47d7e020eaf2d4e81ed"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/NCT07103694.json",
+      "bytes": 33571,
+      "sha256": "98d5f96a6964ea1405953b976d910a010902b844829aca8666302279b327594a"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/history/NCT06085144.json",
+      "bytes": 134,
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/history/NCT06212661.json",
+      "bytes": 134,
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/history/NCT06459648.json",
+      "bytes": 134,
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/history/NCT07029126.json",
+      "bytes": 134,
+      "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/primary_NCT04334408.json",
+      "bytes": 8108,
+      "sha256": "9ceda2da6e51a998ff2e38d5b3e329e5d53124e4b224315307138c098a686663"
+    },
+    {
+      "file": "figures/figure5/registry_design_relaxed_20261118/raw/primary_NCT07655440.json",
+      "bytes": 24370,
+      "sha256": "b2d55dd45ec3d48f04f2ba4fa9c8b4eeb8f3150f71cbb4df40db05a21672b966"
+    },
+    {
+      "file": "figures/figureS1/Figure_S1_mab_income.pdf",
+      "bytes": 45159,
+      "sha256": "405c64d742f6e1f5689fcbf3aa31b5f7e84346840833a8aa3fca70e72115265c"
+    },
+    {
+      "file": "figures/figureS1/Figure_S1_mab_income.png",
+      "bytes": 160192,
+      "sha256": "0d7b68feac012c99f729fc724bc18d697e5d7867ea515e29b8069fb2198a7d24"
+    },
+    {
+      "file": "figures/figureS1/Figure_S1_mab_income.svg",
+      "bytes": 14216,
+      "sha256": "0db71e01e9b594bbf98b75c15da5c92cfda22e94df28f2afa65d0ff0ae03aef7"
+    },
+    {
+      "file": "figures/figureS1/Figure_S1_mab_income_data.csv",
+      "bytes": 1227,
+      "sha256": "ac2807ce1424aadb8eb6e482dc9fd64741b87afc32c8d907f7263173471501af"
+    },
+    {
+      "file": "figures/figureS1/Figure_S1_mab_income_validation.json",
+      "bytes": 671,
+      "sha256": "9a7cb388eab719d429c59ae52e957aa3cd0a5736d7300296fe6e79f9edd0dd91"
+    },
+    {
+      "file": "table1_member_states.py",
+      "bytes": 3701,
+      "sha256": "f99f628f63506e84589a3b689d83e9c2bca59975a30fe4d8d980d032a0af9f37"
+    },
+    {
+      "file": "tables/table1_panel_b_member_states.csv",
+      "bytes": 973,
+      "sha256": "3848342c9bb16a4b8c160c89c427d98c0df84b7f41790eb196afe1bf5ca5c964"
     }
   ],
   "excluded_inputs": [
@@ -249,6 +509,6 @@
   ],
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
-  "updated": "2026-11-17",
-  "update_note": "Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H."
+  "updated": "2026-11-20",
+  "update_note": "Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
 }
