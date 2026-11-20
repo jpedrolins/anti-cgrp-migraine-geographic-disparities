@@ -3,7 +3,7 @@
 Working research repository, 17 November 2026. The variable definitions below
 describe the reviewed analytical dataset, including externally acquired inputs.
 Restricted third-party input snapshots are not distributed in this repository.
-See DATA_ACCESS.md and EXTERNAL_INPUTS.json. This is not the final Zenodo release.
+See DATA_ACCESS.md and EXTERNAL_INPUTS.json. Version 1.0.0 is archived on Zenodo (https://doi.org/10.5281/zenodo.24386425).
 
 # Codebook v4 country–record analysis with 108 records
 

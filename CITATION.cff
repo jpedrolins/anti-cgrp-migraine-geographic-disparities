@@ -1,11 +1,20 @@
 cff-version: 1.2.0
-message: "Please cite the eventual published Zenodo record; DOI pending."
+message: "If you use these data or code, please cite the archived Zenodo record."
 title: "Geographic disparities in registered clinical trials of anti-CGRP monoclonal antibodies for migraine: data and analysis code"
 type: software
 license:
   - MIT
   - CC-BY-4.0
-version: "0.1.0-dev"
+version: "1.0.0"
+doi: "10.5281/zenodo.24386425"
+date-released: "2026-11-20"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24386425"
+    description: "Version 1.0.0 (manuscript submission)"
+  - type: doi
+    value: "10.5281/zenodo.24386424"
+    description: "All versions"
 repository-code: "https://github.com/jpedrolins/anti-cgrp-migraine-geographic-disparities"
 authors:
   - family-names: "Lins"
