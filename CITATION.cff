@@ -6,8 +6,12 @@ license:
   - MIT
   - CC-BY-4.0
 version: "1.0.1"
+doi: "10.5281/zenodo.24514657"
 date-released: "2026-11-24"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24514657"
+    description: "Version 1.0.1"
   - type: doi
     value: "10.5281/zenodo.24386425"
     description: "Version 1.0.0 (first manuscript submission)"
