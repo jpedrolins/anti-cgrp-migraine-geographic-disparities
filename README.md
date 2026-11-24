@@ -1,10 +1,11 @@
 # Geographic disparities in anti-CGRP migraine trials
 
 Research code and curated registry data for *Geographic disparities in registered
-clinical trials of anti-CGRP monoclonal antibodies for migraine*. Version 1.0.0,
-the one submitted with the manuscript, is archived on Zenodo:
-https://doi.org/10.5281/zenodo.24386425 (all versions:
-https://doi.org/10.5281/zenodo.24386424).
+clinical trials of anti-CGRP monoclonal antibodies for migraine*. Releases are
+archived on Zenodo; all versions: https://doi.org/10.5281/zenodo.24386424.
+Version 1.0.0 (https://doi.org/10.5281/zenodo.24386425) was the first one submitted
+with the manuscript. Version 1.0.1 adds the manuscript item map and the tables as
+submitted (`tables/submission/`; CODEBOOK.md, Part K) and changes no result.
 
 ## Study and analytical unit
 
@@ -113,8 +114,9 @@ manuscript has been accepted or published.
 To cite the data and code, use the archived release that produced the reported
 results: Lins JPS, Carpinelli LP, Makita LM, Lira MCS, Piovesan EJ, Riso IL, Peres MFP.
 Geographic disparities in registered clinical trials of anti-CGRP monoclonal
-antibodies for migraine: data and analysis code. Version 1.0.0. Zenodo; 2026.
-https://doi.org/10.5281/zenodo.24386425. Later changes are tracked in Git; see
+antibodies for migraine: data and analysis code. Zenodo; 2026.
+https://doi.org/10.5281/zenodo.24386424 (all versions; resolves to the latest
+version). Later changes are tracked in Git; see
 `CITATION.cff`.
 Code is released under the MIT Licence (`LICENSE`); data, results, figures and
 documentation produced by the authors under CC BY 4.0. Third-party inputs keep

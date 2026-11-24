@@ -160,7 +160,8 @@ fit_model <- function(s) {
 }
 M <- lapply(specs, fit_model)
 
-# (2) reconciliation with manuscript Table 3 (rounded values)
+# (2) reconciliation with the published indicator table (rounded values): file manuscript_table_06.csv,
+#     formerly manuscript Table 4, now Supplementary Table S11
 for (k in names(M)) {
   row <- table3[grepl(M[[k]]$spec$t3, table3[[1]], fixed = TRUE), ]
   if (nrow(row) != 1) fail(paste("Table 3 row for", k))

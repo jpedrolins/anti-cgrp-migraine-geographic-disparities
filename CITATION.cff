@@ -5,13 +5,12 @@ type: software
 license:
   - MIT
   - CC-BY-4.0
-version: "1.0.0"
-doi: "10.5281/zenodo.24386425"
-date-released: "2026-11-20"
+version: "1.0.1"
+date-released: "2026-11-24"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.24386425"
-    description: "Version 1.0.0 (manuscript submission)"
+    description: "Version 1.0.0 (first manuscript submission)"
   - type: doi
     value: "10.5281/zenodo.24386424"
     description: "All versions"

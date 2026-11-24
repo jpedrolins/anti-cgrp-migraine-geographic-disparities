@@ -1,0 +1,5 @@
+﻿Indicator (contrast),"Source, reference period","Countries, n (with trials)",Spearman ρ with O/E ratio (95% CI),"Any participation, OR (95% CI)","Burden-adjusted participation, IRR (95% CI)"
+HDI (per 0.1 unit increase),"UNDP, 2011–2023 mean",190 (47),0.61 (0.51–0.69),5.41 (3.14–9.33),7.89 (5.92–10.52)
+"GDP per capita, PPP (per doubling)","World Bank, 2011–2025 mean",185 (47),0.55 (0.45–0.64),3.00 (2.07–4.34),5.17 (3.78–7.05)
+HAQ Index (per 10 points),"IHME, GBD 2019",194 (47),0.60 (0.51–0.68),2.59 (1.96–3.41),3.03 (2.46–3.73)
+"R&D expenditure, % of GDP (per doubling)","UNESCO UIS via World Bank, year closest to 2019 (2015–2023)",127 (46),0.71 (0.62–0.78),4.27 (2.59–7.04),2.87 (1.89–4.35)

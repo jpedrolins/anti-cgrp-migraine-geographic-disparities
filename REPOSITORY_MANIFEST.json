@@ -1,6 +1,6 @@
 {
   "prepared": "2026-11-17",
-  "status": "Public research repository; version 1.0.0 archived on Zenodo (https://doi.org/10.5281/zenodo.24386425)",
+  "status": "Public research repository; releases archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424)",
   "source_analysis": "20261116_adopted_108_country_record",
   "files": [
     {
@@ -9,14 +9,19 @@
       "sha256": "13a290d495733eda339e96ed007514cd953f8bfadc17fcf20be0d2f452877a75"
     },
     {
+      "file": ".zenodo.json",
+      "bytes": 1636,
+      "sha256": "4851214a71f321b76b0a00c6eb9a2a3f9eb530e88b6c5a49058c3dd988742f81"
+    },
+    {
       "file": "CITATION.cff",
-      "bytes": 1462,
-      "sha256": "47cea8272f2bb9eb50a815637389e2c24ccb2b3ca46f344387ba3941816a3b2c"
+      "bytes": 1437,
+      "sha256": "bd5a8b6a5bf89fff0e9c218677784ca1eb81d1df9bcd9d67dfd5d4185bb5437d"
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 58207,
-      "sha256": "c40197912103e1cd54be530cdea9b46297b75e6d2e88a53f30602f09038bbd83"
+      "bytes": 62544,
+      "sha256": "cce85387e38081b5cf6b32793cad79c24dc7611960a72a9a64c8d2d0c5bbe981"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -34,19 +39,24 @@
       "sha256": "f88be0d33c0bc4777e1bd42920f920cbe129e5c0b03ceb1ae233313be97fd74a"
     },
     {
+      "file": "LICENSE",
+      "bytes": 1224,
+      "sha256": "7ada470c44fd791f5cecb97bf04e3ac3fce9cc81a439b1c5bfc50c63ac278c02"
+    },
+    {
       "file": "LICENSES.md",
       "bytes": 2073,
       "sha256": "944a5d5579a65d03895f1b7a967c1bca1db22a57b35eeb44fb0e68f1edbd0923"
     },
     {
       "file": "README.md",
-      "bytes": 5970,
-      "sha256": "89207305c9203c8a45086eed2e60515e9bfb432873dd56e8ba8378abc673ad29"
+      "bytes": 6159,
+      "sha256": "37d485feb1f0677f94b2ded3f287191f0c5fb13bf79d2f7c2e81dbc2a464682e"
     },
     {
       "file": "VALIDATION.md",
-      "bytes": 1312,
-      "sha256": "cdfa12053deb64d9803ad1d93bcdbb15aa8a8818447c7e5d3dc4f669b89b93fb"
+      "bytes": 1322,
+      "sha256": "4dda3de846661da28c4b4d17a04ebe51c52f55ce4c207c6b963cc797f35e3c55"
     },
     {
       "file": "analysis.R",
@@ -89,44 +99,44 @@
       "sha256": "f0674bc95832ad765b91525bccdfbb0c5177b9cdd5ed24a1a751b3304b09e027"
     },
     {
+      "file": "figure1_prisma.py",
+      "bytes": 9941,
+      "sha256": "d9d71c852720950d441c1676a8e08a6a3546c01a5b926f26ee1537b13d4c2f69"
+    },
+    {
+      "file": "figure2_global_distribution.R",
+      "bytes": 10352,
+      "sha256": "3374de8068312144c60dc5a56121ccb01ef93c2945450b701569398a447fc725"
+    },
+    {
       "file": "figure2_vertical.R",
       "bytes": 3331,
       "sha256": "23b5c34c70803faa7d165eae642135ca25ea13a007b48d856a54b847253b87ff"
     },
     {
-      "file": "pre_post_income_test.R",
-      "bytes": 3017,
-      "sha256": "6a1fe39f1b0ecb13c39d46020bdb2b375b6f7f97a9d8069b580dffae4c4e8ad4"
+      "file": "figure3_burden_representation.R",
+      "bytes": 15956,
+      "sha256": "d936e46d6047b26abb17629efc4b0ca011a5092a804876471a952f3505ca79fe"
     },
     {
-      "file": "public_data_and_reference_results.zip",
-      "bytes": 1703512,
-      "sha256": "433c7b54b4950d0397f8c5eb24f1f6646ec3598fedae3a5c2a683cfc2dd3d922"
+      "file": "figure4_socioeconomic.R",
+      "bytes": 21566,
+      "sha256": "b1cfb9eddf9e332c4639e8e9c653bdbdcb05faf3b9c980b9450394173d5acc30"
     },
     {
-      "file": "requirements.txt",
-      "bytes": 13,
-      "sha256": "7c3194b101c68d4c524948fd09ec3dff5e7ecf54f11e8ccc23440ff932a604e7"
+      "file": "figure5_build_anti_cgrp_set.py",
+      "bytes": 4905,
+      "sha256": "dc40e45eb6147d9bd089f336c124051456a953c86f921fd16d828ac4c5b362cd"
     },
     {
-      "file": "run_analysis.py",
-      "bytes": 4556,
-      "sha256": "dc070d1922701dfadaf9a6dd1d31f0fa6b6f8b116e4442b76d36c3991884e32d"
+      "file": "figure5_who_benchmark.R",
+      "bytes": 19584,
+      "sha256": "ebdf641e78c72dd5cdb201ad49b24daa2a9f9bd88df0af2fb85839d6210102c3"
     },
     {
-      "file": "summarize_current.py",
-      "bytes": 5459,
-      "sha256": "f8b357f29466ee5b30633c4d096eef8e26cf02b4edc87d06519df62739b59e6e"
-    },
-    {
-      "file": "table3_covariates.R",
-      "bytes": 6155,
-      "sha256": "4bc9fd6c70ff9b89add32b742664e69e5024121700f9cf7e94e29d4afff111b5"
-    },
-    {
-      "file": "temporal_income.R",
-      "bytes": 5622,
-      "sha256": "b9fcb9b2b9c086d2ac161778ee8379c154799a1d31c4fa7d72166a62aa0b58de"
+      "file": "figureS1_mab_income.R",
+      "bytes": 9988,
+      "sha256": "213a3c505a5d82d5789f06460f98c1fae07473ad997773fb06487ceca64f5a44"
     },
     {
       "file": "figure_theme.R",
@@ -134,9 +144,29 @@
       "sha256": "b120a2e7649550e7c2d29c251edd60779bfd99d71809b4c97d3a60ee115ade51"
     },
     {
-      "file": "figure2_global_distribution.R",
-      "bytes": 10352,
-      "sha256": "3374de8068312144c60dc5a56121ccb01ef93c2945450b701569398a447fc725"
+      "file": "figures/figure1/Figure_1_PRISMA_2020.pdf",
+      "bytes": 67263,
+      "sha256": "b62877520c363f1045a3728981509c1fbf76c9100928166d95f27ce1a61c62ee"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020.png",
+      "bytes": 519720,
+      "sha256": "34ce163fb4e62d15d733a53ccaa15b68c54888085d670232b841d59b1a20ddd2"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020.svg",
+      "bytes": 4295,
+      "sha256": "94bfec81ea54f426971285ba95caaf22ab16a9e34e7653c67fa91510a9b7fe92"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_2020_validation.json",
+      "bytes": 1728,
+      "sha256": "3ff26f2d41884d82ec655ee0762c2208ff9015872ba106eb30c18e2d98a0a73b"
+    },
+    {
+      "file": "figures/figure1/Figure_1_PRISMA_counts.csv",
+      "bytes": 1439,
+      "sha256": "9626fb4548b5460c9ca5f0a817f891b9a4a0c7184bbc332fb3e197ea086d346f"
     },
     {
       "file": "figures/figure2/Figure_2_global_distribution_v2.pdf",
@@ -169,11 +199,6 @@
       "sha256": "95d79df507b5a1c17d81de4d69d9eb6b62d397d14670266edfa62d9a2aa873df"
     },
     {
-      "file": "figure3_burden_representation.R",
-      "bytes": 15956,
-      "sha256": "d936e46d6047b26abb17629efc4b0ca011a5092a804876471a952f3505ca79fe"
-    },
-    {
       "file": "figures/figure3/Figure_3_burden_representation_v2.pdf",
       "bytes": 77454,
       "sha256": "f2f0e5a187570356131108f02678f3a8282577ee21014d65ebcf7af97b787b1e"
@@ -204,11 +229,6 @@
       "sha256": "1b49dfc8b2ac1d68a5dc52cfd44c867b57e1bf770fe7501bbbd3ba1403c83b80"
     },
     {
-      "file": "figure4_socioeconomic.R",
-      "bytes": 21461,
-      "sha256": "5bd09737cbc39e81fb652a7b4e759029d4df162fabf467e6dd490709fef3b6c1"
-    },
-    {
       "file": "figures/figure4/Figure_4_legend_proposed.md",
       "bytes": 2518,
       "sha256": "ab0b0ba32d38741d6de9af41f412992da4af4a8586c0e78b2eca33b804325321"
@@ -237,61 +257,6 @@
       "file": "figures/figure4/Figure_4_socioeconomic_v3_validation.json",
       "bytes": 3324,
       "sha256": "f587efa82c5d5b22d6d815dc7c985f9f21e3e229501879097ad5ec450a51ae4a"
-    },
-    {
-      "file": "figure1_prisma.py",
-      "bytes": 9941,
-      "sha256": "d9d71c852720950d441c1676a8e08a6a3546c01a5b926f26ee1537b13d4c2f69"
-    },
-    {
-      "file": "figures/figure1/Figure_1_PRISMA_2020.pdf",
-      "bytes": 67263,
-      "sha256": "b62877520c363f1045a3728981509c1fbf76c9100928166d95f27ce1a61c62ee"
-    },
-    {
-      "file": "figures/figure1/Figure_1_PRISMA_2020.png",
-      "bytes": 519720,
-      "sha256": "34ce163fb4e62d15d733a53ccaa15b68c54888085d670232b841d59b1a20ddd2"
-    },
-    {
-      "file": "figures/figure1/Figure_1_PRISMA_2020.svg",
-      "bytes": 4295,
-      "sha256": "94bfec81ea54f426971285ba95caaf22ab16a9e34e7653c67fa91510a9b7fe92"
-    },
-    {
-      "file": "figures/figure1/Figure_1_PRISMA_2020_validation.json",
-      "bytes": 1728,
-      "sha256": "3ff26f2d41884d82ec655ee0762c2208ff9015872ba106eb30c18e2d98a0a73b"
-    },
-    {
-      "file": "figures/figure1/Figure_1_PRISMA_counts.csv",
-      "bytes": 1439,
-      "sha256": "9626fb4548b5460c9ca5f0a817f891b9a4a0c7184bbc332fb3e197ea086d346f"
-    },
-    {
-      "file": ".zenodo.json",
-      "bytes": 1636,
-      "sha256": "4851214a71f321b76b0a00c6eb9a2a3f9eb530e88b6c5a49058c3dd988742f81"
-    },
-    {
-      "file": "LICENSE",
-      "bytes": 1224,
-      "sha256": "7ada470c44fd791f5cecb97bf04e3ac3fce9cc81a439b1c5bfc50c63ac278c02"
-    },
-    {
-      "file": "figure5_build_anti_cgrp_set.py",
-      "bytes": 4905,
-      "sha256": "dc40e45eb6147d9bd089f336c124051456a953c86f921fd16d828ac4c5b362cd"
-    },
-    {
-      "file": "figure5_who_benchmark.R",
-      "bytes": 19584,
-      "sha256": "ebdf641e78c72dd5cdb201ad49b24daa2a9f9bd88df0af2fb85839d6210102c3"
-    },
-    {
-      "file": "figureS1_mab_income.R",
-      "bytes": 9988,
-      "sha256": "213a3c505a5d82d5789f06460f98c1fae07473ad997773fb06487ceca64f5a44"
     },
     {
       "file": "figures/figure5/Figure_5_who_benchmark.pdf",
@@ -489,14 +454,84 @@
       "sha256": "9a7cb388eab719d429c59ae52e957aa3cd0a5736d7300296fe6e79f9edd0dd91"
     },
     {
+      "file": "pre_post_income_test.R",
+      "bytes": 3017,
+      "sha256": "6a1fe39f1b0ecb13c39d46020bdb2b375b6f7f97a9d8069b580dffae4c4e8ad4"
+    },
+    {
+      "file": "public_data_and_reference_results.zip",
+      "bytes": 1703512,
+      "sha256": "433c7b54b4950d0397f8c5eb24f1f6646ec3598fedae3a5c2a683cfc2dd3d922"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 13,
+      "sha256": "7c3194b101c68d4c524948fd09ec3dff5e7ecf54f11e8ccc23440ff932a604e7"
+    },
+    {
+      "file": "run_analysis.py",
+      "bytes": 4556,
+      "sha256": "dc070d1922701dfadaf9a6dd1d31f0fa6b6f8b116e4442b76d36c3991884e32d"
+    },
+    {
+      "file": "summarize_current.py",
+      "bytes": 5459,
+      "sha256": "f8b357f29466ee5b30633c4d096eef8e26cf02b4edc87d06519df62739b59e6e"
+    },
+    {
       "file": "table1_member_states.py",
       "bytes": 3701,
       "sha256": "f99f628f63506e84589a3b689d83e9c2bca59975a30fe4d8d980d032a0af9f37"
     },
     {
+      "file": "table3_covariates.R",
+      "bytes": 6155,
+      "sha256": "4bc9fd6c70ff9b89add32b742664e69e5024121700f9cf7e94e29d4afff111b5"
+    },
+    {
+      "file": "tables/submission/Supplementary_Table_S11_country_indicator_associations.csv",
+      "bytes": 736,
+      "sha256": "81e1de6dcd0e6bac296bbc539ac50744063ee6b32a27a8897a0393cb5f0cdc55"
+    },
+    {
+      "file": "tables/submission/Supplementary_Table_S9_WHO_benchmarks.csv",
+      "bytes": 559,
+      "sha256": "c3f07ff23fb6853a76e6b0ac9a9cf5d7f6472f4cced309796d57319b542b972a"
+    },
+    {
+      "file": "tables/submission/Table_1_Panel_A_trial_characteristics.csv",
+      "bytes": 898,
+      "sha256": "f5fb6b7b2b454e7e82523b47c8d7604de8e5ea7bcddad4371abbc210d6b3ad95"
+    },
+    {
+      "file": "tables/submission/Table_1_Panel_B_geographic_distribution_by_subgroup.csv",
+      "bytes": 1686,
+      "sha256": "9c5bdf1a120b9d513766fb590cd924bc596e14316fdbf531beb040975c417b49"
+    },
+    {
+      "file": "tables/submission/Table_1_Panel_C_by_antibody.csv",
+      "bytes": 1906,
+      "sha256": "9d18d42a1150290a4c090d73a4078bcde2cf1385af488794db701684aaeb2aee"
+    },
+    {
+      "file": "tables/submission/Table_2_WHO_region_representation.csv",
+      "bytes": 455,
+      "sha256": "66a66c5090545d0724a3bb72f30d2d234a718ad771f020f1c80b26369f0b9ed1"
+    },
+    {
+      "file": "tables/submission/Table_3_country_level_disparities.csv",
+      "bytes": 1236,
+      "sha256": "068440ccf24f6fcff01fa1130916eb338dbbf91561ae8d496781c8b3d08dac39"
+    },
+    {
       "file": "tables/table1_panel_b_member_states.csv",
       "bytes": 973,
       "sha256": "3848342c9bb16a4b8c160c89c427d98c0df84b7f41790eb196afe1bf5ca5c964"
+    },
+    {
+      "file": "temporal_income.R",
+      "bytes": 5622,
+      "sha256": "b9fcb9b2b9c086d2ac161778ee8379c154799a1d31c4fa7d72166a62aa0b58de"
     }
   ],
   "excluded_inputs": [
@@ -509,6 +544,6 @@
   ],
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
-  "updated": "2026-11-20",
-  "update_note": "Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
+  "updated": "2026-11-24",
+  "update_note": "Version 1.0.1: manuscript item map (CODEBOOK.md Part K), tables as submitted in tables/submission/ (former Table 4 is now Supplementary Table S11); no count, model or eligibility decision changed. Earlier notes: Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
 }
