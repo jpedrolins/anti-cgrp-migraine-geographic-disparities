@@ -948,7 +948,7 @@ The manuscript's current **Table 4** (recruitment, completion and publication st
 | Item in the manuscript | Source in this repository |
 |---|---|
 | Figure 1 (PRISMA 2020) | `figure1_prisma.py` (Part J) |
-| Figure 2 (global distribution) | `figure2_global_distribution.R` (Part E) |
+| Figure 2 (burden, participations and O/E; three maps) | `figure2_three_panel.R` (Part L); the two-map v2 is `figure2_global_distribution.R` (Part E) |
 | Figure 3 (burden representation) | `figure3_burden_representation.R` (Part F) |
 | Figure 4 (socioeconomic gradients, four panels) | `figure4_socioeconomic.R` (Parts G–H) |
 | Figure 5 (WHO trial benchmarks) | `figure5_who_benchmark.R`, variant `main` (Part I) |
@@ -1007,3 +1007,46 @@ python3 -I supplement_equal_weight.py <extracted public_data_and_reference_resul
 ```
 
 The script stops unless the primary counts equal the published ones (453 pairs; income groups 392, 42, 19, 0; regions 101, 297, 46, 7, 2, 0) and the weights sum to 106. Its output reproduces the table in the supplement cell for cell.
+
+---
+
+# Part L. Figure 2 v3: migraine burden added as panel a (24 November 2026)
+
+## Status and scope
+
+Presentation-only change to the manuscript's Figure 2. **No count, expected value, O/E ratio or class was changed or recalculated.** A third map, migraine burden, was added above the two v2 maps, which keep their data, classes and colours:
+
+| Panel | Content | v2 panel |
+|---|---|---|
+| a | Migraine burden: all-age, both-sex migraine YLDs per Member State, GBD 2023, year 2023 | new |
+| b | Country–trial participations (absolute number) | a |
+| c | Representation relative to burden: observed-to-expected (O/E) ratio | b |
+
+The v2 files (`figure2_global_distribution.R`, `Figure_2_global_distribution_v2.*`) are retained unchanged. The manuscript text cites Figure 2b and 2c for participations and O/E, and 2a and 2c for the expected counts.
+
+## Files
+
+| Role | Path |
+|---|---|
+| Figure script | `figure2_three_panel.R` (sources `figure_theme.R`) |
+| Vector PDF, editable SVG, 600-dpi PNG | `figures/figure2/Figure_2_global_distribution_v3.{pdf,svg,png}` |
+| Class assigned to each of the 194 Member States, per panel | `figures/figure2/Figure_2_global_distribution_v3_plot_data.csv` |
+| Validation record, input and output SHA-256 | `figures/figure2/Figure_2_global_distribution_v3_validation.json` |
+| Caption | `figures/figure_captions_as_submitted.md` |
+
+```sh
+LC_ALL=en_US.UTF-8 Rscript figure2_three_panel.R <full-reproduction dir> figures/figure2
+```
+
+## Panel a
+
+- Input: `migraine_yld_point_2023` from `results/country_analytic_with_yld_bounds_v1.csv` of the full reproduction. This is a restricted IHME GBD 2023 input that is **not redistributed** (DATA_ACCESS.md), so panel a can only be redrawn with the private snapshot. The public plot-data file therefore holds only the class of each country, not its YLDs.
+- Checks (the script stops on any failure): 194 Member States, one row each; GBD 2023, reference year 2023; every YLD positive; and `expected` equals participations × country YLDs ÷ total YLDs, which also equals the expected count of the O/E file (tolerance 1e-6). The global total is 40,681,879 YLDs.
+- Classes (thousand YLDs, lower bound included): <50 (101 Member States), 50–<200 (57), 200–<500 (20), 500–<1,000 (9), ≥1,000 (7). The key shows the boundaries 50, 200, 500 and 1,000.
+- Colours: the navy sequential ramp of panel b (`fig_navy`), so that dark means more burden in a and more participations in b. The units differ and each panel has its own key.
+
+## Layout
+
+- Width 129 mm (one and a half columns) and height 165 mm, so that the figure with its caption stays within the 225 mm limit. The three maps are stacked; panel letters are lowercase, as in Figures 3–5.
+- The keys sit in the open South Pacific. The left margin (`key_margin_mm`, 20 mm) keeps the same clearance from South America as in v2; the O/E swatches are 5 mm wide.
+- Panel b key title is "Participations, n" and panel a key title "Migraine YLDs, thousands"; the longer titles of v2 no longer fit at this width.

@@ -20,8 +20,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 65732,
-      "sha256": "f8dc4e10ba8868af97bca7aeab1b704aee162b5df18a47ef385b7d9c9d45a84a"
+      "bytes": 68841,
+      "sha256": "d3b4bfdecba31fba276e108c5e0125dd0d355cdcec3a5d6f1457e8bf51c1a85d"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -109,6 +109,11 @@
       "sha256": "3374de8068312144c60dc5a56121ccb01ef93c2945450b701569398a447fc725"
     },
     {
+      "file": "figure2_three_panel.R",
+      "bytes": 13242,
+      "sha256": "7ed9ee26d54a6c60ecbebb9afca27ec15384ed43b769910612e273e78c57a1df"
+    },
+    {
       "file": "figure2_vertical.R",
       "bytes": 3331,
       "sha256": "23b5c34c70803faa7d165eae642135ca25ea13a007b48d856a54b847253b87ff"
@@ -192,6 +197,31 @@
       "file": "figures/figure2/Figure_2_global_distribution_v2_validation.json",
       "bytes": 1706,
       "sha256": "d3af935cdbbb8f1dafc247dbe5232cfb34dc8d1387f7eb00e4bf3267071f14bb"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v3.pdf",
+      "bytes": 1560092,
+      "sha256": "0afb0430dd442a532070e14379c329b8db5a67f9787699438539712d3f861d6e"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v3.png",
+      "bytes": 1103097,
+      "sha256": "f17768d39c4ee9217ce82660cedc370acfade0fccce207fd7197b18db9c9c874"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v3.svg",
+      "bytes": 5001743,
+      "sha256": "dc3ad64e6c8bc76d9dae2afadac99eb95256fa6599b3665c5d2f0df7fcb091bd"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v3_plot_data.csv",
+      "bytes": 10600,
+      "sha256": "3e9386d1647a2c2530e9402f5cada493421931b2830fb66be7e9e5ba078d1d0e"
+    },
+    {
+      "file": "figures/figure2/Figure_2_global_distribution_v3_validation.json",
+      "bytes": 2042,
+      "sha256": "6694e990844528976cdbbfc57326ddbb0cd2e2a8a1a58771ec4f6c41fc7397c9"
     },
     {
       "file": "figures/figure2/Figure_2_legend_proposed.md",
@@ -455,8 +485,8 @@
     },
     {
       "file": "figures/figure_captions_as_submitted.md",
-      "bytes": 7264,
-      "sha256": "fe54399bac31a53896222e6c2054d4d25bc4d10428b7629dc5cb7acc36abdefa"
+      "bytes": 7451,
+      "sha256": "c159d91da5c8c0f46bb524266768e39c5c3b815ccb341ebbdcc0bf715378ed64"
     },
     {
       "file": "pre_post_income_test.R",
@@ -580,5 +610,5 @@
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
   "updated": "2026-11-24",
-  "update_note": "Version 1.0.2: tables and captions as in the closed manuscript (tables/submission/, figures/figure_captions_as_submitted.md) and the script for Supplementary Table S13 (supplement_equal_weight.py); no count, model or eligibility decision changed. See CODEBOOK.md Part K. Earlier: Version 1.0.1: manuscript item map (CODEBOOK.md Part K), tables as submitted in tables/submission/ (former Table 4 is now Supplementary Table S11); no count, model or eligibility decision changed. Earlier notes: Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
+  "update_note": "Figure 2 v3 (three maps; panel a migraine burden), figure2_three_panel.R, CODEBOOK.md Part L; presentation only. Version 1.0.2: tables and captions as in the closed manuscript (tables/submission/, figures/figure_captions_as_submitted.md) and the script for Supplementary Table S13 (supplement_equal_weight.py); no count, model or eligibility decision changed. See CODEBOOK.md Part K. Earlier: Version 1.0.1: manuscript item map (CODEBOOK.md Part K), tables as submitted in tables/submission/ (former Table 4 is now Supplementary Table S11); no count, model or eligibility decision changed. Earlier notes: Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
 }

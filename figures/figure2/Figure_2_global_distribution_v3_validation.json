@@ -1,0 +1,60 @@
+{
+  "figure": "Figure 2",
+  "version": "v3",
+  "generated": "2026-11-24T18:24:54-0300",
+  "scope": "Adds panel a (migraine YLDs, GBD 2023) to the v2 maps; participations, O/E values and classes unchanged. Panels b and c are v2's panels a and b.",
+  "validation": {
+    "who_member_states": 194,
+    "country_trial_participations": 453,
+    "participating_member_states": 47,
+    "member_states_without_participation": 147,
+    "records_contributing": 106,
+    "migraine_yld_total": 40681878.8719,
+    "expected_matches_yld_share": true,
+    "release_metadata_agreement": "CURRENT_RELEASE.json"
+  },
+  "class_counts_panel_a_yld": {
+    "<50": 101,
+    "≥1,000": 7,
+    "200–<500": 20,
+    "50–<200": 57,
+    "500–<1,000": 9
+  },
+  "class_counts_panel_b_participations": {
+    "≥30": 2,
+    "1–2": 14,
+    "15–29": 9,
+    "3–5": 7,
+    "6–14": 15,
+    "No participation (0)": 147
+  },
+  "class_counts_panel_c_oe": {
+    "<0.1": 2,
+    "≥10": 13,
+    "0.1–<0.2": 1,
+    "0.2–<0.5": 3,
+    "0.5–<1": 5,
+    "1–<2": 2,
+    "2–<5": 12,
+    "5–<10": 9,
+    "No participation (0)": 147
+  },
+  "export": {
+    "width_mm": 129,
+    "height_mm": 165,
+    "png_dpi": 600,
+    "font": "Arial"
+  },
+  "input_sha256": {
+    "country_record": "b4e4b0ffc9d2170a9f7574c8576351f3f70fed51ebab0bed1e8543cf2b032f07",
+    "yld_input": "81b9a5479fb34641088a06d9910d34fc9e8e7920fc6d12ebab4073db1a66acf1",
+    "oe_results": "cb4baae28532a723257b88241c56a499e72ef2dd8dedcc86acb6ded47490da22",
+    "who_universe": "5397e2b05a04aa560e03187f94f0713ab0172118ebdf0de26f494c0071ebc356",
+    "natural_earth_shp": "94799b91827fb9f32c0c517d60281572abcf5e4647d19b7f52217071cc4fd30d"
+  },
+  "output_sha256": {
+    "Figure_2_global_distribution_v3.pdf": "0afb0430dd442a532070e14379c329b8db5a67f9787699438539712d3f861d6e",
+    "Figure_2_global_distribution_v3.svg": "dc3ad64e6c8bc76d9dae2afadac99eb95256fa6599b3665c5d2f0df7fcb091bd",
+    "Figure_2_global_distribution_v3.png": "f17768d39c4ee9217ce82660cedc370acfade0fccce207fd7197b18db9c9c874"
+  }
+}
