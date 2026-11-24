@@ -3,7 +3,7 @@
 Working research repository, 17 November 2026. The variable definitions below
 describe the reviewed analytical dataset, including externally acquired inputs.
 Restricted third-party input snapshots are not distributed in this repository.
-See DATA_ACCESS.md and EXTERNAL_INPUTS.json. Version 1.0.2 is archived on Zenodo (https://doi.org/10.5281/zenodo.24514907; all versions: https://doi.org/10.5281/zenodo.24386424).
+See DATA_ACCESS.md and EXTERNAL_INPUTS.json. Releases are archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424).
 
 # Codebook v4 country–record analysis with 108 records
 
@@ -935,7 +935,7 @@ python3 -I figure1_prisma.py ../registry_validation figures/figure1 [--restricte
 
 ## Status and scope
 
-Bookkeeping update for versions 1.0.1 and 1.0.2 (24 November 2026, the latter after the manuscript was closed). **No count, model or eligibility decision was changed.** It records where each table and figure of the submitted manuscript comes from, and which items changed after the 17 November 2026 snapshot in `public_data_and_reference_results.zip` (`results/native_document_tables/`).
+Bookkeeping update for versions 1.0.1 and 1.0.2 (24 November 2026, the latter after the manuscript was closed); version 1.0.3 adds Part L (Figure 2). **No count, model or eligibility decision was changed.** It records where each table and figure of the submitted manuscript comes from, and which items changed after the 17 November 2026 snapshot in `public_data_and_reference_results.zip` (`results/native_document_tables/`).
 
 ## Former Table 4 moved to the supplement; new Tables 4 and 5
 
