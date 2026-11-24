@@ -20,8 +20,8 @@
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 62589,
-      "sha256": "1f57a3f76fa7d0a462b2aafb92dc9683f7e6d7d8aa2ad26d49418efc779f7a88"
+      "bytes": 63850,
+      "sha256": "4e00eda20d7b7953776f385cbaf1900ac08e1e1eabe34dbb25e968c4569fea49"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -500,8 +500,8 @@
     },
     {
       "file": "tables/submission/Table_1_Panel_A_trial_characteristics.csv",
-      "bytes": 898,
-      "sha256": "f5fb6b7b2b454e7e82523b47c8d7604de8e5ea7bcddad4371abbc210d6b3ad95"
+      "bytes": 924,
+      "sha256": "3882ba47c0b1d868e6cdb20b6f10c9663d963dd93082cffc8efa92d905910a91"
     },
     {
       "file": "tables/submission/Table_1_Panel_B_geographic_distribution_by_subgroup.csv",
@@ -515,13 +515,23 @@
     },
     {
       "file": "tables/submission/Table_2_WHO_region_representation.csv",
-      "bytes": 455,
-      "sha256": "66a66c5090545d0724a3bb72f30d2d234a718ad771f020f1c80b26369f0b9ed1"
+      "bytes": 448,
+      "sha256": "97b56dec795f3b0d7b3cb89915f5390b35403d448d8e0dc21251829a4de5690f"
     },
     {
       "file": "tables/submission/Table_3_country_level_disparities.csv",
-      "bytes": 1236,
-      "sha256": "068440ccf24f6fcff01fa1130916eb338dbbf91561ae8d496781c8b3d08dac39"
+      "bytes": 1279,
+      "sha256": "afa88d805307fde5077d0a61dbf6df551d74e5a60fe97d88a42c98d651c7312d"
+    },
+    {
+      "file": "tables/submission/Table_4_status_by_income_group.csv",
+      "bytes": 1053,
+      "sha256": "e36dc6f03a5f7df19370f28c5552a613b671df31a498e0e9d917e3c18321e61f"
+    },
+    {
+      "file": "tables/submission/Table_5_published_trials_by_journal_and_income.csv",
+      "bytes": 962,
+      "sha256": "341fb49d9e840b5f93852fbcb1785f4cbb32244f53bf1ea0a26367f65029801c"
     },
     {
       "file": "tables/table1_panel_b_member_states.csv",
