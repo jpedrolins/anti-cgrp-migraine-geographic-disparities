@@ -1,6 +1,6 @@
 {
   "prepared": "2026-11-17",
-  "status": "Public research repository; releases archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424)",
+  "status": "Public research repository; version 1.0.3 archived on Zenodo (https://doi.org/10.5281/zenodo.24515455; all versions: https://doi.org/10.5281/zenodo.24386424)",
   "source_analysis": "20261116_adopted_108_country_record",
   "files": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "file": "CITATION.cff",
-      "bytes": 1605,
-      "sha256": "0fad61e27f6b466e7bfa3d44f498b4cf90f6e6ecff38d680a8115eb502672ee4"
+      "bytes": 1747,
+      "sha256": "81fb070dff82e56da669e230954af077760ffb29e01a6af3e8aed2fc89361a62"
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 68834,
-      "sha256": "f41d564bb233eb1ea952c9f1401102dcfe971877450b3b696010632f64dc0679"
+      "bytes": 68879,
+      "sha256": "a39c2bcd63ed8b0a75c2ec512dc9601fe5403a34a1e0fa1b1d74e7178b10650f"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -50,13 +50,13 @@
     },
     {
       "file": "README.md",
-      "bytes": 6476,
-      "sha256": "4a53c3db73190edc76bd10507f5c42829adf6915fd70f84302bc65805771ebb2"
+      "bytes": 6542,
+      "sha256": "942e1a2a8a58c078d5b7d9c671694e82c5fe693c6685cb61426961da3499b827"
     },
     {
       "file": "VALIDATION.md",
-      "bytes": 1322,
-      "sha256": "4dda3de846661da28c4b4d17a04ebe51c52f55ce4c207c6b963cc797f35e3c55"
+      "bytes": 1367,
+      "sha256": "b63f511d29dce0d3447dad20c187915a2e730c62811cfc07a4e02740a53bde8e"
     },
     {
       "file": "analysis.R",

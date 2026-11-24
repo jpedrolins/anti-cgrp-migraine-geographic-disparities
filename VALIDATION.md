@@ -18,4 +18,4 @@ The complete pipeline is also tested by restoring the three exact external
 inputs privately, without placing them in the public source package.
 
 No city/site analysis, new eligibility decision, or manuscript revision is
-introduced by this repository packaging. Releases are archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424).
+introduced by this repository packaging. Version 1.0.3 is archived on Zenodo (https://doi.org/10.5281/zenodo.24515455; all versions: https://doi.org/10.5281/zenodo.24386424).
