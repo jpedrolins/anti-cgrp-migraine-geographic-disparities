@@ -3,7 +3,7 @@
 Working research repository, 17 November 2026. The variable definitions below
 describe the reviewed analytical dataset, including externally acquired inputs.
 Restricted third-party input snapshots are not distributed in this repository.
-See DATA_ACCESS.md and EXTERNAL_INPUTS.json. Version 1.0.1 is archived on Zenodo (https://doi.org/10.5281/zenodo.24514657; all versions: https://doi.org/10.5281/zenodo.24386424).
+See DATA_ACCESS.md and EXTERNAL_INPUTS.json. Releases are archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424).
 
 # Codebook v4 country–record analysis with 108 records
 
@@ -935,13 +935,13 @@ python3 -I figure1_prisma.py ../registry_validation figures/figure1 [--restricte
 
 ## Status and scope
 
-Bookkeeping update for version 1.0.1. **No count, model or eligibility decision was changed.** It records where each table and figure of the submitted manuscript comes from, and which items changed after the 17 November 2026 snapshot in `public_data_and_reference_results.zip` (`results/native_document_tables/`).
+Bookkeeping update for versions 1.0.1 and 1.0.2 (24 November 2026, the latter after the manuscript was closed). **No count, model or eligibility decision was changed.** It records where each table and figure of the submitted manuscript comes from, and which items changed after the 17 November 2026 snapshot in `public_data_and_reference_results.zip` (`results/native_document_tables/`).
 
 ## Former Table 4 moved to the supplement; new Tables 4 and 5
 
 The indicator table that was Table 4 in the 17 November manuscript (country-level indicators: Spearman ρ, odds ratios and burden-adjusted IRRs for HDI, GDP per capita, HAQ Index and R&D expenditure) is now **Supplementary Table S11**; the main text cites it together with Figure 4. The values are those listed under "Recalculated results with 108 records" in Part B and are produced by `table3_covariates.R`. In the 17 November snapshot the same table is `results/native_document_tables/manuscript_table_06.csv`; `figure4_socioeconomic.R` still reads that file to check the Figure 4 IRRs against the published table, so the snapshot is kept unchanged.
 
-The manuscript's current **Table 4** (recruitment, completion and publication status by income group) and **Table 5** (published trials by journal category and income group) were added after the snapshot. They are transcribed from the manuscript. Their publication classification comes from a separate review of the 108 trials whose records are not part of this repository, so these two tables are not regenerated here; their participation and income totals (453; high income 392, upper-middle 42, lower-middle 19) equal the primary analysis. Their classification of primary results publications (63 of 75 completed trials) differs from the "candidate results publication" count of Supplementary Table S7 (59), which has not been updated.
+The manuscript's current **Table 4** (recruitment, completion and publication status by income group) and **Table 5** (published trials by journal category and income group) were added after the snapshot. They are transcribed from the manuscript. Their publication classification comes from a separate review of the 108 trials whose records are not part of this repository, so these two tables are not regenerated here; their participation and income totals (453; high income 392, upper-middle 42, lower-middle 19) equal the primary analysis. Supplementary Table S7 uses the same classification (63 completed trials with primary results published).
 
 ## Manuscript items and their sources
 
@@ -952,15 +952,18 @@ The manuscript's current **Table 4** (recruitment, completion and publication st
 | Figure 3 (burden representation) | `figure3_burden_representation.R` (Part F) |
 | Figure 4 (socioeconomic gradients, four panels) | `figure4_socioeconomic.R` (Parts G–H) |
 | Figure 5 (WHO trial benchmarks) | `figure5_who_benchmark.R`, variant `main` (Part I) |
+| Supplementary Table S12 (mutual adjustment, HDI and R&D) | `table3_covariates.R` (output `adjusted_hdi_rd.csv`; Part B, item 4) |
+| Supplementary Table S13 (equal trial weight) | `supplement_equal_weight.py` (below) |
 | Supplementary Figure S1 (antibody and income) | `figureS1_mab_income.R` (Part I) |
 | Supplementary Figure S2 (income-group associations) | `build_supplementary_income_forest.R` |
 | Supplementary Figure S3 (three record-selection stages) | `figure5_who_benchmark.R`, variant `record_sets` (Part I) |
 | Table 1 Panel B, WHO Member States column | `table1_member_states.py` (Part I) |
 | Tables as submitted, in CSV | `tables/submission/` (below) |
+| Figure captions of Figures 1–5 | `figures/figure_captions_as_submitted.md` (supersedes the `*_legend_proposed.md` drafts) |
 
 ## Tables as submitted: `tables/submission/`
 
-CSV copies of the five tables in the manuscript (Table 1 has three panels) and of the two supplementary tables that changed after the 17 November snapshot. They are transcriptions of the submitted documents (header row first, notes omitted) and are not read by any script.
+CSV copies of the five tables in the manuscript (Table 1 has three panels) and of the supplementary tables that changed or were added after the 17 November snapshot (S7, S9, S11, S12, S13). They are transcriptions of the submitted documents (header row first, notes omitted) and are not read by any script.
 
 | File | Manuscript item |
 |---|---|
@@ -971,8 +974,11 @@ CSV copies of the five tables in the manuscript (Table 1 has three panels) and o
 | `Table_3_country_level_disparities.csv` | Table 3 |
 | `Table_4_status_by_income_group.csv` | Table 4 (new; see above) |
 | `Table_5_published_trials_by_journal_and_income.csv` | Table 5 (new; see above) |
+| `Supplementary_Table_S7_recruitment_and_publication_status.csv` | Supplementary Table S7 (updated) |
 | `Supplementary_Table_S9_WHO_benchmarks.csv` | Supplementary Table S9 |
 | `Supplementary_Table_S11_country_indicator_associations.csv` | Supplementary Table S11 (former Table 4) |
+| `Supplementary_Table_S12_mutual_adjustment_HDI_RD.csv` | Supplementary Table S12 (new) |
+| `Supplementary_Table_S13_equal_trial_weight.csv` | Supplementary Table S13 (new) |
 
 The Member States and participation counts in Panel B equal those of `tables/table1_panel_b_member_states.csv` in all 26 subgroup rows.
 
@@ -985,7 +991,19 @@ The Member States and participation counts in Panel B equal those of `tables/tab
 | `manuscript_table_03.csv` (Table 1 Panel C) | Capitalization of antibody names only. |
 | `manuscript_table_05.csv` (Table 3) | Heading of block D now reads "Highest migraine burden among countries with zero participations in the primary analysis". No number changed. |
 | `manuscript_table_06.csv` (former Table 4) | Moved to Supplementary Table S11; values unchanged. |
+| `supplement_table_07.csv` (S7) | Classification by publication status revised: 63 completed trials with primary results published (319 participations) and 12 completed without a qualifying primary-results publication (42), replacing 59 (315) and 16 (46). Other rows unchanged. |
 | `supplement_table_09.csv` (S9) | Replaced. The anti-CGRP column now uses all 132 records retained after deduplication, before eligibility assessment (477 participations; high income 414, 86.79%), and the all-clinical-trials column the WHO export of 18 November 2026 (1,464,719; high income 932,896, 63.69%); neuropsychiatric: 6 Nauru participations added (163,031). See Part I. |
+| (no snapshot file) | Supplementary Tables S12 and S13 were added to the supplement. |
 | `supplement_table_03.csv` (S3) | The submitted S3 also lists migraine YLDs per country. IHME estimates are not redistributed here, so the snapshot and `supplementary_full_rankings_108.csv` keep the version without YLDs. |
 
-All other snapshot tables (`manuscript_table_04`, `supplement_table_01`, `_02`, `_04` to `_08`, `_10`) are identical to the submitted ones after normalizing minus signs and dashes.
+All other snapshot tables (`manuscript_table_04`, `supplement_table_01`, `_02`, `_04` to `_06`, `_08`, `_10`) are identical to the submitted ones after normalizing minus signs and dashes.
+
+## Supplementary Table S13: equal trial weight (`supplement_equal_weight.py`)
+
+Sensitivity to multi-country trials. In the primary analysis each country–trial pair counts once, so a trial with many countries weighs more. Here each of the 106 trials with geography contributes a total weight of 1, split equally among its countries (1/k per country), and the shares by World Bank income group (FY2019) and WHO region are compared with the primary shares (difference in percentage points, equal-weight minus primary).
+
+```sh
+python3 -I supplement_equal_weight.py <extracted public_data_and_reference_results.zip> out.csv
+```
+
+The script stops unless the primary counts equal the published ones (453 pairs; income groups 392, 42, 19, 0; regions 101, 297, 46, 7, 2, 0) and the weights sum to 106. Its output reproduces the table in the supplement cell for cell.

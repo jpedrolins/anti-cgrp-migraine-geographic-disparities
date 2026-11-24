@@ -1,6 +1,6 @@
 {
   "prepared": "2026-11-17",
-  "status": "Public research repository; version 1.0.1 archived on Zenodo (https://doi.org/10.5281/zenodo.24514657; all versions: https://doi.org/10.5281/zenodo.24386424)",
+  "status": "Public research repository; releases archived on Zenodo (all versions: https://doi.org/10.5281/zenodo.24386424)",
   "source_analysis": "20261116_adopted_108_country_record",
   "files": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "file": "CITATION.cff",
-      "bytes": 1552,
-      "sha256": "407df5f8da2e2dcff82336ca1863c90cb20ff661e7cb51056de062d73bb95d77"
+      "bytes": 1521,
+      "sha256": "8976ff8bfa27d11504d2cd4e42d77aba115eaa72334d2dce7d826572fe5111ae"
     },
     {
       "file": "CODEBOOK.md",
-      "bytes": 63850,
-      "sha256": "4e00eda20d7b7953776f385cbaf1900ac08e1e1eabe34dbb25e968c4569fea49"
+      "bytes": 65687,
+      "sha256": "611b230d08b3c4684f2ac2eff77f49f7ddcd4bcff219320a5612064f00baa7ce"
     },
     {
       "file": "CURRENT_RELEASE.json",
@@ -50,13 +50,13 @@
     },
     {
       "file": "README.md",
-      "bytes": 6225,
-      "sha256": "ba3c57d05acfe31868f9c3d3f45f7a77fa16761d1c2f9241e4095b9eb00c38b7"
+      "bytes": 6304,
+      "sha256": "8fae31fba686041243c734c207f1f8e37b3dac392834f05297c03780d3e9499b"
     },
     {
       "file": "VALIDATION.md",
-      "bytes": 1367,
-      "sha256": "8d0e0f78a9926eeba75de5ff590c7ad27c44018083e9c2374affcdb0a8d09f44"
+      "bytes": 1322,
+      "sha256": "4dda3de846661da28c4b4d17a04ebe51c52f55ce4c207c6b963cc797f35e3c55"
     },
     {
       "file": "analysis.R",
@@ -454,6 +454,11 @@
       "sha256": "9a7cb388eab719d429c59ae52e957aa3cd0a5736d7300296fe6e79f9edd0dd91"
     },
     {
+      "file": "figures/figure_captions_as_submitted.md",
+      "bytes": 7264,
+      "sha256": "fe54399bac31a53896222e6c2054d4d25bc4d10428b7629dc5cb7acc36abdefa"
+    },
+    {
       "file": "pre_post_income_test.R",
       "bytes": 3017,
       "sha256": "6a1fe39f1b0ecb13c39d46020bdb2b375b6f7f97a9d8069b580dffae4c4e8ad4"
@@ -479,6 +484,11 @@
       "sha256": "f8b357f29466ee5b30633c4d096eef8e26cf02b4edc87d06519df62739b59e6e"
     },
     {
+      "file": "supplement_equal_weight.py",
+      "bytes": 2863,
+      "sha256": "9ec0c4ce652a5502c423dd41af0df8ef6dd2cf750e4e2c910d36dd829ec76e23"
+    },
+    {
       "file": "table1_member_states.py",
       "bytes": 3701,
       "sha256": "f99f628f63506e84589a3b689d83e9c2bca59975a30fe4d8d980d032a0af9f37"
@@ -492,6 +502,21 @@
       "file": "tables/submission/Supplementary_Table_S11_country_indicator_associations.csv",
       "bytes": 736,
       "sha256": "81e1de6dcd0e6bac296bbc539ac50744063ee6b32a27a8897a0393cb5f0cdc55"
+    },
+    {
+      "file": "tables/submission/Supplementary_Table_S12_mutual_adjustment_HDI_RD.csv",
+      "bytes": 263,
+      "sha256": "b8fbcc0822556bc214c434b866cd042f85471958d70c3f810b20147c30b1ecde"
+    },
+    {
+      "file": "tables/submission/Supplementary_Table_S13_equal_trial_weight.csv",
+      "bytes": 646,
+      "sha256": "6c2e36d0d7f07002ff705973f371a5843dc46104711307585ad649d543161461"
+    },
+    {
+      "file": "tables/submission/Supplementary_Table_S7_recruitment_and_publication_status.csv",
+      "bytes": 596,
+      "sha256": "900687331c62e0238e2a053045172fb87da6f6ef310549515eab80272642480c"
     },
     {
       "file": "tables/submission/Supplementary_Table_S9_WHO_benchmarks.csv",
@@ -555,5 +580,5 @@
   "originals_modified": false,
   "scientific_results_recalculated_for_packaging": false,
   "updated": "2026-11-24",
-  "update_note": "Version 1.0.1: manuscript item map (CODEBOOK.md Part K), tables as submitted in tables/submission/ (former Table 4 is now Supplementary Table S11); no count, model or eligibility decision changed. Earlier notes: Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
+  "update_note": "Version 1.0.2: tables and captions as in the closed manuscript (tables/submission/, figures/figure_captions_as_submitted.md) and the script for Supplementary Table S13 (supplement_equal_weight.py); no count, model or eligibility decision changed. See CODEBOOK.md Part K. Earlier: Version 1.0.1: manuscript item map (CODEBOOK.md Part K), tables as submitted in tables/submission/ (former Table 4 is now Supplementary Table S11); no count, model or eligibility decision changed. Earlier notes: Figure 1 (PRISMA 2020) publication version, figure1_prisma.py; presentation only, no count changed. See CODEBOOK.md Part J. Earlier note: Figures 2-4 publication versions (Figure 4 as four panels) with shared figure theme; no analytical change. See CODEBOOK.md Parts E-H. Also Figure 5, Supplementary Figures S1 and S3, Table 1 Panel B Member States (CODEBOOK.md Part I), MIT and CC BY 4.0 licences and Zenodo metadata."
 }

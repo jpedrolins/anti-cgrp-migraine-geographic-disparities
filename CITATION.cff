@@ -5,8 +5,7 @@ type: software
 license:
   - MIT
   - CC-BY-4.0
-version: "1.0.1"
-doi: "10.5281/zenodo.24514657"
+version: "1.0.2"
 date-released: "2026-11-24"
 identifiers:
   - type: doi
